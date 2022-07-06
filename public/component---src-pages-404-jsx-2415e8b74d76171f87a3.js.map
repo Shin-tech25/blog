@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.jsx"],"names":[],"mappings":"2FAAA,4CAGe,4BAAM,kBAAC,IAAD","file":"component---src-pages-404-jsx-2415e8b74d76171f87a3.js","sourcesContent":["import React from \"react\"\r\nimport Layout from \"../components/Layout\"\r\n\r\nexport default () => <Layout>404 not found .</Layout>\r\n"],"sourceRoot":""}
