@@ -1,0 +1,6 @@
+timezone: "Asia/Tokyo"
+zabbix_server_ip: "164.70.65.194"
+docker_deploy_host: "1.1.1.1"
+docker_host_port: 80
+docker_container_port: 80
+docker_image: "default:latest"

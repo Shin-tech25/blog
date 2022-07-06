@@ -1,0 +1,35 @@
+---
+# tasks file for prometheus
+- name: リポジトリの追加
+  yum_repository:
+    name: prometheus
+    description: prometheus
+    baseurl: https://packagecloud.io/prometheus-rpm/release/el/$releasever/$basearch
+    repo_gpgcheck: yes
+    enabled: no
+    gpgkey:
+      - https://packagecloud.io/prometheus-rpm/release/gpgkey
+      - https://raw.githubusercontent.com/lest/prometheus-rpm/master/RPM-GPG-KEY-prometheus-rpm
+    gpgcheck: yes
+    metadata_expire: 300
+
+- name: Prometheusインストール
+  yum:
+    enablerepo: prometheus
+    name:
+      - prometheus2
+
+- name: 自動起動及びサービス起動
+  service:
+    name: prometheus
+    state: started
+    enabled: yes
+
+- name: Promethes設定ファイル(/etc/prometheus/prometheus.yml)作成
+  vars:
+    node_exporter:
+      - { job_name: node_localhost, target: localhost:9100 }
+      - { job_name: node_staging001.ga, target: staging001.ga:9100 }
+  template:
+    src: "{{role_path}}/files/prometheus.yml.j2"
+    dest: /etc/prometheus/prometheus.yml

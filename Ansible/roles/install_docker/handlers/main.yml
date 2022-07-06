@@ -1,0 +1,8 @@
+---
+# handlers file for test_role
+- name: restart_docker_daemon
+  service:
+    name: docker
+    state: restarted
+  listen:
+    - restart_docker_daemon

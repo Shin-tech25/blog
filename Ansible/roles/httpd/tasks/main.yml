@@ -1,0 +1,32 @@
+---
+# tasks file for httpd
+- name: apacheインストール
+  yum:
+    name: httpd
+    state: latest
+
+- name: httpd有効化
+  service:
+    name: httpd
+    state: restarted
+    enabled: yes
+  ignore_errors: true
+  changed_when: false
+
+- name: ファイアウォール穴あけ(http)
+  firewalld:
+    service: http
+    permanent: yes
+    state: enabled
+  ignore_errors: true
+  notify:
+    - restart firewalld
+
+- name: ファイアウォール穴あけ(https)
+  firewalld:
+    service: https
+    permanent: yes
+    state: enabled
+  ignore_errors: true
+  notify:
+    - restart firewalld

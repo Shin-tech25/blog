@@ -1,0 +1,7 @@
+---
+# tasks file for reboot_role
+
+- name: マシンのリブート
+  shell: "sleep 2 && reboot"
+  async: 1
+  poll: 0

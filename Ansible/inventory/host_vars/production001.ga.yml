@@ -1,0 +1,3 @@
+ansible_host: 164.70.114.195
+ansible_user: ansible
+hostname: production001.ga

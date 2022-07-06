@@ -1,0 +1,10 @@
+---
+# defaults file for test_role
+packages:
+  - php
+  - wget
+  - vim
+  - python39
+  - gcc
+  - git
+  - yum-utils

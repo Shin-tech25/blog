@@ -1,0 +1,12 @@
+---
+# tasks file for linux_common_packages
+# パッケージインストール
+    # httpd, php, wget, vim, phthon39, firewalld
+- name: パッケージ インストール
+  yum:
+    name: "{{ packages }}"
+    state: latest
+  register: result
+
+- name: debug
+  debug: var=result

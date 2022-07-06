@@ -1,0 +1,3 @@
+ansible_host: 164.70.121.236
+ansible_user: ansible
+hostname: manager001.ga

@@ -1,0 +1,26 @@
+---
+# tasks file for node_exporter
+- name: リポジトリの追加
+  yum_repository:
+    name: prometheus
+    description: prometheus
+    baseurl: https://packagecloud.io/prometheus-rpm/release/el/$releasever/$basearch
+    repo_gpgcheck: yes
+    enabled: no
+    gpgkey:
+      - https://packagecloud.io/prometheus-rpm/release/gpgkey
+      - https://raw.githubusercontent.com/lest/prometheus-rpm/master/RPM-GPG-KEY-prometheus-rpm
+    gpgcheck: yes
+    metadata_expire: 300
+
+- name: node_exporterインストール
+  yum:
+    enablerepo: prometheus
+    name:
+      - node_exporter
+
+- name: 自動起動及びサービス起動
+  service:
+    name: node_exporter
+    state: started
+    enabled: yes

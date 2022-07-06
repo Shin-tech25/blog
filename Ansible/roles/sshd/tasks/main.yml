@@ -1,0 +1,9 @@
+---
+# tasks file for sshd
+# - name: sshの設定
+
+- name: sshd有効化
+  service:
+    name: sshd
+    state: started
+    enabled: yes

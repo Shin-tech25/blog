@@ -1,0 +1,12 @@
+# Linux共通用のPlaybook
+# Playbook用の設定
+# 前提としては、Ansibleユーザが設定されている状態（それ以外は全く設定されていない）
+---
+- name: 再起動Playbook
+  hosts: all
+  become: true
+  gather_facts: true
+
+  roles:
+    - role: reboot
+      tags: reboot

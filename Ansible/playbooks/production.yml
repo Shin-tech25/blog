@@ -1,0 +1,9 @@
+---
+- name: Production用のPlaybook
+  hosts: production
+  become: true
+  gather_facts: true
+
+  roles:
+    - role: httpd
+      tags: httpd

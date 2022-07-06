@@ -1,0 +1,17 @@
+# site.ymlはPlaybookの総本山。このPlaybookを流せば必要なInfrastructureが全て揃う状態になるようにトップダウンで設計する。
+# 各Playbookをシンプルにimportする記述。
+# 各Playbookは、roleをimportする。
+# roleに実際の処理を記述する。
+# roleにタグ付けを行うことで、局所的なPlaybook適用を可能にする。
+---
+- name: Linuxの共通設定(all)
+  import_playbook: linux-common.yml
+
+- name: Manager 用の設定
+  import_playbook: manager.yml
+
+- name: Staging用の設定
+  import_playbook: staging.yml
+
+- name: Production用の設定
+  import_playbook: production.yml

@@ -1,0 +1,24 @@
+---
+# tasks file for Grafana
+- name: rpmパッケージダウンロード
+  get_url:
+    url: https://dl.grafana.com/enterprise/release/grafana-enterprise-9.0.1-1.x86_64.rpm
+    dest: /usr/local/src
+  register: result
+
+- name: debug
+  debug: var=result
+
+- name: Change Directory And Install
+  shell: cd /usr/local/src && yum -y install grafana-enterprise-9.0.1-1.x86_64.rpm
+  changed_when: false
+  register: result
+
+- name: debug
+  debug: var=result
+
+- name: 自動起動及びサービスを起動
+  service:
+    name: grafana-server
+    state: started
+    enabled: yes

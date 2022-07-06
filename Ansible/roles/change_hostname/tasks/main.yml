@@ -1,0 +1,6 @@
+---
+# tasks file for change_hostname
+# ホスト名変更
+  - name: ホスト名変更
+    hostname:
+      name: "{{ hostname }}"

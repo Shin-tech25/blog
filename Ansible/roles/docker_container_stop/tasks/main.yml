@@ -1,0 +1,9 @@
+---
+# tasks file for docker container stop
+- name: docker container stop
+  shell: docker container stop "{{ docker_container_name }}"
+  ignore_errors: true
+  register: result
+
+- name: debug
+  debug: var=result

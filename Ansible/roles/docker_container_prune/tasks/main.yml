@@ -1,0 +1,8 @@
+---
+# tasks file for docker image prune
+- name: docker container prune f
+  shell: docker container prune -f
+  register: result
+
+- name: debug
+  debug: var=result

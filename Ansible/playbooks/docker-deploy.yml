@@ -1,0 +1,25 @@
+- name: Docker Deploy
+  hosts: "{{ docker_deploy_host }}"
+  become: true
+  gather_facts: true
+
+  roles:
+    - role: firewalld_tcp_port_open
+      tags: firewalld_tcp_port_open
+      vars:
+        firewalld_tcp_port: "{{ docker_host_port }}"
+
+    - role: docker_image_prune
+      tags: docker_image_prune
+
+    - role: docker_container_stop
+      tags: docker_container_stop
+
+    - role: docker_container_prune
+      tags: docker_container_prune
+
+    - role: docker_pull_image
+      tags: docker_pull_image
+
+    - role: docker_container_run
+      tags: docker_container_run

@@ -1,0 +1,7 @@
+---
+# tasks file for firewalld_port_open
+- name: TCP Port Open
+  firewalld:
+    port: "{{ firewalld_tcp_port }}/tcp"
+    permanent: no # 再起動すると閉じるport
+    state: enabled

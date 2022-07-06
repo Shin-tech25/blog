@@ -1,0 +1,33 @@
+---
+# tasks file for docker
+# 参考：https://note.com/shift_tech/n/n880f71e8e03b
+# https://zaki-hmkc.hatenablog.com/entry/2020/05/08/090132
+- name: Dockerのインストールに必要なパッケージをインストールする
+  yum:
+    name:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+- name: setup docker yum repository
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+    mode: '0644'
+
+- name: Docker install
+  yum:
+    name: docker-ce
+
+- name: Docker Service Start
+  service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: add_user_to_docker_group
+  user:
+    name: centos      # docker実行ユーザ
+    groups: docker
+    append: yes
+  notify:
+    - restart_docker_daemon

@@ -1,0 +1,37 @@
+---
+# tasks file for selinux
+- name: SELinux用のPythonモジュールをインストール
+  yum:
+    name: python3-libselinux
+    state: latest
+
+- name: SELinuxの無効化
+  selinux:
+    state: disabled
+  register: selinux
+
+- name: マシンのリブート
+  shell: "sleep 2 && reboot"
+  async: 1
+  poll: 0
+  when: selinux.reboot_required
+  register: result
+
+- name: debug
+  debug: var=result
+
+- name: マシンの停止を待ち合わせ
+  local_action: wait_for host={{ inventory_hostname }} port=22 state=stopped
+  when: selinux.reboot_required
+  register: result
+
+- name: debug
+  debug: var=result
+
+- name: マシンの起動を待ち合わせ
+  local_action: wait_for host={{ inventory_hostname }} port=22 state=started
+  when: selinux.reboot_required
+  register: result
+
+- name: debug
+  debug: var=result

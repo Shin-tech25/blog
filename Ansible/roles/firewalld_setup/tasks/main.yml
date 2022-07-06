@@ -1,0 +1,37 @@
+---
+# tasks file for firewalld
+# Firewall有効化
+- name: firewalld パッケージの追加
+  yum:
+    name: firewalld
+    state: latest
+
+- name: firewalld service start
+  service:
+    name: firewalld
+    state: started
+    enabled: true
+  ignore_errors: true
+
+- name: デフォルトゾーンをpublicゾーンに変更
+  shell: firewall-cmd --set-default-zone=public
+  changed_when: false # 結果を常に okにする shellモジュールのため。
+  register: result
+
+- name: debug
+  debug: var=result
+
+- name: SSH穴あけ # これが無いと最悪、SSHで繋げられずシステムが使えなくなる可能性がある為。
+  firewalld:
+    service: ssh
+    permanent: yes
+    state: enabled
+  ignore_errors: true
+
+- name: Firewall 再起動
+  service:
+    name: firewalld
+    state: restarted
+    enabled: yes
+  ignore_errors: true
+  changed_when: false

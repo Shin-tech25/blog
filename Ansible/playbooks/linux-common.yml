@@ -1,0 +1,40 @@
+# Linux共通用のPlaybook
+# Playbook用の設定
+# 前提としては、Ansibleユーザが設定されている状態（それ以外は全く設定されていない）
+---
+- name: Linuxの共通設定用のPlaybook
+  hosts: linux
+  become: true
+  gather_facts: true
+
+  roles:
+    # ホスト名変更
+    - role: change_hostname
+      tags: change_hostname
+
+    # 共通パッケージインストール
+    - role: linux_common_packages
+      tags: linux_common_packages
+
+    # firewalld有効化と設定
+    - role: firewalld_setup
+      tags: firewalld_setup
+
+    # sshd有効化と設定
+    - role: sshd
+      tags: sshd
+
+    # dockerインストール
+    - role: install_docker
+      tags: install_docker
+
+    # node_exporterインストール
+    - role: node_exporter
+      tags: node_exporter
+
+    - role: firewalld_tcp_port_open
+      firewalld_tcp_port: 9100
+
+    # SELinux 無効化と必要なら再起動
+    - role: selinux
+      tags: selinux
