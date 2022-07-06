@@ -1,0 +1,14 @@
+.flex {
+    display: flex;
+}
+
+.main-left {
+    padding: 10px;
+    width: 65%;
+}
+
+.main-right {
+    margin: 0 0 0 50px;
+    padding: 10px;
+    width: 35%;
+}

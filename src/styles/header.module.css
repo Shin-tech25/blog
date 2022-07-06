@@ -1,0 +1,11 @@
+.header-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+
+.header-box {
+    background: mistyrose;
+    box-sizing: border-box;
+    padding: 15px;
+}

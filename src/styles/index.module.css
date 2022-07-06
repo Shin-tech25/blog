@@ -1,0 +1,13 @@
+.box {
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+.date {
+    font-size: 13px;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+}
