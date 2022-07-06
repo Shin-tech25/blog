@@ -3,7 +3,7 @@ on:
     branches:
       - 'blog**'
     paths:
-      - 'Docker/blog/**'
+      - 'blog/**'
 
 jobs:
   CICD:
