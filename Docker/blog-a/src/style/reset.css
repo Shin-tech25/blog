@@ -127,3 +127,9 @@ input, select {
   box-sizing: border-box;
   max-width: 100%;
 }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
