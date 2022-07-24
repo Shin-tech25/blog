@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Jul 2022 12:40:38 GMT</lastBuildDate><item><title><![CDATA[Gatsbyで内部リンクをSPA的に使う方法]]></title><description><![CDATA[このページでは、Gatsby で内部リンクを SPA 的に使う方法について解説します。 結論 を用います。 Markdown で gatsby-transformer-remark を用いているため、gatsby-config.js に以下のように追記しました。 Markdown…]]></description><link>https://Shin-tech25.netlify.app/gatsby-internal-link/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-internal-link/</guid><pubDate>Sun, 24 Jul 2022 09:30:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、Gatsby で内部リンクを SPA 的に使う方法について解説します。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Jul 2022 23:05:58 GMT</lastBuildDate><item><title><![CDATA[冊封体制と五世紀の東アジアの勢力図]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/emperor-yuryaku/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/emperor-yuryaku/</guid><pubDate>Sun, 24 Jul 2022 23:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;雄略天皇&quot;&gt;雄略天皇&lt;/h1&gt;
+&lt;p&gt;雄略天皇は五世紀の人物です。中国の歴史書（＝宋書倭国伝）では、「倭王武」と記載されており、埼玉県の稲荷山古墳から出土した辛亥名鉄剣の銘文に見える「獲加多支鹵大王」が「記紀」にいう「ワカタケル」天皇すなわち雄略天皇であることはほぼ確実だと考えられています。&lt;/p&gt;
+&lt;p&gt;猪狩りをする雄略天皇（安達吟光画）
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c24acd84181e37b1610ef269c4627dd3/625ec/Tenno_Yuryaku.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.63306451612904%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgAEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAAB6jIwuiMf/8QAGBABAQEBAQAAAAAAAAAAAAAAAQIAAxD/2gAIAQEAAQUCXFezzJTf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAgMAAAAAAAAAAAAAAAAAEBEAIWH/2gAIAQEABj8CiLt6P//EABoQAQEAAgMAAAAAAAAAAAAAAAEAEUExUWH/2gAIAQEAAT8hXQxro9TY9mwUtq4X/9oADAMBAAIAAwAAABBM3//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxDWG//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAECAQE/EIf/xAAbEAEBAAIDAQAAAAAAAAAAAAABEQAhEDFRQf/aAAgBAQABPxCm90PdfXKRpLTUHG0imsEiWUTWsEIsaIecH//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;猪狩りをする雄略天皇（安達吟光画）&quot;
+        title=&quot;猪狩りをする雄略天皇（安達吟光画）&quot;
+        src=&quot;/static/c24acd84181e37b1610ef269c4627dd3/a296c/Tenno_Yuryaku.jpg&quot;
+        srcset=&quot;/static/c24acd84181e37b1610ef269c4627dd3/f544b/Tenno_Yuryaku.jpg 200w,
+/static/c24acd84181e37b1610ef269c4627dd3/41689/Tenno_Yuryaku.jpg 400w,
+/static/c24acd84181e37b1610ef269c4627dd3/a296c/Tenno_Yuryaku.jpg 800w,
+/static/c24acd84181e37b1610ef269c4627dd3/625ec/Tenno_Yuryaku.jpg 992w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+出典 Wikipedia&lt;/p&gt;
+&lt;h1 id=&quot;参考&quot;&gt;参考&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://sekainorekisi.com/glossary/%E9%9B%84%E7%95%A5%E5%A4%A9%E7%9A%87/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;世界の歴史まっぷ 雄略天皇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Gatsbyで内部リンクをSPA的に使う方法]]></title><description><![CDATA[このページでは、Gatsby で内部リンクを SPA 的に使う方法について解説します。 結論 を用います。 Markdown で gatsby-transformer-remark を用いているため、gatsby-config.js に以下のように追記しました。 Markdown…]]></description><link>https://Shin-tech25.netlify.app/gatsby-internal-link/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-internal-link/</guid><pubDate>Sun, 24 Jul 2022 09:30:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、Gatsby で内部リンクを SPA 的に使う方法について解説します。&lt;/p&gt;
 &lt;h1 id=&quot;結論&quot;&gt;結論&lt;/h1&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-catch-links&lt;/code&gt;を用います。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install gatsby-plugin-catch-links&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -96,7 +132,8 @@
 &lt;h2 id=&quot;検索エンジンの活用&quot;&gt;検索エンジンの活用&lt;/h2&gt;
 &lt;p&gt;最近の検索エンジンは非常に高機能のため、欲しい情報を絞り込むためにはちょっとしたテクニックが必要&lt;/p&gt;
 &lt;p&gt;こちらのページを参考に
-&lt;a href=&quot;/google-search&quot;&gt;Google 検索エンジンの使い方&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ハッキングにおける情報収集の手法]]></title><description><![CDATA[概要 偵察（Reconnaissance）は、CEH…]]></description><link>https://Shin-tech25.netlify.app/hacking-gathering-information/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/hacking-gathering-information/</guid><pubDate>Sun, 24 Jul 2022 04:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
+&lt;a href=&quot;/google-search&quot;&gt;Google 検索エンジンの使い方&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;sns-を利用した情報収集&quot;&gt;SNS を利用した情報収集&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[ハッキングにおける情報収集の手法]]></title><description><![CDATA[概要 偵察（Reconnaissance）は、CEH…]]></description><link>https://Shin-tech25.netlify.app/hacking-gathering-information/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/hacking-gathering-information/</guid><pubDate>Sun, 24 Jul 2022 04:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
 &lt;p&gt;偵察（Reconnaissance）は、CEH における準備段階である最初のフェーズです。この段階で、攻撃にするために必要な情報を集めます。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;公開されている情報から&lt;/li&gt;
