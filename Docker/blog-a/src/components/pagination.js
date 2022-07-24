@@ -21,6 +21,13 @@ const Pagination = ({ pageContext }) => {
           : null
       }
       {
+        pages.map(page => (
+          humanPageNumber !== page
+            ? <Link key={page} to={page === 1 ? "/" : `/page/${page}`} style={style}>{page}</Link>
+            : <span style={style}>{page}</span>
+        ))
+      }
+      {
         nextPagePath
           ? <Link to={nextPagePath} style={style}>
               <FontAwesomeIcon icon={faCircleChevronRight} className="faCircleChevronRight" />
