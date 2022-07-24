@@ -39,6 +39,15 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
             <h1 itemProp="name">{post.frontmatter.title}</h1>
             <Tags tags={post.frontmatter.tags} />
           </div>
+          {pageContext.relatedPosts.length === 0 ? (
+            <Latest latest={pageContext.latestPosts} />
+          ) : (
+            <Related
+              slug={post.frontmatter.slug}
+              related={pageContext.relatedPosts}
+              latest={pageContext.latestPosts}
+            />
+          )}
           <TOC data={data.markdownRemark.tableOfContents} />
           <section
             itemProp="articleBody"
