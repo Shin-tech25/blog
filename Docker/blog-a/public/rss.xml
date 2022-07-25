@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Jul 2022 23:41:31 GMT</lastBuildDate><item><title><![CDATA[冊封体制と五世紀の東アジアの勢力図]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/emperor-yuryaku/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/emperor-yuryaku/</guid><pubDate>Sun, 24 Jul 2022 23:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;雄略天皇&quot;&gt;雄略天皇&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 00:15:05 GMT</lastBuildDate><item><title><![CDATA[冊封体制と五世紀の東アジアの勢力図]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/emperor-yuryaku/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/emperor-yuryaku/</guid><pubDate>Sun, 24 Jul 2022 23:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;雄略天皇&quot;&gt;雄略天皇&lt;/h1&gt;
 &lt;p&gt;雄略天皇は五世紀の人物です。中国の歴史書（＝宋書倭国伝）では、「倭王武」と記載されており、埼玉県の稲荷山古墳から出土した辛亥名鉄剣の銘文に見える「獲加多支鹵大王」が「記紀」にいう「ワカタケル」天皇すなわち雄略天皇であることはほぼ確実だと考えられています。&lt;/p&gt;
 &lt;p&gt;猪狩りをする雄略天皇（安達吟光画）
 &lt;span
@@ -31,6 +31,37 @@
   &lt;/a&gt;
     &lt;/span&gt;
 出典 Wikipedia&lt;/p&gt;
+&lt;h2 id=&quot;宋書倭国伝&quot;&gt;宋書倭国伝&lt;/h2&gt;
+&lt;p&gt;宋書倭国伝には、倭の五王（大和政権の大王（おおきみ））が、中国に認めてもらい朝鮮半島に対する影響力を強めて、国（ヤマト政権）を発展させようとした経緯が記されています。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;…興死して弟武立つ。自ら使持節都督倭・百済・新羅・任那・加羅・秦韓・慕韓七国く諸軍事安東大将軍倭国王称す。&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 246px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8f14b0e91bb95060077b9310d146dfda/52e6c/soujyowakokuden.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 126.01626016260161%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAZABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAv/aAAwDAQACEAMQAAAB6THCyQTyUaDKH//EABkQAAIDAQAAAAAAAAAAAAAAAAECABAxQf/aAAgBAQABBQJRSYMiwX2v/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwJP/8QAHRAAAgICAwEAAAAAAAAAAAAAAAERITFBEFFx8P/aAAgBAQABPyGpbKbVIhqYhKIGhfdGKImhQPL3hn//2gAMAwEAAgADAAAAEEzW/f/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxB0/8QAFhEAAwAAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/EHD/xAAgEAACAgEEAwEAAAAAAAAAAAABEQAhMUFRYXGBobGR/9oACAEBAAE/EAXBtXevMKjNmuRABOO2wmGQTZXThgIoij8hDhLGekfaVD9jBd0F6hgETtg8Ce2+zTxMp//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;宋書倭国伝&quot;
+        title=&quot;宋書倭国伝&quot;
+        src=&quot;/static/8f14b0e91bb95060077b9310d146dfda/52e6c/soujyowakokuden.jpg&quot;
+        srcset=&quot;/static/8f14b0e91bb95060077b9310d146dfda/f544b/soujyowakokuden.jpg 200w,
+/static/8f14b0e91bb95060077b9310d146dfda/52e6c/soujyowakokuden.jpg 246w&quot;
+        sizes=&quot;(max-width: 246px) 100vw, 246px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;稲荷山古墳から出土した辛亥名鉄剣&quot;&gt;稲荷山古墳から出土した辛亥名鉄剣&lt;/h2&gt;
 &lt;h1 id=&quot;参考&quot;&gt;参考&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://sekainorekisi.com/glossary/%E9%9B%84%E7%95%A5%E5%A4%A9%E7%9A%87/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;世界の歴史まっぷ 雄略天皇&lt;/a&gt;&lt;/li&gt;
