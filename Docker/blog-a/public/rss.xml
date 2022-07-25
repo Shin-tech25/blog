@@ -1,7 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 01:38:24 GMT</lastBuildDate><item><title><![CDATA[Gatsby＋GitHub Actions+Ansibleで自分メディアを作った]]></title><description><![CDATA[背景・動機など Gatsby ビルド ~ GitHub Actions まで GitHub Actions で行われていること Ansible Playbook]]></description><link>https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</guid><pubDate>Mon, 25 Jul 2022 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;背景・動機など&quot;&gt;背景・動機など&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 14:01:13 GMT</lastBuildDate><item><title><![CDATA[Gatsby＋GitHub Actions+Ansibleで自分メディアを作った]]></title><description><![CDATA[背景・動機など 背景としては、Markdown で静的サイトを作ることで簡単に記述し、軽いブログをビルドすることが出来る、ということがあります。 また、CICD パイプラインによって自動ビルド、デプロイを行うことで執筆プロセスの改善を行いました。 なぜ Markdown…]]></description><link>https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</guid><pubDate>Mon, 25 Jul 2022 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;背景・動機など&quot;&gt;背景・動機など&lt;/h1&gt;
+&lt;p&gt;背景としては、Markdown で静的サイトを作ることで簡単に記述し、軽いブログをビルドすることが出来る、ということがあります。&lt;/p&gt;
+&lt;p&gt;また、CICD パイプラインによって自動ビルド、デプロイを行うことで執筆プロセスの改善を行いました。&lt;/p&gt;
+&lt;p&gt;なぜ Markdown を選んだかについては別記事で書きましたため、参考にしてください。&lt;a href=&quot;/why-blog-by-markdown&quot;&gt;なぜ WordPress ではなく Markdown なのか？&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;gatsby-ビルド--github-actions-まで&quot;&gt;Gatsby ビルド ~ GitHub Actions まで&lt;/h1&gt;
+&lt;p&gt;Gatsby ビルド ~ GitHub Actions のワークフロー起動までは次の記事にまとめました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/blog-tools&quot;&gt;gatsby build から git push するまでのバッチファイル作成&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;また、GitHub Actions の基礎については次の記事にまとめました。&lt;/p&gt;
 &lt;h1 id=&quot;github-actions-で行われていること&quot;&gt;GitHub Actions で行われていること&lt;/h1&gt;
-&lt;h1 id=&quot;ansible-playbook&quot;&gt;Ansible Playbook&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[冊封体制と五世紀の東アジアの勢力図]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/emperor-yuryaku/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/emperor-yuryaku/</guid><pubDate>Sun, 24 Jul 2022 23:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;雄略天皇&quot;&gt;雄略天皇&lt;/h1&gt;
+&lt;p&gt;GitHub Actions では、git push を起点にしてワークフローが起動し、GitHub 上の runner で処理が行われます。&lt;/p&gt;
+&lt;p&gt;ワークフローでは、Ansible の Playbook を実行するようになっていますため、runner から、デプロイ先に Playbook が実行されます。&lt;/p&gt;
+&lt;h1 id=&quot;ansible-playbook&quot;&gt;Ansible Playbook&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;blog-deploy.yml&lt;/code&gt;は以下のようにしました。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deploy Blog
+  &lt;span class=&quot;token key atrule&quot;&gt;hosts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; shin&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tech25.com
+  &lt;span class=&quot;token key atrule&quot;&gt;become&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;gather_facts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;
+
+  &lt;span class=&quot;token key atrule&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; /usr/share/nginx/html/をディレクトリごと削除
+      &lt;span class=&quot;token key atrule&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; /usr/share/nginx/html/
+        &lt;span class=&quot;token key atrule&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; absent
+
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; public/フォルダを/usr/share/nginx/html/に移動
+      &lt;span class=&quot;token key atrule&quot;&gt;synchronize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; files/
+        &lt;span class=&quot;token key atrule&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; /usr/share/nginx/html/
+        &lt;span class=&quot;token key atrule&quot;&gt;compress&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; no
+      &lt;span class=&quot;token key atrule&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; result
+
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; debug(public/フォルダを/usr/share/nginx/html/に移動)
+      &lt;span class=&quot;token key atrule&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; var=result&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ポイントとして、Nginx のディレクトリにビルドした public/フォルダをコピーしています。このとき、copy モジュールだと非常に時間がかかるため、上のように synchronize モジュールを使用しました。（オプションには、compress: no を指定します。）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[冊封体制と五世紀の東アジアの勢力図]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/emperor-yuryaku/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/emperor-yuryaku/</guid><pubDate>Sun, 24 Jul 2022 23:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;雄略天皇&quot;&gt;雄略天皇&lt;/h1&gt;
 &lt;p&gt;雄略天皇は五世紀の人物です。中国の歴史書（＝宋書倭国伝）では、「倭王武」と記載されており、埼玉県の稲荷山古墳から出土した辛亥名鉄剣の銘文に見える「獲加多支鹵大王」が「記紀」にいう「ワカタケル」天皇すなわち雄略天皇であることはほぼ確実だと考えられています。&lt;/p&gt;
 &lt;p&gt;猪狩りをする雄略天皇（安達吟光画）
 &lt;span
