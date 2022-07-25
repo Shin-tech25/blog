@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 14:04:39 GMT</lastBuildDate><item><title><![CDATA[GitHub Actionsの基礎]]></title><description><![CDATA[このページでは、GitHub Actions の基礎について解説します。]]></description><link>https://Shin-tech25.netlify.app/github-actions-basic/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/github-actions-basic/</guid><pubDate>Mon, 25 Jul 2022 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、GitHub Actions の基礎について解説します。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby＋GitHub Actions+Ansibleで自分メディアを作った]]></title><description><![CDATA[背景・動機など 背景としては、Markdown で静的サイトを作ることで簡単に記述し、軽いブログをビルドすることが出来る、ということがあります。 また、CICD パイプラインによって自動ビルド、デプロイを行うことで執筆プロセスの改善を行いました。 なぜ Markdown…]]></description><link>https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</guid><pubDate>Mon, 25 Jul 2022 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;背景・動機など&quot;&gt;背景・動機など&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Jul 2022 23:34:05 GMT</lastBuildDate><item><title><![CDATA[GitHub Actionsの基礎]]></title><description><![CDATA[このページでは、GitHub Actions の基礎について解説します。 GitHub Actions の概要 GitHub が 2019 年 11 月に正式公開した新機能が GitHub Actions です。GitHub…]]></description><link>https://Shin-tech25.netlify.app/github-actions-basic/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/github-actions-basic/</guid><pubDate>Mon, 25 Jul 2022 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、GitHub Actions の基礎について解説します。&lt;/p&gt;
+&lt;h1 id=&quot;github-actions-の概要&quot;&gt;GitHub Actions の概要&lt;/h1&gt;
+&lt;p&gt;GitHub が 2019 年 11 月に正式公開した新機能が GitHub Actions です。GitHub 上のリポジトリやイシューに対する様々な操作をトリガーとしてあらかじめ定義しておいた処理を実行することができる機能で、今まで外部サービスとの連携が必要だった自動テストや自動ビルドなどが GitHub だけで実現できるようになりました。他の CI/CD ツールと同様、リポジトリに対するプッシュやプルリクエストといった操作、もしくは指定した時刻になるといったイベントをトリガーとして、あらかじめ定義しておいた処理を実行する機能です。これらの処理は、GitHub が提供するサーバ上に用意された仮想マシン内で実行できるため、ユーザーが独自にサーバなどを準備する必要がない点がメリットです。&lt;/p&gt;
+&lt;h1 id=&quot;cicd-について&quot;&gt;CI/CD について&lt;/h1&gt;
+&lt;p&gt;CI(Continuous Integration、継続的インテグレーション)、CD(Continuous Delivery、継続的デリバリー)です。&lt;/p&gt;
+&lt;p&gt;CI はソフトウェアのビルドやテストを自動化して頻繁に実行することでソフトウェアの品質向上や開発効率化を目指す手法で、CD は CI に加えてリリースやデプロイまでも自動化する手法です。&lt;/p&gt;
+&lt;h1 id=&quot;ワークフローを配置する場所&quot;&gt;ワークフローを配置する場所&lt;/h1&gt;
+&lt;p&gt;git で管理するルートディレクトリに&lt;code class=&quot;language-text&quot;&gt;.github/workflows/xxxx.yml&lt;/code&gt;を配置します。push してリモートリポジトリに上げるだけで、自動で処理が実行される仕組みです。&lt;/p&gt;
+&lt;h1 id=&quot;例&quot;&gt;例&lt;/h1&gt;
+&lt;p&gt;以下にワークフローの例を示します。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ansible&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;playbook
+&lt;span class=&quot;token key atrule&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; master
+    &lt;span class=&quot;token key atrule&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Ansible/**&apos;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;.github/workflows/ansible-playbook.yml&apos;&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ansible-playbook&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ubuntu&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;latest
+    &lt;span class=&quot;token key atrule&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; actions/checkout@v2
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Run ansible playbook
+      &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;PRIVATE_KEY&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; secrets.PRIVATE_KEY &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token scalar string&quot;&gt;
+        mkdir -p ~/.ssh
+        echo &quot;$PRIVATE_KEY&quot; | tr -d &apos;\r&apos; &gt; ~/.ssh/id_rsa
+        chmod 700 ~/.ssh/id_rsa
+        eval $(ssh-agent -s)
+        ssh-add ~/.ssh/id_rsa
+        ssh-keyscan -p 22 -H XXX.XXX.XXX.XXX &gt;&gt; ~/.ssh/known_hosts  # Blog
+        cd Ansible/
+        ansible-playbook -i inventory/hosts.yml playbooks/site.yml --private-key ~/.ssh/id_rsa&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;大きく-2-つの枠組み条件とジョブ&quot;&gt;大きく 2 つの枠組み~条件とジョブ&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;on:&lt;/code&gt;から始まるブロックが、条件を表します。&lt;code class=&quot;language-text&quot;&gt;jobs:&lt;/code&gt;から始まるブロックが、ジョブを表します。&lt;/p&gt;
+&lt;h1 id=&quot;条件の書き方&quot;&gt;条件の書き方&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;push:&lt;/code&gt;は git push を起点にして、ワークフローが起動することを表しています。
+&lt;code class=&quot;language-text&quot;&gt;branches:&lt;/code&gt;はどのブランチかを指定することができます。ここに&lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;ブランチを記述することで、他のブランチで&lt;code class=&quot;language-text&quot;&gt;push&lt;/code&gt;されてもワークフローが起動しないようにすることが出来ます。この場合は、master ブランチでの直接の push か、プルリクエストによりマージコミットが追加されたタイミングでワークフローが起動します。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;paths:&lt;/code&gt;は変更があったフォルダの場所を指定することで、その他のフォルダに変更が加わった場合にワークフローが起動しないようにすることができます。&lt;/p&gt;
+&lt;h1 id=&quot;ジョブの書き方&quot;&gt;ジョブの書き方&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ansible-playbook:&lt;/code&gt;はジョブ名を表します、ここは任意です。一つのジョブの塊を表します。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;runs-on:&lt;/code&gt;で、処理を実行する環境（＝コンテナ）を指定します。このコンテナは GitHub 上の runner で、使い捨てのコンテナです。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;steps:&lt;/code&gt;で以下にステップを記述します。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;- uses:&lt;/code&gt;で既存に定義されているアクションを実行することもできます。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;- name:&lt;/code&gt;以下で、任意の名前のステップの一つの塊を表します。&lt;/p&gt;
+&lt;h1 id=&quot;参考&quot;&gt;参考&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.co.jp/features/actions&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Actions | GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.github.com/ja/actions&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub Actions のドキュメント&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://knowledge.sakura.ad.jp/23478/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub の新機能 GitHub Actions で試す CI/CD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Gatsby＋GitHub Actions+Ansibleで自分メディアを作った]]></title><description><![CDATA[背景・動機など 背景としては、Markdown で静的サイトを作ることで簡単に記述し、軽いブログをビルドすることが出来る、ということがあります。 また、CICD パイプラインによって自動ビルド、デプロイを行うことで執筆プロセスの改善を行いました。 なぜ Markdown…]]></description><link>https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</guid><pubDate>Mon, 25 Jul 2022 01:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;背景・動機など&quot;&gt;背景・動機など&lt;/h1&gt;
 &lt;p&gt;背景としては、Markdown で静的サイトを作ることで簡単に記述し、軽いブログをビルドすることが出来る、ということがあります。&lt;/p&gt;
 &lt;p&gt;また、CICD パイプラインによって自動ビルド、デプロイを行うことで執筆プロセスの改善を行いました。&lt;/p&gt;
 &lt;p&gt;なぜ Markdown を選んだかについては別記事で書きましたため、参考にしてください。&lt;a href=&quot;/why-blog-by-markdown&quot;&gt;なぜ WordPress ではなく Markdown なのか？&lt;/a&gt;&lt;/p&gt;
