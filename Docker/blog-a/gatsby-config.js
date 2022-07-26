@@ -11,6 +11,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-QWHR9EN0JS"],
+        pluginConfig: {
+          head: true
+        }
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/blog`,
