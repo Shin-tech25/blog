@@ -27,6 +27,12 @@ keywords: 冊封体制, 日本史, 雄略天皇
 
 ## 稲荷山古墳から出土した辛亥名鉄剣
 
+![辛亥名鉄剣](./inariyama_kinsakumeitekken_d_omote.jpg)
+出典 埼玉県立さきたま史跡の博物館
+
+辛亥年とは、西暦 471 年のことで、このことから、倭王武＝ワカタケル天皇であることが読み取れます。
+
 # 参考
 
 - [世界の歴史まっぷ 雄略天皇](https://sekainorekisi.com/glossary/%E9%9B%84%E7%95%A5%E5%A4%A9%E7%9A%87/)
+- [埼玉県立さきたま史跡の博物館 - 金錯銘鉄剣](https://sakitama-muse.spec.ed.jp/%E9%87%91%E9%8C%AF%E9%8A%98%E9%89%84%E5%89%A3)
