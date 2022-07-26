@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 26 Jul 2022 02:48:44 GMT</lastBuildDate><item><title><![CDATA[GitHub Actionsの基礎]]></title><description><![CDATA[このページでは、GitHub Actions の基礎について解説します。 GitHub Actions の概要 GitHub が 2019 年 11 月に正式公開した新機能が GitHub Actions です。GitHub…]]></description><link>https://Shin-tech25.netlify.app/github-actions-basic/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/github-actions-basic/</guid><pubDate>Mon, 25 Jul 2022 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、GitHub Actions の基礎について解説します。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 26 Jul 2022 04:23:16 GMT</lastBuildDate><item><title><![CDATA[GitHub Actionsの基礎]]></title><description><![CDATA[このページでは、GitHub Actions の基礎について解説します。 GitHub Actions の概要 GitHub が 2019 年 11 月に正式公開した新機能が GitHub Actions です。GitHub…]]></description><link>https://Shin-tech25.netlify.app/github-actions-basic/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/github-actions-basic/</guid><pubDate>Mon, 25 Jul 2022 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;このページでは、GitHub Actions の基礎について解説します。&lt;/p&gt;
 &lt;h1 id=&quot;github-actions-の概要&quot;&gt;GitHub Actions の概要&lt;/h1&gt;
 &lt;p&gt;GitHub が 2019 年 11 月に正式公開した新機能が GitHub Actions です。GitHub 上のリポジトリやイシューに対する様々な操作をトリガーとしてあらかじめ定義しておいた処理を実行することができる機能で、今まで外部サービスとの連携が必要だった自動テストや自動ビルドなどが GitHub だけで実現できるようになりました。他の CI/CD ツールと同様、リポジトリに対するプッシュやプルリクエストといった操作、もしくは指定した時刻になるといったイベントをトリガーとして、あらかじめ定義しておいた処理を実行する機能です。これらの処理は、GitHub が提供するサーバ上に用意された仮想マシン内で実行できるため、ユーザーが独自にサーバなどを準備する必要がない点がメリットです。&lt;/p&gt;
 &lt;h1 id=&quot;cicd-について&quot;&gt;CI/CD について&lt;/h1&gt;
@@ -177,8 +177,65 @@
     &lt;/span&gt;
 出典 埼玉県立さきたま史跡の博物館&lt;/p&gt;
 &lt;p&gt;辛亥年とは、西暦 471 年のことで、このことから、倭王武＝ワカタケル天皇であることが読み取れます。&lt;/p&gt;
-&lt;h1 id=&quot;冊封体制&quot;&gt;冊封体制&lt;/h1&gt;
-&lt;p&gt;四七八年、倭王武こと雄略天皇は、当時、南北朝時代であった中国の南朝の宋に朝貢しました。朝貢とは一部の王のみに許されていたことでした。&lt;/p&gt;
+&lt;h1 id=&quot;冊封体制と-5-世紀の東アジア&quot;&gt;冊封体制と 5 世紀の東アジア&lt;/h1&gt;
+&lt;p&gt;478 年、倭王武こと雄略天皇は、当時、南北朝時代であった中国の南朝の宋に朝貢しました。朝貢とは一部の王のみに許されていたことでした。朝貢を認められ、臣下にある周辺の従属国の王として保護を受けることを冊封体制とよびます。冊封を受けた従属国は、受けていない国に対して中国皇帝の権威を後ろ盾にすることができ、もし他の従属国から責められた場合は、中国が守ってくれるという関係でもありました。&lt;/p&gt;
+&lt;p&gt;5 世紀の東アジア
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 250px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9f3183aeba987600be76eb3516d359ef/9fb78/east_asia_in_5thcentury.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAECAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAACAwH/2gAMAwEAAhADEAAAAeywsVsF52B0Fn//xAAaEAACAgMAAAAAAAAAAAAAAAAAEQEQEiAh/9oACAEBAAEFAuDvFkQtP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEDAQE/AWM//8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIQEf/aAAgBAgEBPwFG0xZ//8QAFRABAQAAAAAAAAAAAAAAAAAAICH/2gAIAQEABj8CMH//xAAbEAEBAQACAwAAAAAAAAAAAAABABExUSGR0f/aAAgBAQABPyHX16k8EO9SYfLXKAZ4WEuQ7f/aAAwDAQACAAMAAAAQaNd//8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQMf/aAAgBAwEBPxAATdZ//8QAGBEBAAMBAAAAAAAAAAAAAAAAAQARIRD/2gAIAQIBAT8QWphdbABnP//EABwQAQEAAgMBAQAAAAAAAAAAAAERACExQVFxwf/aAAgBAQABPxDUZJtNm4LSdTX5hFnBieYFARfGAY6Dr5OcjiLclNdZJrGCr3n/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;5世紀の東アジア&quot;
+        title=&quot;5世紀の東アジア&quot;
+        src=&quot;/static/9f3183aeba987600be76eb3516d359ef/9fb78/east_asia_in_5thcentury.jpg&quot;
+        srcset=&quot;/static/9f3183aeba987600be76eb3516d359ef/f544b/east_asia_in_5thcentury.jpg 200w,
+/static/9f3183aeba987600be76eb3516d359ef/9fb78/east_asia_in_5thcentury.jpg 250w&quot;
+        sizes=&quot;(max-width: 250px) 100vw, 250px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+出典 ４～５世紀の東アジア(『新日本史』26 頁、カラー)&lt;/p&gt;
+&lt;p&gt;雄略天皇は、中国の権威を借りて、朝鮮半島南部の諸国に対する政治的・軍事的な優位を確保しようとして朝貢しました。一方、百済も同様の理由で宋とは冊封関係にあったため、百済を除く六カ国の指揮権をヤマト政権（倭国）に対して与えました。&lt;/p&gt;
+&lt;p&gt;宋（南宋）は当時、北魏（北宋）と敵対関係にあったため、戦力を増やすためにヤマト政権（倭国）や百済を冊封関係に置こうとしていました。百済と倭国は当時良好な関係にありました。奈良県石上神宮が所蔵している七支刀（国宝）は、四世紀に百済王から贈られたものです。加えて、六世紀には百済から、儒教・仏教・歴訪なども伝わりました。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHrRsRC1f/EABoQAAEFAQAAAAAAAAAAAAAAAAIAARAREjH/2gAIAQEAAQUCMqfSHk//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAESAzMmGh/9oACAEBAAY/ArFpFvDJw//EABwQAAEDBQAAAAAAAAAAAAAAAAABESAhMUFxof/aAAgBAQABPyFDL7C+jyp+iH//2gAMAwEAAgADAAAAEEzP/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8Qp//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAQADAAIDAAAAAAAAAAAAAAEAETEhgUFxwf/aAAgBAQABPxCocTKLfWBAcBAKNnW+ziGya+ARB6lBhkJ//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;七支刀（国宝）&quot;
+        title=&quot;七支刀（国宝）&quot;
+        src=&quot;/static/b8d63dd4c16880d77aead1d6090d7863/a296c/shitishitou.jpg&quot;
+        srcset=&quot;/static/b8d63dd4c16880d77aead1d6090d7863/f544b/shitishitou.jpg 200w,
+/static/b8d63dd4c16880d77aead1d6090d7863/41689/shitishitou.jpg 400w,
+/static/b8d63dd4c16880d77aead1d6090d7863/a296c/shitishitou.jpg 800w,
+/static/b8d63dd4c16880d77aead1d6090d7863/b3ee8/shitishitou.jpg 960w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+出典 &lt;a href=&quot;https://www.touken-world.jp/tips/32778/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;刀剣ワールド 石上神宮と古代の鉄剣 七支刀（しちしとう）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;伽耶は日本書紀では、任那と呼ばれていて、小国連合的なものでした。当時大和政権はこの地と密接な関係をもっていました。鉄資源などを確保していました。&lt;/p&gt;
+&lt;h1 id=&quot;渡来人の編成化（部）&quot;&gt;渡来人の編成化（部）&lt;/h1&gt;
+&lt;p&gt;475 年、倭と友好関係にあった百済が高句麗に攻められ、王が戦士して一度滅びました。この戦乱で多くの王族と百済の人々が倭に渡来してきます。その結果、様々な技術や文化が伝わりました。&lt;/p&gt;
+&lt;p&gt;ヤマト政権は、渡来人を部という職業集団に組織し、政権の職掌を分担させました。部はもともと百済の制度で、渡来人の組織化が官僚制度が作られる発端であったと考えられています。&lt;/p&gt;
 &lt;h1 id=&quot;参考&quot;&gt;参考&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://sekainorekisi.com/glossary/%E9%9B%84%E7%95%A5%E5%A4%A9%E7%9A%87/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;世界の歴史まっぷ 雄略天皇&lt;/a&gt;&lt;/li&gt;
