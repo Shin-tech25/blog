@@ -6,6 +6,8 @@ slug: emperor-yuryaku
 tags:
   - 日本史
   - 雄略天皇
+  - 古墳時代
+  - ヤマト政権
 keywords: 冊封体制, 日本史, 雄略天皇
 ---
 
