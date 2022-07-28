@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Jul 2022 13:31:46 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Jul 2022 23:59:09 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
 &lt;p&gt;こちらのブログですが、「ジャンルを問わずひたすら投稿すること」を目標にしています（笑）。&lt;/p&gt;
 &lt;p&gt;サイトの設計をする上でジャンルを絞った方が読者目線だと分かりやすいと思いますが、ジャンルを絞らないほうが継続しやすいのと自分のノートとしても活用したいためジャンルの制限はつけませんでした。&lt;/p&gt;
 &lt;p&gt;関連記事やタグ付けなどで関連性をつけていますが、記事が増えてくるとそれだけではどうしても対応できないためトップページを設けました。&lt;/p&gt;
@@ -27,7 +27,63 @@
 &lt;p&gt;明治維新のときもそうでしたが、日本は外圧や政治的な背景によって大きく変化します。宗教を輸入するというのは普通そんな簡単ではありません。&lt;/p&gt;
 &lt;p&gt;法隆寺では、飛鳥文化に影響を与えた中国の南朝様式と北魏様式の両方の仏像を見ることができます。&lt;/p&gt;
 &lt;h1 id=&quot;冠位十二階&quot;&gt;冠位十二階&lt;/h1&gt;
+&lt;p&gt;冠位十二階は役人の位を 12 個に分け、位に応じて冠の色を分けました。氏や姓ではなく個人の能力に応じて役人に取り立てようと定められました。聖徳太子が身分に関係なく役人に取り立てようと政治の改革に努めたことがわかります。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 300px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/63d0b2efcbec46aae4248adbdd69ea3d/135ae/kani-jyunikai.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 123.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAABcSAAAXEgFnn9JSAAAE7klEQVQ4y3VVC2wUVRR9O7M7szO7OzP7m/13d1tou4XSClja0lJlQSFAA6UtjYBgDKIJQaLGhIDVRAoFitZCgPihrQgIShGiqPgLoKkIVdQ2KMRfjImCkooxEQWf925vYy11krNvdt7Mfeeee+57TLRIccaYnQX9gVR23UTmFb2TxqxcZtcCCXjuZxZBh1EDBABBgA+QDwgR8FkOIE7/mTSrYmesNrn5TEPsiWu1yZZ3ZhRtbFNTxW6YExQtJMBoJTgBMcBsQB5AzpBhbAqgjOYZq83ZsvveaCdfHGrly2Gszt90lP17VQPuo3sfMSoHZBNz1SbJRZrh88O9gmsY1cl1z9SFm3+pDzefq400X56deKwRV3fLMZ0+HE8fewBewGTAKGTk8ZkqjEUA3WcGkK0Yxh8jwJyJyllJp5UphfMerRMEOZj52CJImDoFGmSIiygOl47P2PrdH5c+3t49fTAlecxdXT69fv9rUu3BHzwLXuwsW/psm8MbR0bikNRtAAMwGjAJF4gl83EBtmXvh01PHTizNfMWzAiu+v3PmStO81nNp7lxTzdPNHR04Zz9lkYsxDhiJFDKiCyAIxzPzQRse6ln5Y5XPludCQgiGXpNx6uBJUf41LVv9/sWH+ZKTftGZGf1pzSySC7ABXBTMFzElZVTgMEZsHtg+6FPGwfyRe+U3a2zmVuyWHzxODanNboidftCq6Kjth5BtFnJHt6MLwf8NhaLFM4a5R8S8JFBbZQdlUu183Z/1yWL+tMF1dz1QrxkEyuY7gMqgkMLCMM0TAIm4mLRZL73xoCcsz41tJM7vJynZ3AuOvhbZv7r+JyuKsAEuvdS6hhUjyRyRwg4pkrrUQP7Lrs8f18qHP/jRbvGTyqxZuyMIsGKPgyThhoxRNuU4JjILTRuDCiAhmIlvDw3y81KUozVRFctm7oQPScKgpf0s1F1/TTCe8yMJPK8I2kob9+2xHt+T/jl/kOO3hNP57XsaynFKsuJoGAb5kOdfDgTOyWZVzQCQ3aH9OXzkX38IwfnH4zm/KTGj7QWd2bk/SKKBbkZUEM+9JGGUUw/Qj4cFnCyu68j0n3tzSD/+VjVVX7Mx9/bmngYZ9Yu0iTq0zmUOu4mEUAatS0uneYYCNgzNKAcuXNOODF/EitsmMJKGirY2PtXr1sAfRIRLMyEXrZTuiYVyE1pm8FotjmShioby8W+b37dduUq7/38q/6mzsOn1rliE/3Sf3tZIoa4y9ShwQtuqnCOwJCx899ebOFwnT7VjQM/9n7vUdIMr2mARXRvUqWx9YKh/+kUZ9+F749c+e133t6x+8+/rnN+9tx3bRiweu58lXbiemJn0I6Nmibzi8pctDmsgs1hzWDAwPKHNuTsf+OTkuO9/eXtB0+UTkgvXIoVtVqt4DOLjTT0EkP0IZ43Buw2GYYte7rXtB3oWT8YMFMpZnFsgN/jTNQf1KPFTeHUrQadI8N9iKaeh0wdLneG4ZOHvk407z2bm3lr1x+cKUZksyTJPBwOcdEqcSNccLBroJdRx2LaDERiqVL7oQR6IJIt0xbnMnxBlcWLZ3pEWXtXVRSeTk+7Lggit+uhHcjIIoj48W1UVZXSHUUHVxb1t1u02solWckhSzHFHS1MOc3RaSabVXoolYb/OKlYLIKDjkmV4Bw42TJQSS6VMkFJlH8A06xh1gr7+DcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;冠位十二階&quot;
+        title=&quot;冠位十二階&quot;
+        src=&quot;/static/63d0b2efcbec46aae4248adbdd69ea3d/135ae/kani-jyunikai.png&quot;
+        srcset=&quot;/static/63d0b2efcbec46aae4248adbdd69ea3d/9ec3c/kani-jyunikai.png 200w,
+/static/63d0b2efcbec46aae4248adbdd69ea3d/135ae/kani-jyunikai.png 300w&quot;
+        sizes=&quot;(max-width: 300px) 100vw, 300px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;憲法十七条&quot;&gt;憲法十七条&lt;/h1&gt;
+&lt;p&gt;聖徳太子が役人の心構えを示すため、自ら定めたと言われている憲法です。「一に曰く、和を以て貴しと為す」。争いごとが絶えない中、聖徳太子が第一条で最初に示したのは人々の和でした。第二条では、「仏法僧」を大事にしなさい、と定めました。仏は「ほとけ」、法は「お経」、僧は「お坊さん」を表します。仏教を敬うように定め、政治に仏教を役立てることを示しました。第三条では、「詔はつつしんで受け止めなさい。」詔とは、天皇の言葉を表します。天皇に従うように命じました。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 370px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b6bdbccbe571b0b99d0654713531948a/b5ae4/jyu-shiti-jyo.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.27027027027026%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQP/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABscWVCsJYb//EABoQAAMAAwEAAAAAAAAAAAAAAAABEQIDBBT/2gAIAQEAAQUCtMnF6CHSprR//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/AZWP/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Bh//EABsQAAIBBQAAAAAAAAAAAAAAAAAQAREhMYGR/9oACAEBAAY/Ait+mIW1/8QAHBABAAICAwEAAAAAAAAAAAAAAQARMUEhUbHB/9oACAEBAAE/IW7ZrMzzlAk+kC+wwrpBds//2gAMAwEAAgADAAAAECgf/8QAFhEBAQEAAAAAAAAAAAAAAAAAEQAB/9oACAEDAQE/ENEhf//EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8Qaww//8QAHRABAAMAAgMBAAAAAAAAAAAAAQARIUFxMZHh8P/aAAgBAQABPxC6DyUqn5yJaPXMC35kKqTyWiZlOW9xnt3dsYYNvKz/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;十七条の憲法&quot;
+        title=&quot;十七条の憲法&quot;
+        src=&quot;/static/b6bdbccbe571b0b99d0654713531948a/b5ae4/jyu-shiti-jyo.jpg&quot;
+        srcset=&quot;/static/b6bdbccbe571b0b99d0654713531948a/f544b/jyu-shiti-jyo.jpg 200w,
+/static/b6bdbccbe571b0b99d0654713531948a/b5ae4/jyu-shiti-jyo.jpg 370w&quot;
+        sizes=&quot;(max-width: 370px) 100vw, 370px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;まとめ&quot;&gt;まとめ&lt;/h1&gt;
 &lt;p&gt;冠位十二階によって、家柄ではなく、個人の能力や功績に応じて冠位が与えられ、昇進可能にしたこと、憲法十七条では、能力で選ばれた官僚が、法に基づいて中央集権政治を行うようになりました。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[崇仏論争に見るヤマト政権内部での権力闘争]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/yamato-kenryoku-tousou/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/yamato-kenryoku-tousou/</guid><pubDate>Wed, 27 Jul 2022 22:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;崇仏論争&quot;&gt;崇仏論争&lt;/h1&gt;
 &lt;p&gt;物部氏は軍事を職掌としており、政権内での地位を示す姓は、「連（むらじ）」でした。一方、蘇我氏は近畿地方の有力豪族で姓は「臣」、財務担当で先進的な知識を持つ渡来人とも深く交流していました。&lt;/p&gt;
