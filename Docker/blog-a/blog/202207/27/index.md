@@ -1,6 +1,6 @@
 ---
 title: "律令国家の礎"
-date: "2022-07-28T07:00:00"
+date: "2022-07-28T17:00:00"
 description: "律令国家の礎を築いた聖徳太子、推古朝"
 slug: ritsuryo-kokka-ishizue
 tags:
