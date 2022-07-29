@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Jul 2022 23:59:09 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 Jul 2022 00:05:26 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
 &lt;p&gt;こちらのブログですが、「ジャンルを問わずひたすら投稿すること」を目標にしています（笑）。&lt;/p&gt;
 &lt;p&gt;サイトの設計をする上でジャンルを絞った方が読者目線だと分かりやすいと思いますが、ジャンルを絞らないほうが継続しやすいのと自分のノートとしても活用したいためジャンルの制限はつけませんでした。&lt;/p&gt;
 &lt;p&gt;関連記事やタグ付けなどで関連性をつけていますが、記事が増えてくるとそれだけではどうしても対応できないためトップページを設けました。&lt;/p&gt;
@@ -18,6 +18,7 @@
 &lt;h2 id=&quot;飛鳥・飛鳥時代&quot;&gt;飛鳥・飛鳥時代&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/yamato-kenryoku-tousou&quot;&gt;崇仏論争に見るヤマト政権内部での権力闘争&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/ritsuryo-kokka-ishizue&quot;&gt;律令国家の礎&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;平安時代&quot;&gt;平安時代&lt;/h2&gt;
 &lt;h2 id=&quot;鎌倉時代&quot;&gt;鎌倉時代&lt;/h2&gt;

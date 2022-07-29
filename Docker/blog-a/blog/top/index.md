@@ -36,6 +36,7 @@ keywords: 日本史, 雑記ブログ
 ## 飛鳥・飛鳥時代
 
 - [崇仏論争に見るヤマト政権内部での権力闘争](/yamato-kenryoku-tousou)
+- [律令国家の礎](/ritsuryo-kokka-ishizue)
 
 ## 平安時代
 
