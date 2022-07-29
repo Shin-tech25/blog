@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 Jul 2022 00:05:26 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Shin-tech25's RSS Feed]]></title><description><![CDATA[Engineering Blog]]></description><link>https://Shin-tech25.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 29 Jul 2022 04:01:39 GMT</lastBuildDate><item><title><![CDATA[トップページ]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/top-page/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/top-page/</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;p&gt;全ページの関連性をまとめました。&lt;/p&gt;
 &lt;p&gt;こちらのブログですが、「ジャンルを問わずひたすら投稿すること」を目標にしています（笑）。&lt;/p&gt;
 &lt;p&gt;サイトの設計をする上でジャンルを絞った方が読者目線だと分かりやすいと思いますが、ジャンルを絞らないほうが継続しやすいのと自分のノートとしても活用したいためジャンルの制限はつけませんでした。&lt;/p&gt;
 &lt;p&gt;関連記事やタグ付けなどで関連性をつけていますが、記事が増えてくるとそれだけではどうしても対応できないためトップページを設けました。&lt;/p&gt;
@@ -23,7 +23,82 @@
 &lt;h2 id=&quot;平安時代&quot;&gt;平安時代&lt;/h2&gt;
 &lt;h2 id=&quot;鎌倉時代&quot;&gt;鎌倉時代&lt;/h2&gt;
 &lt;h1 id=&quot;世界史&quot;&gt;世界史&lt;/h1&gt;
-&lt;h1 id=&quot;哲学&quot;&gt;哲学&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[律令国家の礎]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/ritsuryo-kokka-ishizue/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/ritsuryo-kokka-ishizue/</guid><pubDate>Thu, 28 Jul 2022 08:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;グローバルスタンダードの輸入（飛鳥文化）&quot;&gt;グローバルスタンダードの輸入（飛鳥文化）&lt;/h1&gt;
+&lt;h1 id=&quot;哲学&quot;&gt;哲学&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[飛鳥文化]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/asuka-bunka/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/asuka-bunka/</guid><pubDate>Fri, 29 Jul 2022 02:45:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;飛鳥文化&quot;&gt;飛鳥文化&lt;/h1&gt;
+&lt;p&gt;七世紀前半に蘇我氏や王族によって広められた仏教中心の文化を飛鳥文化といいます。仏教が日本に入り込めた理由について、&lt;a href=&quot;/ritsuryo-kokka-ishizue&quot;&gt;律令国家の礎&lt;/a&gt;にも書きましたが、もともと自然崇拝というフレキシブルさがあったからでしょう。&lt;/p&gt;
+&lt;p&gt;法隆寺に行けば、飛鳥文化に影響を与えた中国の南朝様式と北魏様式の両方の仏像を見ることができます。北魏様式は、正面から見ることを前提として、アルカイックスマイルを浮かべています。それに対して南朝様式は、穏やかな顔で全体に丸みがあります。&lt;/p&gt;
+&lt;p&gt;アルカイック・スマイルは古代ギリシアのアルカイク美術の彫像に見られる表情です。飛鳥文化についても同様の表情が見られます。口元だけが微笑みの形を伴っているのが特徴です。&lt;/p&gt;
+&lt;p&gt;アルカイックスマイルの例：　クーロスの頭部
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 501px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e3a68774c137014881f008fd06bb87ab/458f6/501px-003MA_Equestrian_Kouros_2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 119.76047904191618%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAEEBQID/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgED/9oADAMBAAIQAxAAAAGPDSqDWigzb4Bc8M//xAAbEAACAwADAAAAAAAAAAAAAAABAgMRIQAxMv/aAAgBAQABBQJUweyNjoqUKEvqy0JZs65//8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQMBAT8BI//EABgRAAIDAAAAAAAAAAAAAAAAAAAREBIh/9oACAECAQE/AbaMUf/EABgQAQEAAwAAAAAAAAAAAAAAAAEAEBEg/9oACAEBAAY/ApMal5//xAAbEAADAAIDAAAAAAAAAAAAAAAAAREQITFRYf/aAAgBAQABPyHQYlZ4msbYCrV0IbYi0lXo/9oADAMBAAIAAwAAABBkMIH/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREx/9oACAEDAQE/EMDRXCs//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EBGxrH//xAAaEAEBAQEBAQEAAAAAAAAAAAABEQAhMVFh/9oACAEBAAE/EJkgLFS5FgpPE6YxkwIY0p+ZNARgPTc7eM5kOPjrA6uWJ69V+7//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;クーロスの頭部&quot;
+        title=&quot;クーロスの頭部&quot;
+        src=&quot;/static/e3a68774c137014881f008fd06bb87ab/458f6/501px-003MA_Equestrian_Kouros_2.jpg&quot;
+        srcset=&quot;/static/e3a68774c137014881f008fd06bb87ab/f544b/501px-003MA_Equestrian_Kouros_2.jpg 200w,
+/static/e3a68774c137014881f008fd06bb87ab/41689/501px-003MA_Equestrian_Kouros_2.jpg 400w,
+/static/e3a68774c137014881f008fd06bb87ab/458f6/501px-003MA_Equestrian_Kouros_2.jpg 501w&quot;
+        sizes=&quot;(max-width: 501px) 100vw, 501px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+出典 Wikipedia&lt;/p&gt;
+&lt;p&gt;北魏様式:　法隆寺金堂釈迦三尊像
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 511px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 148.33659491193737%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgUD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHG63YwoDI0PZrdKlRP/8QAHRAAAQQCAwAAAAAAAAAAAAAAAAECERIDIhMhQf/aAAgBAQABBQJrZOMVsDE18VJMXbapD7KYpNh17f/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABYRAQEBAAAAAAAAAAAAAAAAABEAEP/aAAgBAgEBPwFnf//EABkQAAIDAQAAAAAAAAAAAAAAAAAxARAyof/aAAgBAQAGPwK4FUQMQzXDR//EABwQAAMBAAIDAAAAAAAAAAAAAAABESFBUTFhgf/aAAgBAQABPyHyaKuSqNkmdjquyutn1rY8KYpT6Q3cRJeqaN6avMP/2gAMAwEAAgADAAAAEOcEMf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEBH/2gAIAQMBAT8QC5Dn/8QAGBEBAQADAAAAAAAAAAAAAAAAAQAQESH/2gAIAQIBAT8QVvBOxf/EACIQAQACAQMDBQAAAAAAAAAAAAEAESExQVFhcYGRsdHw8f/aAAgBAQABPxBU6BBSPonngPMywIvvvBgTGqYv8lYHBWKlVmi47138xGwMC4GJcLCqOrFiBcV2g3BW96fMIFXIoXoE/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;法隆寺金堂釈迦三尊像&quot;
+        title=&quot;法隆寺金堂釈迦三尊像&quot;
+        src=&quot;/static/af98716da1ae30f87bbc4ba2e5a27517/e6801/o0511075812755114371.jpg&quot;
+        srcset=&quot;/static/af98716da1ae30f87bbc4ba2e5a27517/f544b/o0511075812755114371.jpg 200w,
+/static/af98716da1ae30f87bbc4ba2e5a27517/41689/o0511075812755114371.jpg 400w,
+/static/af98716da1ae30f87bbc4ba2e5a27517/e6801/o0511075812755114371.jpg 511w&quot;
+        sizes=&quot;(max-width: 511px) 100vw, 511px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+参考 &lt;a href=&quot;https://ameblo.jp/iyokumamoto/entry-11706442782.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ameblo.jp/iyokumamoto/entry-11706442782.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;南朝様式：　法隆寺百済観音像
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 170px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 323.5294117647059%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABBABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAQFAwIB/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIDAAT/2gAMAwEAAhADEAAAAYfemgyYwDdU1LamYViDQ6MbWwuCBB5Onr3TJQTAzADJiAd//8QAIRABAAICAQMFAAAAAAAAAAAAAQACAxESBBAxEyEiM0H/2gAIAQEAAQUCia7GpesKDKU3a+Fuejrt8ki8XFlF3Ls6ZSzePjF7RtMIzfKryH8POb7P/8QAFxEAAwEAAAAAAAAAAAAAAAAAABARQf/aAAgBAwEBPwEj1Ur/AP/EABkRAQEAAwEAAAAAAAAAAAAAAAARARASIv/aAAgBAgEBPwFVdp5Rlzv/xAAeEAACAgICAwAAAAAAAAAAAAAAARAhEVECMUFhgf/aAAgBAQAGPwKUKpyn1Cq/Rw8bhMxcu4Y4yaLPkM//xAAfEAADAAICAwEBAAAAAAAAAAAAAREhMUFREGHBgZH/2gAIAQEAAT8hIF2/GvmrYhKnVXIho6WlsXKnhGoWkQl3zrsNNsw6neBpU9CiBTYn7v4PMdH6QvnhyjIPWcFN/RlEspgylaV4Hg2Pl5x//9oADAMBAAIAAwAAABD38gMQD0L8P//EABkRAAIDAQAAAAAAAAAAAAAAAAARARAxUf/aAAgBAwEBPxBQMZIjitMW/wD/xAAZEQEBAQEBAQAAAAAAAAAAAAABABEhEDH/2gAIAQIBAT8QXtklPS1PRtw5ns+X/8QAIBABAAICAgMAAwAAAAAAAAAAAQARITFBYVFxkYGh8P/aAAgBAQABPxCl4ogOXq6i5zG+EcOY9J3CtmowdmagXYFL1KPBGzbNlwGYaMvlhoKc94W7viZXttboLH2o/SXnoa8lw+kKsWW5fiCYZlwNfY5gZwItPyeext5QLI8G4OHTE0YopVDW3r3uVLIFqDY2b7ipsNx1/vc1+mfoE//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;法隆寺百済観音像&quot;
+        title=&quot;法隆寺百済観音像&quot;
+        src=&quot;/static/a8af4a6e986a0f56923ce65b4fd68b8d/c2e49/o0170055012755115931.jpg&quot;
+        srcset=&quot;/static/a8af4a6e986a0f56923ce65b4fd68b8d/c2e49/o0170055012755115931.jpg 170w&quot;
+        sizes=&quot;(max-width: 170px) 100vw, 170px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
+参考 &lt;a href=&quot;https://ameblo.jp/iyokumamoto/entry-11706442782.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ameblo.jp/iyokumamoto/entry-11706442782.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[律令国家の礎]]></title><description><![CDATA[…]]></description><link>https://Shin-tech25.netlify.app/ritsuryo-kokka-ishizue/</link><guid isPermaLink="false">https://Shin-tech25.netlify.app/ritsuryo-kokka-ishizue/</guid><pubDate>Thu, 28 Jul 2022 08:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;グローバルスタンダードの輸入（飛鳥文化）&quot;&gt;グローバルスタンダードの輸入（飛鳥文化）&lt;/h1&gt;
 &lt;p&gt;七世紀前半に、日本の神々は自然崇拝に由来する八百万の神であり非常にフレキシブルでした。グローバル（ここでいうグローバルとは、中国のことです）スタンダードである仏教文化を展開し律令国家を形成させようとしました。&lt;/p&gt;
 &lt;p&gt;明治維新のときもそうでしたが、日本は外圧や政治的な背景によって大きく変化します。宗教を輸入するというのは普通そんな簡単ではありません。&lt;/p&gt;
 &lt;p&gt;法隆寺では、飛鳥文化に影響を与えた中国の南朝様式と北魏様式の両方の仏像を見ることができます。&lt;/p&gt;
