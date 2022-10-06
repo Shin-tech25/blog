@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://Shin-tech25.netlify.app/top-page/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/asuka-bunka/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/ritsuryo-kokka-ishizue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/yamato-kenryoku-tousou/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/shiseiseido-yamato-seiken/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/shinuhodo-dokusyo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/github-actions-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/gatsby-cicd-markdown-blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/emperor-yuryaku/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/gatsby-internal-link/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/google-search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/hacking-reconnaissance/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/hacking-gathering-information/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/hacking-phase-and-strategy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/information-security-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/ethical-hacker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://Shin-tech25.netlify.app/book-review-howto-learn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/micro-service-feature/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/Ansible-Prometheus-Grafana/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/aws-responsibility-security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/blog-tools/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/Nginx-LetsEncrypt/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/why-blog-by-markdown/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/cloud-native-computing-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/react-d3-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/react-hooks-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/JavaScript-Array-Manipulation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/ansible-playbook-maintainance/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/moff-iias-takao/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://Shin-tech25.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/tags/CI/CD/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://Shin-tech25.netlify.app/tags/SSL/TLS/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
