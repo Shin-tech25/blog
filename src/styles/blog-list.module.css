@@ -77,6 +77,10 @@
   text-align: left;
 }
 
+.tagArticle {
+  margin-bottom: var(--spacing-5);
+}
+
 .tagList {
   display: flex;
   flex-wrap: wrap;

@@ -53,7 +53,7 @@ const BlogList = ({ data, pageContext, location }) => {
   const FeaturedTags = () => (
     <section className={styles.featuredTags}>
       <h2 className={styles.sectionTitle}>人気のタグ</h2>
-      <ul className={`${styles.tagList} ${styles.tagListCenter}`}>
+      <ul className={styles.tagList}>
         <li className={styles.tagItem}>
           <Link to="/tags/python">python</Link>
         </li>
