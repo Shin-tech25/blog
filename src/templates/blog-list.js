@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import kebabCase from "lodash/kebabCase"
+import * as styles from "../styles/blog-list.module.css"
 
 const BlogList = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -17,63 +18,93 @@ const BlogList = ({ data, pageContext, location }) => {
     )
   }
 
-  const FeaturedSection = () => (
-    <section>
-      <h2>人気の記事</h2>
-      <ul>
+  const FeaturedArticles = () => (
+    <section className={styles.featuredArticles}>
+      <h2 className={styles.sectionTitle}>人気の記事</h2>
+      <ul className={styles.articleList}>
         <li>
-          <Link to="/blog/popular-post-1">人気記事 1</Link>
+          <Link
+            to="/blog/4-months-pmp-exam-success"
+            className={styles.articleLink}
+          >
+            PMP受験記録
+          </Link>
         </li>
         <li>
-          <Link to="/blog/popular-post-2">人気記事 2</Link>
+          <Link
+            to="/blog/python-temporary-data-storage"
+            className={styles.articleLink}
+          >
+            Pythonによる一時データ保存のベストプラクティス
+          </Link>
         </li>
         <li>
-          <Link to="/blog/popular-post-3">人気記事 3</Link>
-        </li>
-      </ul>
-      <h2>人気のタグ</h2>
-      <ul>
-        <li>
-          <Link to="/tags/tag1">#タグ1</Link>
-        </li>
-        <li>
-          <Link to="/tags/tag2">#タグ2</Link>
-        </li>
-        <li>
-          <Link to="/tags/tag3">#タグ3</Link>
+          <Link
+            to="/blog/us-stock-market-cap-strategies"
+            className={styles.articleLink}
+          >
+            米国株投資における時価総額別の分類と投資戦略
+          </Link>
         </li>
       </ul>
     </section>
+  )
+
+  const FeaturedTags = () => (
+    <section className={styles.featuredTags}>
+      <h2 className={styles.sectionTitle}>人気のタグ</h2>
+      <ul className={`${styles.tagList} ${styles.tagListCenter}`}>
+        <li className={styles.tagItem}>
+          <Link to="/tags/python">python</Link>
+        </li>
+        <li className={styles.tagItem}>
+          <Link to="/tags/linux">Linux</Link>
+        </li>
+        <li className={styles.tagItem}>
+          <Link to="/tags/資格試験">資格試験</Link>
+        </li>
+      </ul>
+    </section>
+  )
+
+  const FeaturedSection = () => (
+    <div className={styles.featuredSection}>
+      <FeaturedArticles />
+      <FeaturedTags />
+    </div>
   )
 
   return (
     <Layout location={location}>
       {currentPage === 1 && <FeaturedSection />}
 
-      <ol style={{ listStyle: `none` }}>
+      <ol className={styles.postList}>
+        {currentPage === 1 && (
+          <h2 className={styles.sectionTitle}>最近の投稿</h2>
+        )}
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={`blog${post.fields.slug}`}>
+            <li key={`blog${post.fields.slug}`} className={styles.postItem}>
               <article
                 className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h3>
                     <Link to={`/blog${post.fields.slug}`} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
+                  </h3>
                   <small>{post.frontmatter.date}</small>
-                  <div className="tag-article">
+                  <div className={styles.tagArticle}>
                     {post.frontmatter.tags &&
                       post.frontmatter.tags.length > 0 && (
-                        <ul className="tag-list">
+                        <ul className={styles.tagList}>
                           {post.frontmatter.tags.map((tag, index) => (
-                            <li key={index} className="tag-item">
+                            <li key={index} className={styles.tagItem}>
                               <Link
                                 to={`/tags/${kebabCase(tag)}/`}
                                 itemProp="url"
@@ -102,31 +133,40 @@ const BlogList = ({ data, pageContext, location }) => {
 
       {/* ページネーション */}
       <div>
-        {currentPage > 1 && (
-          <Link
-            to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`} // ページ1の場合はルートにリンク
-            style={{ margin: "0 10px" }}
-          >
-            Previous
-          </Link>
-        )}
-        {Array.from({ length: numPages }).map((_, index) => (
-          <Link
-            key={index}
-            to={index === 0 ? `/` : `/page/${index + 1}/`} // ページ1はルートを使用
-            style={{
-              margin: "0 5px",
-              fontWeight: currentPage === index + 1 ? "bold" : "normal",
-            }}
-          >
-            {index + 1}
-          </Link>
-        ))}
-        {currentPage < numPages && (
-          <Link to={`/page/${currentPage + 1}/`} style={{ margin: "0 10px" }}>
-            Next
-          </Link>
-        )}
+        <ul className={styles.pagination}>
+          {currentPage > 1 && (
+            <li>
+              <Link
+                to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`}
+                className={styles.paginationNextPrev}
+              >
+                Previous
+              </Link>
+            </li>
+          )}
+          {Array.from({ length: numPages }).map((_, index) => (
+            <li key={index}>
+              <Link
+                to={index === 0 ? `/` : `/page/${index + 1}/`}
+                className={`${styles.paginationItem} ${
+                  currentPage === index + 1 ? styles.active : ""
+                }`}
+              >
+                {index + 1}
+              </Link>
+            </li>
+          ))}
+          {currentPage < numPages && (
+            <li>
+              <Link
+                to={`/page/${currentPage + 1}/`}
+                className={styles.paginationNextPrev}
+              >
+                Next
+              </Link>
+            </li>
+          )}
+        </ul>
       </div>
     </Layout>
   )
