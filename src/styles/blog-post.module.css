@@ -1,0 +1,84 @@
+.blogPost {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+.blogPost header {
+    margin-bottom: var(--spacing-6);
+}
+
+.blogPost header h1 {
+    margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+    font-weight: var(--fontWeight-black);
+    font-size: var(--fontSize-6);
+    color: var(--color-heading-black);
+}
+
+.blogPost header small {
+    font-size: var(--fontSize-2);
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-4);
+}
+
+.tagArticle {
+    margin-bottom: var(--spacing-5);
+}
+
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: var(--spacing-0);
+    margin: var(--spacing-0);
+    justify-content: left;
+}
+
+.tagItem {
+    margin: var(--spacing-1);
+}
+
+.tagItem a {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-2);
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    font-size: var(--fontSize-0);
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tagItem a:hover {
+    background-color: var(--color-hover-tag-bg);
+    color: var(--color-hover-tag-text);
+}
+
+.socialLinks {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+.blogPostNav ul {
+    margin: var(--spacing-0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 42rem) {
+    .blogPost header h1 {
+        font-size: var(--fontSize-5);
+        /* スマホ画面でのh1フォントサイズを調整 */
+        margin-top: var(--spacing-2);
+    }
+
+    .blogPost header small {
+        font-size: var(--fontSize-4);
+        /* スマホ画面でのh2フォントサイズを調整 */
+    }
+}

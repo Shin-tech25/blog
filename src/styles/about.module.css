@@ -1,0 +1,222 @@
+.container {
+    padding: 0;
+    /* 余白を削除 */
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileImage {
+    border-radius: 50%;
+    margin-bottom: var(--spacing-4);
+}
+
+.name {
+    font-size: var(--fontSize-3);
+    margin: var(--spacing-0);
+}
+
+.title {
+    font-size: var(--fontSize-2);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-4);
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-3);
+    font-size: var(--fontSize-4);
+}
+
+.profileText {
+    max-width: 600px;
+    margin: 0 0;
+    padding: var(--spacing-4);
+}
+
+.profileText p {
+    margin-bottom: var(--spacing-3);
+}
+
+.content {
+    margin-top: var(--spacing-6);
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.content li {
+    line-height: var(--lineHeight-relaxed);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    justify-content: center;
+    margin-top: var(--spacing-4);
+}
+
+.skillTag {
+    background-color: #e0e0e0;
+    /* 背景色を追加 */
+    color: #333;
+    /* 文字色を設定 */
+    padding: 8px 12px;
+    /* パディングを調整 */
+    border-radius: 12px;
+    /* 丸みを追加 */
+    font-size: var(--fontSize-0);
+    /* 文字サイズを小さくする */
+    line-height: var(--lineHeight-tight);
+    white-space: nowrap;
+    /* テキストの改行を防止 */
+}
+
+.certificates {
+    list-style: none;
+    /* デフォルトのリストスタイルを削除 */
+    padding: 0;
+    /* パディングを削除 */
+    margin: 0;
+    /* マージンを削除 */
+}
+
+.certificates li {
+    text-align: center;
+    margin-bottom: var(--spacing-2);
+    /* 各項目の間にスペースを追加 */
+}
+
+.certificates li::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    /* バッジのサイズ */
+    height: 8px;
+    /* バッジのサイズ */
+    border-radius: 50%;
+    /* 丸い形にする */
+    background-color: var(--color-primary);
+    /* 初期色を設定 */
+    margin-right: var(--spacing-2);
+    /* テキストとの間にスペースを追加 */
+}
+
+.portfolios {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.portfolioItem {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4) 0;
+}
+
+.portfolioItem img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.portfolioItem p {
+    margin: 0;
+    font-size: var(--fontSize-2);
+}
+
+/* ポートフォリオアイテムの間隔を調整 */
+.portfolioItem div {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--spacing-4);
+    /* ここで間隔を調整 */
+}
+
+.portfolioItem a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--fontWeight-bold);
+    margin-bottom: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+    .portfolioItem {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .portfolioItem img {
+        width: 100px;
+        height: auto;
+    }
+
+    .portfolioItem p {
+        margin-top: var(--spacing-0);
+    }
+
+    .profileContainer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profileText {
+        max-width: 50%;
+        text-align: left;
+        padding: 0;
+        /* 余白を削除 */
+    }
+
+    .profile {
+        max-width: 50%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolioItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .portfolioItem img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolioItem p {
+        margin-top: var(--spacing-4);
+    }
+
+    .profileContainer {
+        flex-direction: column;
+        padding: var(--spacing-4);
+        /* スマートフォンでのパディング調整 */
+    }
+
+    .profileText {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

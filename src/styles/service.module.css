@@ -1,0 +1,72 @@
+/* src/styles/service.module.css */
+
+.serviceMenu {
+    margin-top: var(--spacing-1);
+}
+
+.serviceList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.serviceItem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.serviceImage {
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
+    border-radius: 8px;
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceTitle {
+    font-size: var(--fontSize-4);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: var(--spacing-1);
+    color: var(--color-primary);
+}
+
+.serviceDescription {
+    font-size: var(--fontSize-2);
+    color: var(--color-text);
+}
+
+/* スマートフォン対応 */
+@media (max-width: 767px) {
+    .serviceItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .serviceImage {
+        display: none !important;
+        /* スマホではアイキャッチ画像を非表示 */
+    }
+
+    .serviceContent {
+        align-items: center;
+    }
+
+    .serviceDescription {
+        font-size: var(--fontSize-1);
+    }
+}
