@@ -139,6 +139,8 @@ const BlogList = ({ data, pageContext, location }) => {
               <Link
                 to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`}
                 className={styles.paginationNextPrev}
+                state={{ noScroll: true }}
+                /*tabIndex={-1}*/
               >
                 Previous
               </Link>
@@ -151,6 +153,8 @@ const BlogList = ({ data, pageContext, location }) => {
                 className={`${styles.paginationItem} ${
                   currentPage === index + 1 ? styles.active : ""
                 }`}
+                state={{ noScroll: true }}
+                /*tabIndex={-1}*/
               >
                 {index + 1}
               </Link>
@@ -161,6 +165,8 @@ const BlogList = ({ data, pageContext, location }) => {
               <Link
                 to={`/page/${currentPage + 1}/`}
                 className={styles.paginationNextPrev}
+                state={{ noScroll: true }}
+                /*tabIndex={-1}*/
               >
                 Next
               </Link>
