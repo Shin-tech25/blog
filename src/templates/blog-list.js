@@ -2,12 +2,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import kebabCase from "lodash/kebabCase"
 import * as styles from "../styles/blog-list.module.css"
 
 const BlogList = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark.nodes
+  const tags = data.allTags.group
   const { currentPage, numPages } = pageContext
 
   if (posts.length === 0) {
@@ -50,27 +50,35 @@ const BlogList = ({ data, pageContext, location }) => {
     </section>
   )
 
-  const FeaturedTags = () => (
-    <section className={styles.featuredTags}>
-      <h2 className={styles.sectionTitle}>人気のタグ</h2>
-      <ul className={styles.tagList}>
-        <li className={styles.tagItem}>
-          <Link to="/tags/python">python</Link>
-        </li>
-        <li className={styles.tagItem}>
-          <Link to="/tags/linux">Linux</Link>
-        </li>
-        <li className={styles.tagItem}>
-          <Link to="/tags/資格試験">資格試験</Link>
-        </li>
-      </ul>
-    </section>
-  )
+  const FeaturedTags = ({ tags }) => {
+    if (!tags || tags.length === 0) {
+      return <p>No tags found.</p> // タグが存在しない場合の処理
+    }
+    // タグを投稿数でソート（降順）し、上位20件を取得
+    const sortedTags = tags
+      .sort((a, b) => b.totalCount - a.totalCount)
+      .slice(0, 20)
+
+    return (
+      <section className={styles.featuredTags}>
+        <h2 className={styles.sectionTitle}>人気のタグ</h2>
+        <ul className={styles.tagList}>
+          {sortedTags.map(tag => (
+            <li key={tag.fieldValue} className={styles.tagItem}>
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                {tag.fieldValue} ({tag.totalCount} posts)
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 
   const FeaturedSection = () => (
     <div className={styles.featuredSection}>
       <FeaturedArticles />
-      <FeaturedTags />
+      <FeaturedTags tags={tags} /> {/* 全タグ情報を渡す */}
     </div>
   )
 
@@ -140,7 +148,6 @@ const BlogList = ({ data, pageContext, location }) => {
                 to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`}
                 className={styles.paginationNextPrev}
                 state={{ noScroll: true }}
-                /*tabIndex={-1}*/
               >
                 Previous
               </Link>
@@ -154,7 +161,6 @@ const BlogList = ({ data, pageContext, location }) => {
                   currentPage === index + 1 ? styles.active : ""
                 }`}
                 state={{ noScroll: true }}
-                /*tabIndex={-1}*/
               >
                 {index + 1}
               </Link>
@@ -166,7 +172,6 @@ const BlogList = ({ data, pageContext, location }) => {
                 to={`/page/${currentPage + 1}/`}
                 className={styles.paginationNextPrev}
                 state={{ noScroll: true }}
-                /*tabIndex={-1}*/
               >
                 Next
               </Link>
@@ -204,6 +209,16 @@ export const pageQuery = graphql`
           description
           tags
         }
+      }
+    }
+    allTags: allMarkdownRemark(
+      filter: {
+        frontmatter: { templateKey: { eq: "blog-post" }, tags: { ne: null } }
+      }
+    ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }
