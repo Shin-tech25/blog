@@ -68,16 +68,16 @@ const BlogPostTemplate = ({
       <nav className={styles.blogPostNav}>
         <ul>
           <li>
-            {previous && (
-              <Link to={`/blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
+            {next && (
+              <Link to={`/blog${next.fields.slug}`} rel="next">
+                (←) {next.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
-              <Link to={`/blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
+            {previous && (
+              <Link to={`/blog${previous.fields.slug}`} rel="prev">
+                {previous.frontmatter.title} (→)
               </Link>
             )}
           </li>
