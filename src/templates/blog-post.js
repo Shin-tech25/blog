@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
-import kebabCase from "lodash/kebabCase";
+import * as React from "react"
+import { Link, graphql } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -10,17 +10,17 @@ import {
   TwitterIcon,
   LinkedinIcon,
   RedditIcon,
-} from "react-share";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import * as styles from "../styles/blog-post.module.css";
+} from "react-share"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import * as styles from "../styles/blog-post.module.css"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`;
-  const shareUrl = location.href;
+  const siteTitle = site.siteMetadata?.title || `Title`
+  const shareUrl = location.href
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -51,7 +51,9 @@ const BlogPostTemplate = ({
               <ul className={styles.tagList}>
                 {post.frontmatter.tags.map((tag, index) => (
                   <li key={index} className={styles.tagItem}>
-                    <Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">{tag}</Link>
+                    <Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                      {tag}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -67,14 +69,14 @@ const BlogPostTemplate = ({
         <ul>
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -82,8 +84,8 @@ const BlogPostTemplate = ({
         </ul>
       </nav>
     </Layout>
-  );
-};
+  )
+}
 
 export const Head = ({ data: { markdownRemark: post } }) => {
   return (
@@ -91,10 +93,10 @@ export const Head = ({ data: { markdownRemark: post } }) => {
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
     />
-  );
-};
+  )
+}
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -135,4 +137,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
