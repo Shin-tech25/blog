@@ -1,33 +1,24 @@
-/* blog-list.module.css */
-
 .blogList {
   margin-bottom: var(--spacing-8);
 }
 
 .featuredSection {
   margin-bottom: var(--spacing-8);
-  /*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  */
 }
 
-/* Section タイトルのスタイル */
 .sectionTitle {
   color: var(--color-heading);
   text-align: center;
   margin-bottom: var(--spacing-6);
 }
 
-/* 人気の記事のスタイル */
 .featuredArticles {
   margin-bottom: var(--spacing-2);
 }
 
 .articleList {
   list-style: none;
-  padding: var(--spacing-0) var(--spacing-4);
+  padding: var(--spacing-0);
   margin: var(--spacing-0);
   text-align: left;
 }
@@ -37,7 +28,8 @@
 }
 
 .articleLink {
-  font-size: var(--fontSize-2); /* ブログ記事のタイトルと同じサイズ */
+  font-size: var(--fontSize-2);
+  font-family: var(--font-heading);
   color: var(--color-primary);
   text-decoration: none;
   font-weight: var(--fontWeight-bold);
@@ -48,7 +40,6 @@
   color: var(--color-hover-title);
 }
 
-/* 人気のタグのスタイル */
 .featuredTags {
   margin-bottom: var(--spacing-6);
   display: flex;
@@ -113,7 +104,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-2); /* ボタン間のスペース */
+  gap: var(--spacing-2);
   list-style: none;
   padding: 0;
   margin: var(--spacing-4) 0;
@@ -121,39 +112,39 @@
 
 .pagination-item {
   display: inline-block;
-  width: 2rem; /* 丸ボタンのサイズ */
+  width: 2rem;
   height: 2rem;
   line-height: 2rem;
   text-align: center;
-  border-radius: 50%; /* 丸くする */
-  background-color: var(--color-accent); /* デフォルト背景色 */
-  color: var(--color-text-light); /* デフォルト文字色 */
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
   text-decoration: none;
   font-size: var(--fontSize-1);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination-item:hover {
-  background-color: var(--color-hover-title); /* ホバー時の背景色 */
-  color: var(--color-hover-tag-text); /* ホバー時の文字色 */
+  background-color: var(--color-hover-title);
+  color: var(--color-hover-tag-text);
 }
 
 .pagination-item.active {
-  background-color: var(--color-primary); /* 現在のページ背景色 */
-  color: white; /* 現在のページ文字色 */
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .pagination-next-prev {
   display: inline-block;
-  padding: var(--spacing-1) var(--spacing-3); /* Next/Previous のサイズ調整 */
-  border-radius: var(--spacing-1); /* 少し丸みをつける */
-  background-color: var(--color-accent); /* デフォルト背景色 */
-  color: var(--color-text-light); /* デフォルト文字色 */
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--spacing-1);
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination-next-prev:hover {
-  background-color: var(--color-hover-title); /* ホバー時の背景色 */
-  color: white; /* ホバー時の文字色 */
+  background-color: var(--color-hover-title);
+  color: white;
 }
