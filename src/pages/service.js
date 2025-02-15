@@ -68,7 +68,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "service-post" } } }
-      sort: { frontmatter: { date: DESC } }
+      sort: { frontmatter: { num: ASC } }
     ) {
       nodes {
         fields {
