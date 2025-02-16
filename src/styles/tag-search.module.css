@@ -117,4 +117,10 @@
   .postThumbnail {
     display: none !important; /* スマホではサムネイルを非表示 */
   }
+  .noImageBox {
+    display: none !important; /* スマホではサムネイルを非表示 */
+  }
+  .postContent {
+    width: 100%;
+  }
 }
