@@ -4,21 +4,22 @@ title: "DNFによるコンテンツのインストール - DNF(2)"
 date: "2024-09-22"
 description: "DNFコマンドとパッケージ管理システムの概念について体系的にまとめました。今回は2回目になります。DNFコマンドによるコンテンツインストールを扱います。"
 tags: ["Linux", "dnf", "RHEL"]
+featuredImage: ../thumbnails/linux.jpg
 ---
 
 ## 概要
 
-インフラエンジニアなら`dnf`コマンドを使用したことが無いという人はまずいない、と言っても過言ではないくらいよく使うパッケージ管理コマンドですが、パッケージ管理は奥が深く、しっかりと理解するのも難しく、自分の学習も兼ねてまとめてみました。今回は2回目になります。
+インフラエンジニアなら`dnf`コマンドを使用したことが無いという人はまずいない、と言っても過言ではないくらいよく使うパッケージ管理コマンドですが、パッケージ管理は奥が深く、しっかりと理解するのも難しく、自分の学習も兼ねてまとめてみました。今回は 2 回目になります。
 
-`dnf`コマンドに関しては、Red Hat本家が出しているドキュメントが最も参考になると思います。この記事は、以下のドキュメントから適宜抜粋し編纂したものです。しっかりと理解したい方は以下も参照してください。
+`dnf`コマンドに関しては、Red Hat 本家が出しているドキュメントが最も参考になると思います。この記事は、以下のドキュメントから適宜抜粋し編纂したものです。しっかりと理解したい方は以下も参照してください。
 
 [Red Hat Enterprise Linux 9 DNF ツールを使用したソフトウェアの管理](https://docs.redhat.com/ja-jp/documentation/red_hat_enterprise_linux/9/pdf/managing_software_with_the_dnf_tool/Red_Hat_Enterprise_Linux-9-Managing_software_with_the_DNF_tool-ja-JP.pdf)
 
-今回は、上記の「第5章 RHEL 9 コンテンツのインストール」および「第6章 RHEL 9 コンテンツの更新」の内容になります。
+今回は、上記の「第 5 章 RHEL 9 コンテンツのインストール」および「第 6 章 RHEL 9 コンテンツの更新」の内容になります。
 
 ## パッケージのインストール
 
-ソフトウェアがデフォルトのインストールに含まれていない場合は、手動でインストールできます。DNFは依存関係を解決してインストールします。
+ソフトウェアがデフォルトのインストールに含まれていない場合は、手動でインストールできます。DNF は依存関係を解決してインストールします。
 
 前提として、インストールするパッケージ名が分かっていなければなりません。これについては、前回の記事を参考にし、パッケージ検索の方法について理解してください。
 
@@ -30,15 +31,15 @@ tags: ["Linux", "dnf", "RHEL"]
 dnf install <package_name_1> <package_name_2> ...
 ```
 
-i686やx86_64などの複数のアーキテクチャをサポートするシステムにパッケージをインストールする場合は、パッケージ名にそれを追加することで、パッケージのアーキテクチャを指定できます。
+i686 や x86_64 などの複数のアーキテクチャをサポートするシステムにパッケージをインストールする場合は、パッケージ名にそれを追加することで、パッケージのアーキテクチャを指定できます。
 
 ```bash
 dnf install <package_name>.<architecture>
 ```
 
-### ローカルRPMファイルからのインストール
+### ローカル RPM ファイルからのインストール
 
-ローカルRPMファイルからのインストールも可能です。パッケージに依存関係がある場合は、これらのRPMファイルへのパスも指定します。指定しなかった場合、DNFはリポジトリーから依存関係をダウンロードします。依存関係がリポジトリーで利用できない場合はインストールに失敗します。
+ローカル RPM ファイルからのインストールも可能です。パッケージに依存関係がある場合は、これらの RPM ファイルへのパスも指定します。指定しなかった場合、DNF はリポジトリーから依存関係をダウンロードします。依存関係がリポジトリーで利用できない場合はインストールに失敗します。
 
 ```bash
 dnf install <path_to_RPM_file>
@@ -46,7 +47,7 @@ dnf install <path_to_RPM_file>
 
 ## パッケージグループのインストール
 
-パッケージグループには複数のパッケージがバンドルされています。パッケージグループを使用すると、グループに割り当てられたすべてのパッケージを1回の手順でインストールできます。
+パッケージグループには複数のパッケージがバンドルされています。パッケージグループを使用すると、グループに割り当てられたすべてのパッケージを 1 回の手順でインストールできます。
 
 前提として、インストールするパッケージグループ名が分かっていなければなりません。これについては、前回の記事を参考にし、パッケージグループ検索の方法について理解してください。
 
@@ -60,7 +61,7 @@ dnf group install <group_name_or_ID>
 
 ## モジュールコンテンツのインストール
 
-特定のソフトウェアについては、Red Hatがモジュールを提供しています。モジュールを使用して、特定のバージョン（ストリーム）とパッケージのセット（プロファイル）をインストールできます。
+特定のソフトウェアについては、Red Hat がモジュールを提供しています。モジュールを使用して、特定のバージョン（ストリーム）とパッケージのセット（プロファイル）をインストールできます。
 
 **手順**
 
@@ -78,7 +79,7 @@ dnf module install <module_name>:<stream>/<profile>
 
 ストリームのデフォルトプロファイルが定義されている場合は、コマンドの`/<profile>`を省略して、このストリームのデフォルトプロファイルをインストールできます。
 
-たとえば、nodejsモジュールのストリーム18からデフォルトのプロファイル (common) をイ
+たとえば、nodejs モジュールのストリーム 18 からデフォルトのプロファイル (common) をイ
 ンストールするには、次のように入力します。
 
 ```bash
@@ -132,15 +133,15 @@ Name Stream Profiles Summary
 nodejs 18 common [d], development, minimal, s2i Javascript runtime
 ```
 
-この例では、nodejs:18はデフォルトストリームとして設定されておらず、このストリームの
-デフォルトプロファイルはcommonです。
+この例では、nodejs:18 はデフォルトストリームとして設定されておらず、このストリームの
+デフォルトプロファイルは common です。
 
-`etc/dnf/modules.defaults.d/`ディレクトリーにYAMLファイルを作成して、モジュールのデ
+`etc/dnf/modules.defaults.d/`ディレクトリーに YAML ファイルを作成して、モジュールのデ
 フォルトのストリームとプロファイルを定義します。
 
 たとえば、次の内容を含む`/etc/dnf/modules.defaults.d/nodejs.yaml`ファイルを作成し
-て、nodejsモジュールのデフォルトストリームとして18を定義し、デフォルトプロファイル
-としてminimumを定義します。
+て、nodejs モジュールのデフォルトストリームとして 18 を定義し、デフォルトプロファイル
+として minimum を定義します。
 
 ```YAML
 document: modulemd-defaults
@@ -166,7 +167,7 @@ nodejs 18 [d] common, development, minimal [d], s2i Javascript runtime
 
 ## コンテンツの更新
 
-DNFでは、システムに保留中の更新があるかどうかを確認できます。更新が必要なパッケージをリスト表示して、1つのパッケージ、複数のパッケージ、またはすべてのパッケージを一度に更新できます。更新を選択したパッケージに依存関係がある場合は、これらの依存関係も更新されます。
+DNF では、システムに保留中の更新があるかどうかを確認できます。更新が必要なパッケージをリスト表示して、1 つのパッケージ、複数のパッケージ、またはすべてのパッケージを一度に更新できます。更新を選択したパッケージに依存関係がある場合は、これらの依存関係も更新されます。
 
 ### 更新の確認
 
@@ -180,23 +181,23 @@ dnf check-update
 
 ### パッケージの更新
 
-DNFを使用すると、単一のパッケージ、パッケージグループ、またはすべてのパッケージとその依存関係を一度に更新できます。
+DNF を使用すると、単一のパッケージ、パッケージグループ、またはすべてのパッケージとその依存関係を一度に更新できます。
 
 シナリオに応じて、次のいずれかのオプションを使用して更新を適用します。
 
-* すべてのパッケージとその依存関係を更新するには、次のコマンドを実行します。
+- すべてのパッケージとその依存関係を更新するには、次のコマンドを実行します。
 
 ```bash
 dnf upgrade
 ```
 
-* 単一のパッケージを更新するには、次のように入力します。
+- 単一のパッケージを更新するには、次のように入力します。
 
 ```bash
 dnf upgrade <package_name>
 ```
 
-* 特定のパッケージグループからのパッケージのみを更新するには、次のように実行します。
+- 特定のパッケージグループからのパッケージのみを更新するには、次のように実行します。
 
 ```bash
 dnf group upgrade <group_name>
@@ -204,7 +205,7 @@ dnf group upgrade <group_name>
 
 ### セキュリティー関連パッケージの更新
 
-DNFを使用して、セキュリティー関連のパッケージを更新できます。
+DNF を使用して、セキュリティー関連のパッケージを更新できます。
 
 以下のコマンドは、システム上で利用可能なすべてのセキュリティ関連のパッケージを最新バージョンにアップグレードします。
 
@@ -220,12 +221,12 @@ dnf upgrade-minimal --security
 
 ## References
 
-* [Red Hat Enterprise Linux 9 DNF ツールを使用したソフトウェアの管理](https://docs.redhat.com/ja-jp/documentation/red_hat_enterprise_linux/9/pdf/managing_software_with_the_dnf_tool/Red_Hat_Enterprise_Linux-9-Managing_software_with_the_DNF_tool-ja-JP.pdf)
-* [パッケージ管理ツール](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/package-management.html)
-* [【 dnf 】コマンド（基礎編）――ソフトウェア（パッケージ）をインストールする：Linux基本コマンドTips（368） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2001/09/news018.html)
-* [yumの後継、dnfについて（Linux2023） #AWS - Qiita](https://qiita.com/zenden/items/de1860f9e976d87a1c6c)
-* [パッケージ管理 (dnf yum) – Int Design LLC.](https://int-design.jp/content/dnf/)
-* [定時帰る術-Linux パッケージ管理（dnfコマンド） #Linux - Qiita](https://qiita.com/Snow315/items/123ba83064019064b36d)
-* [yum および dnf パッケージ マネージャーの一般的な問題のトラブルシューティング - Virtual Machines | Microsoft Learn](https://learn.microsoft.com/ja-jp/troubleshoot/azure/virtual-machines/linux/yum-dnf-common-issues)
-* [yumとdnfについて | Linux入門 PartⅣ | 演習で学ぶインフラLinux](https://www.infra-linux.com/menu-linux5/yum-dnf/)
-* [【 dnf 】コマンド（応用編その3）――複雑な条件を付けてソフトウェア（パッケージ）の情報を表示する：Linux基本コマンドTips（371） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2001/17/news016.html)
+- [Red Hat Enterprise Linux 9 DNF ツールを使用したソフトウェアの管理](https://docs.redhat.com/ja-jp/documentation/red_hat_enterprise_linux/9/pdf/managing_software_with_the_dnf_tool/Red_Hat_Enterprise_Linux-9-Managing_software_with_the_DNF_tool-ja-JP.pdf)
+- [パッケージ管理ツール](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/package-management.html)
+- [【 dnf 】コマンド（基礎編）――ソフトウェア（パッケージ）をインストールする：Linux 基本コマンド Tips（368） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2001/09/news018.html)
+- [yum の後継、dnf について（Linux2023） #AWS - Qiita](https://qiita.com/zenden/items/de1860f9e976d87a1c6c)
+- [パッケージ管理 (dnf yum) – Int Design LLC.](https://int-design.jp/content/dnf/)
+- [定時帰る術-Linux パッケージ管理（dnf コマンド） #Linux - Qiita](https://qiita.com/Snow315/items/123ba83064019064b36d)
+- [yum および dnf パッケージ マネージャーの一般的な問題のトラブルシューティング - Virtual Machines | Microsoft Learn](https://learn.microsoft.com/ja-jp/troubleshoot/azure/virtual-machines/linux/yum-dnf-common-issues)
+- [yum と dnf について | Linux 入門 PartⅣ | 演習で学ぶインフラ Linux](https://www.infra-linux.com/menu-linux5/yum-dnf/)
+- [【 dnf 】コマンド（応用編その 3）――複雑な条件を付けてソフトウェア（パッケージ）の情報を表示する：Linux 基本コマンド Tips（371） - ＠IT](https://atmarkit.itmedia.co.jp/ait/articles/2001/17/news016.html)

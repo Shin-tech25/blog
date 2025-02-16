@@ -4,14 +4,12 @@ title: "Pythonでサブプロセスを管理する方法 - subprocess"
 date: "2025-02-11"
 description: "Pythonの標準ライブラリsubprocessモジュールを使用して、システムコマンドの実行、プロセス管理、入出力のキャプチャ方法について詳しく解説します。初心者から上級者まで役立つ実践例を紹介。"
 tags: ["Python", "subprocess"]
-
+featuredImage: ../thumbnails/python2.jpg
 ---
-
 
 ## 概要
 
 `subprocess` モジュールは、Python スクリプトの中からシステムコマンドを実行したり、その実行に関連する出力や結果を取得するための機能を提供します。このガイドでは、`subprocess` モジュールの使い方や具体的な例を紹介します。
-
 
 ## サブプロセスの実行
 
@@ -32,11 +30,11 @@ print(result.stdout)
 
 `subprocess.run()` の戻り値は `subprocess.CompletedProcess` クラスのインスタンスです。このクラスは以下の属性を持っています。
 
-| 属性             | 説明                                                                      |
-| -------------- | ----------------------------------------------------------------------- |
-| args       | 実行したコマンドの引数のリスト                                                         |
-| returncode | コマンドの終了ステータスコード（0は成功、0以外はエラー）                                           |
-| stdout     | 標準出力の内容（`capture_output=True` または `stdout=subprocess.PIPE` の場合に利用可能）    |
+| 属性       | 説明                                                                                           |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| args       | 実行したコマンドの引数のリスト                                                                 |
+| returncode | コマンドの終了ステータスコード（0 は成功、0 以外はエラー）                                     |
+| stdout     | 標準出力の内容（`capture_output=True` または `stdout=subprocess.PIPE` の場合に利用可能）       |
 | stderr     | 標準エラー出力の内容（`capture_output=True` または `stderr=subprocess.PIPE` の場合に利用可能） |
 
 例えば、以下のコードで戻り値を確認できます。
@@ -48,30 +46,29 @@ print(f"Return code: {result.returncode}")
 print(f"Output: {result.stdout}")
 ```
 
-
 ## `run()` 関数の詳細
 
 `subprocess.run(args, *, **kwargs)` は、多様な引数を指定できます。下記に主な引数を説明します。
 
 ### 主な引数
 
-| 引数                  | 説明                             |
-| ------------------- | ------------------------------ |
-| args            | 実行するコマンドと引数のリスト                |
-| stdin           | 標準入力を指定する                      |
-| stdout          | 標準出力を指定する                      |
-| stderr          | 標準エラー出力を指定する                   |
-| capture_output | Trueの場合、標準出力・標準エラー出力をキャプチャする   |
-| shell           | Trueの場合、シェルを経由してコマンドを実行する      |
-| cwd             | 作業ディレクトリを指定する                  |
-| timeout         | 実行タイムアウトの秒数を指定する               |
-| check           | Trueの場合、終了ステータスが0以外の時に例外を発生させる |
-| text            | Trueの場合、入出力を文字列として処理する         |
-| env             | 環境変数を指定する                      |
+| 引数           | 説明                                                       |
+| -------------- | ---------------------------------------------------------- |
+| args           | 実行するコマンドと引数のリスト                             |
+| stdin          | 標準入力を指定する                                         |
+| stdout         | 標準出力を指定する                                         |
+| stderr         | 標準エラー出力を指定する                                   |
+| capture_output | True の場合、標準出力・標準エラー出力をキャプチャする      |
+| shell          | True の場合、シェルを経由してコマンドを実行する            |
+| cwd            | 作業ディレクトリを指定する                                 |
+| timeout        | 実行タイムアウトの秒数を指定する                           |
+| check          | True の場合、終了ステータスが 0 以外の時に例外を発生させる |
+| text           | True の場合、入出力を文字列として処理する                  |
+| env            | 環境変数を指定する                                         |
 
 ### 実践例
 
-#### capture\_output
+#### capture_output
 
 `capture_output=True` を指定することで、標準出力や標準エラー出力を簡単に取得できます。
 
@@ -102,7 +99,6 @@ except subprocess.TimeoutExpired:
     print('The process timed out!')
 ```
 
-
 ## Popen クラスの利用
 
 より高度な管理を行いたい場合、`Popen` クラスを使用します。`Popen` はサブプロセスを開始し、出力を利用して別のプロセスへ入力することも可能です。
@@ -123,7 +119,6 @@ print(stdout_data.decode())
 ```
 
 上記の例は、`echo` の出力を大文字変換するプロセスの入力として使用しています。
-
 
 ## よくあるエラーと対処法
 
@@ -148,4 +143,3 @@ try:
 except subprocess.CalledProcessError as e:
     print(f"Error: {e}")
 ```
-
