@@ -111,6 +111,7 @@
 .postDescription {
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  margin-bottom: var(--spacing-2);
 }
 
 @media (max-width: 767px) {
