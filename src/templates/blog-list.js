@@ -1,7 +1,7 @@
-// src/templates/blog-list.js
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import kebabCase from "lodash/kebabCase"
 import * as styles from "../styles/blog-list.module.css"
 
@@ -85,71 +85,63 @@ const BlogList = ({ data, pageContext, location }) => {
   return (
     <Layout location={location}>
       {currentPage === 1 && <FeaturedSection />}
+      {currentPage === 1 && <h2 className={styles.sectionTitle}>最近の投稿</h2>}
 
-      <ol className={styles.postList}>
-        {currentPage === 1 && (
-          <h2 className={styles.sectionTitle}>最近の投稿</h2>
-        )}
+      <div className={styles.postList}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const image = getImage(post.frontmatter.featuredImage)
 
           return (
-            <li key={`blog${post.fields.slug}`} className={styles.postItem}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h3>
-                    <Link to={`/blog${post.fields.slug}`} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h3>
-                  <small>{post.frontmatter.date}</small>
-                  <div className={styles.tagArticle}>
-                    {post.frontmatter.tags &&
-                      post.frontmatter.tags.length > 0 && (
-                        <ul className={styles.tagList}>
-                          {post.frontmatter.tags.map((tag, index) => (
-                            <li key={index} className={styles.tagItem}>
-                              <Link
-                                to={`/tags/${kebabCase(tag)}/`}
-                                itemProp="url"
-                              >
-                                {tag}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                  </div>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
+            <div key={post.fields.slug} className={styles.postItem}>
+              {image ? (
+                <GatsbyImage
+                  image={image}
+                  alt={post.frontmatter.title}
+                  className={styles.postThumbnail}
+                />
+              ) : (
+                <div className={styles.noImageBox}>
+                  <span className={styles.noImageText}>No Image</span>
+                </div>
+              )}
+              <div className={styles.postContent}>
+                <h3 className={styles.postTitle}>
+                  <Link to={`/blog${post.fields.slug}`}>{title}</Link>
+                </h3>
+                <small className={styles.postDate}>
+                  {post.frontmatter.date}
+                </small>
+                {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                  <ul className={styles.tagList}>
+                    {post.frontmatter.tags.map((tag, index) => (
+                      <li key={index} className={styles.tagItem}>
+                        <Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
+                          {tag}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <p className={styles.postDescription}>
+                  {post.frontmatter.description}
+                </p>
+              </div>
+            </div>
           )
         })}
-      </ol>
+      </div>
 
       {/* ページネーション */}
-      <div>
+      <div className={styles.paginationWrapper}>
         <ul className={styles.pagination}>
           {currentPage > 1 && (
             <li>
               <Link
                 to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`}
                 className={styles.paginationNextPrev}
-                state={{ noScroll: true }}
               >
-                Previous
+                Prev
               </Link>
             </li>
           )}
@@ -160,7 +152,6 @@ const BlogList = ({ data, pageContext, location }) => {
                 className={`${styles.paginationItem} ${
                   currentPage === index + 1 ? styles.active : ""
                 }`}
-                state={{ noScroll: true }}
               >
                 {index + 1}
               </Link>
@@ -171,7 +162,6 @@ const BlogList = ({ data, pageContext, location }) => {
               <Link
                 to={`/page/${currentPage + 1}/`}
                 className={styles.paginationNextPrev}
-                state={{ noScroll: true }}
               >
                 Next
               </Link>
@@ -199,7 +189,6 @@ export const pageQuery = graphql`
       limit: $limit
     ) {
       nodes {
-        excerpt
         fields {
           slug
         }
@@ -208,6 +197,11 @@ export const pageQuery = graphql`
           title
           description
           tags
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
         }
       }
     }
