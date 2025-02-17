@@ -5,6 +5,7 @@ date: "2025-02-17"
 description: "Python標準ライブラリ urllib.request を使用して、GET・POST・DELETEなどのHTTPリクエストを送信し、レスポンスを取得する方法を解説します。"
 tags: ["Python", "urllib"]
 featuredImage: ../thumbnails/python2.jpg
+relatedPosts: ["python-urlencode-parse_qs-parse_qsl"]
 ---
 
 ## 概要
@@ -167,9 +168,3 @@ except error.URLError as e:
 - エラーハンドリング
 
 シンプルな HTTP リクエストを実装する場合には `urllib.request` で十分対応できますが、より柔軟で強力な機能を求める場合は `requests` ライブラリの利用を検討すると良いでしょう。
-
-### 関連記事
-
-`urllib`を用いた URL クエリ文字列の生成（`urllib.urlencode`）、解析（`urllib.parse_qs`, `urllib.parse_qsl`）について次の記事で解説しています。
-
-- [URL クエリ文字列の生成と解析における Python の標準ライブラリ活用](/blog/python-urlencode-parse_qs-parse_qsl/)
