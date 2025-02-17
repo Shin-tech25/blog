@@ -100,6 +100,12 @@
   margin-top: var(--spacing-0);
   margin-bottom: var(--spacing-1);
   color: var(--color-primary);
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: var(--lineHeight-relaxed);
 }
 
 .postDate {
@@ -111,7 +117,13 @@
 .postDescription {
   font-size: var(--fontSize-1);
   color: var(--color-text);
-  margin-bottom: var(--spacing-2);
+  margin-bottom: var(--spacing-0);
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 767px) {
