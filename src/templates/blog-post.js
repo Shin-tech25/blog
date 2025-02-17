@@ -13,10 +13,11 @@ import {
 } from "react-share"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import RelatedPosts from "../components/related-posts"
 import * as styles from "../styles/blog-post.module.css"
 
 const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
+  data: { previous, next, site, markdownRemark: post, relatedPosts },
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
@@ -64,6 +65,7 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <RelatedPosts relatedPosts={relatedPosts} />
       </article>
       <nav className={styles.blogPostNav}>
         <ul>
@@ -103,6 +105,7 @@ export const pageQuery = graphql`
     $id: String!
     $previousPostId: String
     $nextPostId: String
+    $relatedPosts: [String]
   ) {
     site {
       siteMetadata {
@@ -118,6 +121,18 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         tags
+      }
+    }
+    relatedPosts: allMarkdownRemark(
+      filter: { fields: { slug: { in: $relatedPosts } } }
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
