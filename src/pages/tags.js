@@ -1,20 +1,22 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { FaSearch } from "react-icons/fa";
-import kebabCase from "lodash/kebabCase";
-import * as styles from "../styles/tags.module.css";
+import React from "react"
+import { graphql, Link } from "gatsby"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import { FaSearch } from "react-icons/fa"
+import kebabCase from "lodash/kebabCase"
+import * as styles from "../styles/tags.module.css"
 
 const AllTagsPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const allTags = data.allMarkdownRemark.group;
+  const siteTitle = data.site.siteMetadata.title
+  const allTags = data.allMarkdownRemark.group
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All tags" />
       <div className={styles.tagsPage}>
-        <h1><FaSearch className={styles.tagIcon} /> All tags</h1>
+        <h1>
+          <FaSearch className={styles.tagIcon} /> All tags
+        </h1>
         <ul className={styles.tagList}>
           {allTags.map(tag => (
             <li key={tag.fieldValue} className={styles.tagItem}>
@@ -26,10 +28,10 @@ const AllTagsPage = ({ data, location }) => {
         </ul>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default AllTagsPage;
+export default AllTagsPage
 
 export const pageQuery = graphql`
   query {
@@ -39,10 +41,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
     }
   }
-`;
+`

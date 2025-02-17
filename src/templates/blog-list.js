@@ -210,7 +210,7 @@ export const pageQuery = graphql`
         frontmatter: { templateKey: { eq: "blog-post" }, tags: { ne: null } }
       }
     ) {
-      group(field: frontmatter___tags) {
+      group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
       }
