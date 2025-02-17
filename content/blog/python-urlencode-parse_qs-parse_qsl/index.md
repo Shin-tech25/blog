@@ -7,11 +7,13 @@ tags: ["Python", "urllib"]
 featuredImage: ../thumbnails/python2.jpg
 ---
 
-## 背景と概要
+## 概要
 
 Web 開発や API 通信において、URL のクエリ文字列は、データの送受信やリソースの指定に欠かせない要素です。Python では、標準ライブラリの`urllib.parse`モジュールを活用することで、これらのクエリ文字列を効率的に生成・解析できます。
 
 本記事では、`urllib.parse`モジュールを用いたクエリ文字列の生成と解析の方法について詳しく解説します。
+
+## `urllib.request` の基本
 
 ## URL クエリ文字列とは
 
@@ -103,3 +105,9 @@ print(parsed_qsl)
 - **`parse_qsl`**: クエリ文字列を(キー, 値)のリスト形式で解析し、順序を保持する。
 
 これらの関数を理解し適切に使用することで、URL クエリパラメータの操作が容易になります。
+
+### 関連記事
+
+`urllib`を用いた HTTP リクエスト（`urllib.request`）について次の記事で解説しています。
+
+- [Python で HTTP リクエストを送る - urllib.request](/blog/python-urllib-request/)
