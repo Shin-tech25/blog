@@ -33,8 +33,6 @@ with request.urlopen('https://httpbin.org/get') as response:
 
 このコードでは `urlopen()` に URL を渡すだけで、HTTP リクエストを送信し、レスポンスデータを取得できます。レスポンスは `bytes` 型で返されるため、デコードして `str` 型に変換する必要があります。
 
----
-
 ## クエリ文字列を含む GET リクエスト
 
 URL にクエリ文字列を含める場合、`urllib.parse` の `urlencode()` を利用すると便利です。
