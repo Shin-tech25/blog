@@ -60,12 +60,13 @@
 
 .postTitle {
   font-size: var(--fontSize-2);
-  font-weight: bold;
-  margin: var(--spacing-4) var(--spacing-0) var(--spacing-1) var(--spacing-0);
+  font-weight: var(--fontWeight-bold);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-1) var(--spacing-0);
   color: var(--color-primary);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  line-height: var(--lineHeight-relaxed);
 }
 
 .postDate {
