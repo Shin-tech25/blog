@@ -1,0 +1,128 @@
+.relatedPostsWrapper {
+  margin-top: var(--spacing-6);
+  padding: var(--spacing-4) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  background: var(--color-background);
+  border-radius: var(--border-radius);
+}
+
+.relatedPostsTitle {
+  font-size: var(--fontSize-5);
+  font-weight: bold;
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.postItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: var(--spacing-4) 0;
+  padding: var(--spacing-3) var(--spacing-0) var(--spacing-3) var(--spacing-0);
+}
+
+.postThumbnail {
+  width: 20%;
+  margin-right: var(--spacing-4);
+  border-radius: 8px;
+}
+
+.noImageBox {
+  width: 20%;
+  height: 0;
+  padding-top: 20%;
+  background-color: #f0f0f0;
+  border: 1px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--spacing-4);
+  border-radius: 8px;
+}
+
+.noImageText {
+  font-size: var(--fontSize-1);
+  color: #999;
+  text-align: center;
+}
+
+.postContent {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.postTitle {
+  font-size: var(--fontSize-2);
+  font-weight: bold;
+  margin: var(--spacing-4) var(--spacing-0) var(--spacing-1) var(--spacing-0);
+  color: var(--color-primary);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.postDate {
+  font-size: var(--fontSize-1);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-1);
+}
+
+.postDescription {
+  font-size: var(--fontSize-1);
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: var(--spacing-2);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: var(--spacing-0) 0 var(--spacing-1) 0;
+}
+
+.tagItem {
+  margin: var(--spacing-1);
+}
+
+.tagItem a {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  font-size: var(--fontSize-0);
+  text-decoration: none;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.tagItem a:hover {
+  background-color: var(--color-hover-tag-bg);
+  color: var(--color-hover-tag-text);
+}
+
+/* スマートフォン対応 */
+@media (max-width: 767px) {
+  .postThumbnail {
+    display: none !important; /* スマホではサムネイルを非表示 */
+  }
+  .noImageBox {
+    display: none !important; /* スマホではサムネイルを非表示 */
+  }
+  .postContent {
+    width: 100%;
+  }
+}

@@ -67,7 +67,7 @@
 .postThumbnail {
   width: 20%;
   margin-right: var(--spacing-4);
-  object-fit: cover;
+  border-radius: 8px;
 }
 
 .noImageBox {
