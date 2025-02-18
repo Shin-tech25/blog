@@ -57,6 +57,8 @@
   --color-heading-black: black;
   --color-accent: #d1dce5;
   --color-background-footer: #333;
+  --color-background-toc: #f8f9fa;
+  --color-background-toc-title: #b0b0b0;
   --fontSize-footer: var(--fontSize-0);
   --color-hover-title: #004080; /* タイトルのホバー時の色 */
   --color-hover-tag-bg: #004080; /* タグのホバー時の背景色 */
@@ -86,7 +88,9 @@ body {
   margin: var(--spacing-0);
 }
 
-#root, #___gatsby, .site {
+#root,
+#___gatsby,
+.site {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -218,12 +222,12 @@ blockquote {
   margin-bottom: var(--spacing-8);
 }
 
-blockquote> :last-child {
+blockquote > :last-child {
   margin-bottom: var(--spacing-0);
 }
 
-blockquote>ul,
-blockquote>ol {
+blockquote > ul,
+blockquote > ol {
   list-style-position: inside;
 }
 
@@ -499,7 +503,9 @@ a:focus {
   }
 
   .nav a {
-    font-size: var(--fontSize-1); /* スマホ画面でのナビゲーションフォントサイズを調整 */
+    font-size: var(
+      --fontSize-1
+    ); /* スマホ画面でのナビゲーションフォントサイズを調整 */
   }
 
   .global-wrapper {
