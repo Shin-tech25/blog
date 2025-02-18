@@ -254,7 +254,7 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-5) var(--spacing-0);
+  padding: var(--spacing-5) var(--spacing-4);
   flex: 1;
   width: 100%; /* スマホ画面での幅を100%に */
   box-sizing: border-box; /* パディングを含めたボックスサイズ計算 */
