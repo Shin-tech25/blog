@@ -13,6 +13,7 @@ import {
 } from "react-share"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import TableOfContents from "../components/toc"
 import RelatedPosts from "../components/related-posts"
 import * as styles from "../styles/blog-post.module.css"
 
@@ -61,6 +62,7 @@ const BlogPostTemplate = ({
             )}
           </div>
         </header>
+        <TableOfContents tableOfContents={post.tableOfContents} />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -115,6 +117,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
+      tableOfContents
       html
       frontmatter {
         title
