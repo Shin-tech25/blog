@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
 import kebabCase from "lodash/kebabCase"
-import * as styles from "../styles/blog-list.module.css"
+import Layout from "../components/layout"
 import PostItem from "../components/post-item"
+import FeaturedArticles from "../components/featured-articles"
+import * as styles from "../styles/blog-list.module.css"
 
 const BlogList = ({ data, pageContext, location }) => {
   const posts = data.allMarkdownRemark
@@ -17,38 +18,6 @@ const BlogList = ({ data, pageContext, location }) => {
       </Layout>
     )
   }
-
-  const FeaturedArticles = () => (
-    <section className={styles.featuredArticles}>
-      <h2 className={styles.sectionTitle}>人気の記事</h2>
-      <ul className={styles.articleList}>
-        <li>
-          <Link
-            to="/blog/4-months-pmp-exam-success"
-            className={styles.articleLink}
-          >
-            PMP受験記録
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/blog/python-temporary-data-storage"
-            className={styles.articleLink}
-          >
-            Pythonによる一時データ保存のベストプラクティス
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/blog/us-stock-market-cap-strategies"
-            className={styles.articleLink}
-          >
-            米国株投資における時価総額別の分類と投資戦略
-          </Link>
-        </li>
-      </ul>
-    </section>
-  )
 
   const FeaturedTags = ({ tags }) => {
     if (!tags || tags.length === 0) {
@@ -75,9 +44,15 @@ const BlogList = ({ data, pageContext, location }) => {
     )
   }
 
+  // ★ 好きなスラグをここで定義
+  const FEATURED_SLUGS = [
+    "/4-months-pmp-exam-success/",
+    "/python-temporary-data-storage/",
+    "/us-stock-market-cap-strategies/",
+  ]
   const FeaturedSection = () => (
     <div className={styles.featuredSection}>
-      <FeaturedArticles />
+      <FeaturedArticles slugList={FEATURED_SLUGS} />
       <FeaturedTags tags={tags} /> {/* 全タグ情報を渡す */}
     </div>
   )

@@ -12,10 +12,6 @@
   margin-bottom: var(--spacing-6);
 }
 
-.featuredArticles {
-  margin-bottom: var(--spacing-2);
-}
-
 .articleList {
   list-style: none;
   padding: var(--spacing-0);

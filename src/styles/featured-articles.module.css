@@ -1,0 +1,15 @@
+.sectionTitle {
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.featuredArticles {
+  margin-bottom: var(--spacing-2);
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0);
+}

@@ -10,3 +10,9 @@
   margin-right: var(--spacing-2);
   line-height: 1;
 }
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0);
+}
