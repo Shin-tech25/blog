@@ -5,6 +5,8 @@ date: "2025-02-14"
 description: "Pythonで共通鍵暗号化方式を実装するためにcryptographyライブラリを使用した方法を解説します。実際のコード例を通して、暗号化、復号化を学びます。"
 tags: ["Python", "暗号化", "cryptography", "セキュリティ"]
 featuredImage: ../thumbnails/security.jpg
+relatedPosts:
+  - python-cryptgraphy2
 ---
 
 ## 概要

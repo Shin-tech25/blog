@@ -5,6 +5,9 @@ date: "2025-02-09"
 description: "Python標準ライブラリのgzipモジュールを使って、gzip形式のファイルやデータを効率的に圧縮・展開する方法を徹底解説。基本的な使い方からエラー対処法、応用例まで幅広くカバーします。"
 tags: ["Python", "gzip", "データ圧縮"]
 featuredImage: ../thumbnails/archive-files.jpg
+relatedPosts:
+  - python-zipfile
+  - python-tarfile
 ---
 
 Python の標準ライブラリである`gzip`モジュールを使用すると、gzip 形式のファイルを簡単に圧縮・展開できます。本記事では、`gzip`モジュールの基本的な使い方から応用的な活用方法、エラー対処法までを詳しく解説します。

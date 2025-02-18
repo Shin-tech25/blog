@@ -5,6 +5,8 @@ date: "2025-01-31"
 description: "Pythonのrandomモジュールを使って、シーケンスから要素をランダムに選択したり、並び替えたりする方法をわかりやすく紹介。choice, choices, sample, shuffleの使い分けや注意点、シード値による再現性についても詳しく解説します。"
 tags: ["Python", "数値計算"]
 featuredImage: ../thumbnails/python2.jpg
+relatedPosts:
+  - python-secrets
 ---
 
 Python で乱数を扱うには、標準ライブラリの `random` モジュールを使います。数値の乱数生成はもちろん、**シーケンス（リストやタプルなど）からランダムに要素を選びたい**ときにも役立ちます。本記事では、シーケンス内の要素をランダムに選択・抽出・並び替えするための関数を詳しく見ていきましょう。

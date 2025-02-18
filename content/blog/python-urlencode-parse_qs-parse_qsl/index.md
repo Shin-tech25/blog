@@ -5,6 +5,8 @@ date: "2025-02-03"
 description: "Pythonの標準ライブラリであるurllib.parseモジュールを活用することで、これらのクエリ文字列を効率的に生成・解析できます。本記事では、urlencode、parse_qs、およびparse_qsl関数の役割や相互関係、具体的な使用方法について詳しく解説します。"
 tags: ["Python", "urllib"]
 featuredImage: ../thumbnails/python2.jpg
+relatedPosts:
+  - python-urllib-request
 ---
 
 ## 概要
@@ -105,9 +107,3 @@ print(parsed_qsl)
 - **`parse_qsl`**: クエリ文字列を(キー, 値)のリスト形式で解析し、順序を保持する。
 
 これらの関数を理解し適切に使用することで、URL クエリパラメータの操作が容易になります。
-
-### 関連記事
-
-`urllib`を用いた HTTP リクエスト（`urllib.request`）について次の記事で解説しています。
-
-- [Python で HTTP リクエストを送る - urllib.request](/blog/python-urllib-request/)

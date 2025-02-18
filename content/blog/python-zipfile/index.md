@@ -5,6 +5,9 @@ date: "2025-02-09"
 description: "Pythonの標準ライブラリであるzipfileモジュールを使用して、ZIPファイルの作成、展開、操作方法を詳しく解説します。圧縮ファイルの扱い方や、便利なユースケースについても網羅しています。"
 tags: ["Python", "zipfile", "データ圧縮"]
 featuredImage: ../thumbnails/archive-files.jpg
+relatedPosts:
+  - python-gzip
+  - python-tarfile
 ---
 
 Python では、ZIP 形式のアーカイブファイルを操作するために、標準ライブラリの`zipfile`モジュールを使用できます。このモジュールを利用することで、zip コマンドなどを使用せずに、ファイルの圧縮や展開を Python コード内で簡単に行うことが可能です。本記事では、`zipfile`モジュールの使い方やその応用について詳しく解説します。

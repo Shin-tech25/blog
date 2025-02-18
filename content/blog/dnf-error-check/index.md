@@ -5,6 +5,9 @@ date: "2025-01-04"
 description: "RHEL系OSでリポジトリ構成のエラーを検証する方法"
 tags: ["Linux", "dnf"]
 featuredImage: ../thumbnails/linux.jpg
+relatedPosts:
+  - dnf-1
+  - dnf-2
 ---
 
 ## **`sudo dnf clean all && sudo dnf update` でリポジトリ構成のエラーを検証**

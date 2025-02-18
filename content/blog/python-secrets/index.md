@@ -5,6 +5,9 @@ date: "2025-02-09"
 description: "Pythonのsecretsモジュールを使って、安全なパスワードやトークンを生成する方法を解説。タイミング攻撃への対策や実用例も詳しく紹介します。"
 tags: ["Python", "セキュリティ", "secrets", "random"]
 featuredImage: ../thumbnails/security.jpg
+relatedPosts:
+  - python-random-choice-choices-sample-shuffle
+  - python-hashlib
 ---
 
 Python には、セキュアな乱数生成をサポートする標準ライブラリ `secrets` があります。このモジュールは、暗号学的に安全な乱数を生成するために設計されており、パスワードやトークンなどの機密情報を扱う際に推奨されます。本記事では、`secrets` モジュールの基本的な使い方から応用例までを解説します。
