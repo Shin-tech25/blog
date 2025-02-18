@@ -117,6 +117,10 @@
 
 /* スマートフォン対応 */
 @media (max-width: 767px) {
+  .postTitle {
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
   .postThumbnail {
     display: none !important; /* スマホではサムネイルを非表示 */
   }
