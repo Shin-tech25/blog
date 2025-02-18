@@ -44,15 +44,9 @@ const BlogList = ({ data, pageContext, location }) => {
     )
   }
 
-  // ★ 好きなスラグをここで定義
-  const FEATURED_SLUGS = [
-    "/4-months-pmp-exam-success/",
-    "/python-temporary-data-storage/",
-    "/us-stock-market-cap-strategies/",
-  ]
   const FeaturedSection = () => (
     <div className={styles.featuredSection}>
-      <FeaturedArticles slugList={FEATURED_SLUGS} />
+      <FeaturedArticles />
       <FeaturedTags tags={tags} /> {/* 全タグ情報を渡す */}
     </div>
   )
