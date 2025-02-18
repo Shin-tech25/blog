@@ -47,88 +47,6 @@
   align-items: center;
 }
 
-.postList {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-0);
-}
-
-.postItem {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin: var(--spacing-4) var(--spacing-0) var(--spacing-8) var(--spacing-0);
-  padding: var(--spacing-0);
-}
-
-.postThumbnail {
-  width: 20%;
-  margin-right: var(--spacing-4);
-  border-radius: 8px;
-}
-
-.noImageBox {
-  width: 20%;
-  height: 0;
-  padding-top: 20%;
-  background-color: #f0f0f0;
-  border: 1px dashed #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: var(--spacing-4);
-  border-radius: 8px;
-}
-
-.noImageText {
-  font-size: var(--fontSize-1);
-  color: #999;
-  text-align: center;
-}
-
-.postContent {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
-
-.postTitle {
-  font-size: var(--fontSize-3);
-  font-weight: bold;
-  margin-top: var(--spacing-0);
-  margin-bottom: var(--spacing-1);
-  color: var(--color-primary);
-  display: -webkit-box;
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-height: var(--lineHeight-relaxed);
-}
-
-.postDate {
-  font-size: var(--fontSize-1);
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-1);
-}
-
-.postDescription {
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
-  margin-bottom: var(--spacing-0);
-  display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.tagArticle {
-  margin-bottom: var(--spacing-5);
-}
-
 .tagList {
   display: flex;
   flex-wrap: wrap;
@@ -155,6 +73,12 @@
 .tagItem a:hover {
   background-color: var(--color-hover-tag-bg);
   color: var(--color-hover-tag-text);
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0);
 }
 
 .paginationWrapper {
@@ -207,21 +131,4 @@
 .pagination-next-prev:hover {
   background-color: var(--color-hover-title);
   color: white;
-}
-
-/* スマートフォン対応 */
-@media (max-width: 767px) {
-  .postTitle {
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-  }
-  .postThumbnail {
-    display: none !important; /* スマホではサムネイルを非表示 */
-  }
-  .noImageBox {
-    display: none !important; /* スマホではサムネイルを非表示 */
-  }
-  .postContent {
-    width: 100%;
-  }
 }

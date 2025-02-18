@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import kebabCase from "lodash/kebabCase"
 import * as styles from "../styles/blog-list.module.css"
+import PostItem from "../components/post-item"
 
 const BlogList = ({ data, pageContext, location }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark
   const tags = data.allTags.group
   const { currentPage, numPages } = pageContext
 
@@ -88,48 +88,19 @@ const BlogList = ({ data, pageContext, location }) => {
       {currentPage === 1 && <h2 className={styles.sectionTitle}>最近の投稿</h2>}
 
       <div className={styles.postList}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          const image = getImage(post.frontmatter.featuredImage)
-
-          return (
-            <div key={post.fields.slug} className={styles.postItem}>
-              {image ? (
-                <GatsbyImage
-                  image={image}
-                  alt={post.frontmatter.title}
-                  className={styles.postThumbnail}
-                />
-              ) : (
-                <div className={styles.noImageBox}>
-                  <span className={styles.noImageText}>No Image</span>
-                </div>
-              )}
-              <div className={styles.postContent}>
-                <h3 className={styles.postTitle}>
-                  <Link to={`/blog${post.fields.slug}`}>{title}</Link>
-                </h3>
-                <small className={styles.postDate}>
-                  {post.frontmatter.date}
-                </small>
-                {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                  <ul className={styles.tagList}>
-                    {post.frontmatter.tags.map((tag, index) => (
-                      <li key={index} className={styles.tagItem}>
-                        <Link to={`/tags/${kebabCase(tag)}/`} itemProp="url">
-                          {tag}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <p className={styles.postDescription}>
-                  {post.frontmatter.description}
-                </p>
-              </div>
-            </div>
-          )
-        })}
+        {posts.nodes.map(post => (
+          <PostItem
+            key={post.fields.slug}
+            post={{
+              slug: post.fields.slug,
+              title: post.frontmatter.title,
+              date: post.frontmatter.date,
+              tags: post.frontmatter.tags,
+              description: post.frontmatter.description,
+              featuredImage: post.frontmatter.featuredImage,
+            }}
+          />
+        ))}
       </div>
 
       {/* ページネーション */}

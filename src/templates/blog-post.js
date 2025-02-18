@@ -48,7 +48,7 @@ const BlogPostTemplate = ({
             </RedditShareButton>
           </div>
           <small>{post.frontmatter.date}</small>
-          <div className={styles.tagArticle}>
+          <div className={styles.tagWrapper}>
             {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
               <ul className={styles.tagList}>
                 {post.frontmatter.tags.map((tag, index) => (
