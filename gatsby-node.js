@@ -181,5 +181,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Fields {
       slug: String
     }
+    
+    type PopularArticlesYaml implements Node {
+      slug: String
+    }
   `)
 }
