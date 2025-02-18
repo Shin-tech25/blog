@@ -47,50 +47,52 @@ const TagSearch = ({ data, pageContext, location }) => {
       </div>
 
       {/* 🔹 ページネーション */}
-      <div className={styles.paginationWrapper}>
-        <ul className={styles.pagination}>
-          {currentPage > 1 && (
-            <li>
-              <Link
-                to={
-                  currentPage - 1 === 1
-                    ? `/tags/${kebabCase(tag)}`
-                    : `/tags/${kebabCase(tag)}/page/${currentPage - 1}`
-                }
-                className={styles.paginationNextPrev}
-              >
-                Prev
-              </Link>
-            </li>
-          )}
-          {Array.from({ length: numPages }).map((_, index) => (
-            <li key={index}>
-              <Link
-                to={
-                  index === 0
-                    ? `/tags/${kebabCase(tag)}`
-                    : `/tags/${kebabCase(tag)}/page/${index + 1}`
-                }
-                className={`${styles.paginationItem} ${
-                  currentPage === index + 1 ? styles.active : ""
-                }`}
-              >
-                {index + 1}
-              </Link>
-            </li>
-          ))}
-          {currentPage < numPages && (
-            <li>
-              <Link
-                to={`/tags/${kebabCase(tag)}/page/${currentPage + 1}`}
-                className={styles.paginationNextPrev}
-              >
-                Next
-              </Link>
-            </li>
-          )}
-        </ul>
-      </div>
+      {numPages > 1 && (
+        <div className={styles.paginationWrapper}>
+          <ul className={styles.pagination}>
+            {currentPage > 1 && (
+              <li>
+                <Link
+                  to={
+                    currentPage - 1 === 1
+                      ? `/tags/${kebabCase(tag)}`
+                      : `/tags/${kebabCase(tag)}/page/${currentPage - 1}`
+                  }
+                  className={styles.paginationNextPrev}
+                >
+                  Prev
+                </Link>
+              </li>
+            )}
+            {Array.from({ length: numPages }).map((_, index) => (
+              <li key={index}>
+                <Link
+                  to={
+                    index === 0
+                      ? `/tags/${kebabCase(tag)}`
+                      : `/tags/${kebabCase(tag)}/page/${index + 1}`
+                  }
+                  className={`${styles.paginationItem} ${
+                    currentPage === index + 1 ? styles.active : ""
+                  }`}
+                >
+                  {index + 1}
+                </Link>
+              </li>
+            ))}
+            {currentPage < numPages && (
+              <li>
+                <Link
+                  to={`/tags/${kebabCase(tag)}/page/${currentPage + 1}`}
+                  className={styles.paginationNextPrev}
+                >
+                  Next
+                </Link>
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
     </Layout>
   )
 }
