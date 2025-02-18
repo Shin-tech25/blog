@@ -1,16 +1,17 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import PostItem from "../components/post-item"
 import Seo from "../components/seo"
 import { FaSearch } from "react-icons/fa"
+import kebabCase from "lodash/kebabCase"
 import * as styles from "../styles/tag-search.module.css"
 
-const Tags = ({ data, pageContext, location }) => {
+const TagSearch = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { totalCount } = data.allMarkdownRemark
-  const posts = data.allMarkdownRemark
-  const { tag } = pageContext
+  const { tag, currentPage, numPages } = pageContext
+  const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
     return (
@@ -21,18 +22,16 @@ const Tags = ({ data, pageContext, location }) => {
     )
   }
 
-  const tagHeader = (
-    <span className={styles.tagHeader}>
-      <FaSearch className={styles.tagIcon} /> tag: {tag} ({totalCount} posts)
-    </span>
-  )
-
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={`tag: ${tag} | ${siteTitle}`} />
-      <h1>{tagHeader}</h1>
+      <h1 className={styles.tagHeader}>
+        <FaSearch className={styles.tagIcon} /> tag: {tag} (posts: {totalCount},
+        page: {currentPage}/{numPages})
+      </h1>
+
       <div className={styles.postList}>
-        {posts.nodes.map(post => (
+        {posts.map(post => (
           <PostItem
             key={post.fields.slug}
             post={{
@@ -46,27 +45,73 @@ const Tags = ({ data, pageContext, location }) => {
           />
         ))}
       </div>
+
+      {/* 🔹 ページネーション */}
+      <div className={styles.paginationWrapper}>
+        <ul className={styles.pagination}>
+          {currentPage > 1 && (
+            <li>
+              <Link
+                to={
+                  currentPage - 1 === 1
+                    ? `/tags/${kebabCase(tag)}`
+                    : `/tags/${kebabCase(tag)}/page/${currentPage - 1}`
+                }
+                className={styles.paginationNextPrev}
+              >
+                Prev
+              </Link>
+            </li>
+          )}
+          {Array.from({ length: numPages }).map((_, index) => (
+            <li key={index}>
+              <Link
+                to={
+                  index === 0
+                    ? `/tags/${kebabCase(tag)}`
+                    : `/tags/${kebabCase(tag)}/page/${index + 1}`
+                }
+                className={`${styles.paginationItem} ${
+                  currentPage === index + 1 ? styles.active : ""
+                }`}
+              >
+                {index + 1}
+              </Link>
+            </li>
+          ))}
+          {currentPage < numPages && (
+            <li>
+              <Link
+                to={`/tags/${kebabCase(tag)}/page/${currentPage + 1}`}
+                className={styles.paginationNextPrev}
+              >
+                Next
+              </Link>
+            </li>
+          )}
+        </ul>
+      </div>
     </Layout>
   )
 }
 
-export default Tags
+export default TagSearch
 
 export const pageQuery = graphql`
-  query ($tag: String) {
+  query ($tag: String, $skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      limit: 2000
       sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tags: { in: [$tag] } } }
+      skip: $skip
+      limit: $limit
     ) {
       totalCount
       nodes {
-        excerpt
         fields {
           slug
         }

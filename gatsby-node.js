@@ -28,6 +28,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
+          totalCount
         }
       }
     }
@@ -113,15 +114,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
+  // タグ検索ページのページネーション
   const tags = result.data.tagsGroup.group
-
   tags.forEach(tag => {
-    createPage({
-      path: `/tags/${kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
+    const numTagPages = Math.ceil(tag.totalCount / postsPerPage)
+    const tagSlug = `/tags/${kebabCase(tag.fieldValue)}`
+
+    Array.from({ length: numTagPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? tagSlug : `${tagSlug}/page/${i + 1}`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages: numTagPages,
+          currentPage: i + 1,
+        },
+      })
     })
   })
 }
