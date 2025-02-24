@@ -25,13 +25,13 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "MontserratVariable", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  --fontFamily-sans: "Meiryo", sans-serif, "MontserratVariable", system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
-  --font-body: var(--fontFamily-serif);
+  --fontFamily-serif: serif, "Merriweather", "Georgia", Cambria,
+    "Times New Roman", Times;
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
   --fontWeight-bold: 700;
@@ -116,7 +116,7 @@ h6 {
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
-  letter-spacing: -0.025em;
+  letter-spacing: 0.08em;
 }
 
 h2,
@@ -180,6 +180,7 @@ p {
   line-height: var(--lineHeight-relaxed);
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
   padding: var(--spacing-0);
+  letter-spacing: 0.05em;
 }
 
 ul,
@@ -240,6 +241,11 @@ table {
 
 table thead tr th {
   border-bottom: var(--spacing-1) solid var(--color-accent);
+  padding: var(--spacing-1) var(--spacing-3);
+}
+
+table tbody tr td {
+  padding: var(--spacing-3) var(--spacing-3);
 }
 
 a {
