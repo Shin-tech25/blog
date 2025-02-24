@@ -4,7 +4,7 @@ title: "PythonのEnumを用いて複数ステータスをビット演算で管�
 date: "2025-02-25"
 description: "PythonのenumモジュールのIntFlagを中心に、ビット演算を活用して複数のステータスを効率的に管理する方法とそのメリットを解説します。"
 tags:
-  - python
+  - Python
   - enum
   - ビット演算子
 featuredImage: ../thumbnails/python2.jpg
