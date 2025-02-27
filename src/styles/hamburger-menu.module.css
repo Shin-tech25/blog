@@ -37,14 +37,14 @@
 .nav {
   position: fixed;
   top: 0;
-  right: -100%; /* 初期状態では画面外 */
+  left: -100%; /* 初期状態では画面外 */
   width: 80%;
   max-width: 300px;
   height: 100vh;
   background: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  transition: right 0.3s ease; /* スライドアニメーション */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-3);
+  transition: left 0.3s ease; /* スライドアニメーション */
   z-index: 1001;
 }
 
@@ -54,24 +54,35 @@
   padding: 0;
 }
 
+/* リストアイテムのスタイル */
 .nav li {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-2); /* 適度な間隔 */
+  padding: var(--spacing-1) var(--spacing-2);
+  display: flex; /* 左寄せ */
+  align-items: center;
+  border-radius: 4px;
 }
 
 .nav a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: var(--fontSize-2);
   color: black;
+  padding-left: var(--spacing-2);
 }
 
+/* 現在のページ */
 .activeLink {
   font-weight: bold;
-  color: #007bff; /* お好みの色 */
+  background-color: #f4f4f4; /* くすみカラー */
+  width: 100%; /* 幅を統一 */
+  text-align: left; /* 文字を左寄せ */
+  border-radius: 4px;
+  padding: var(--spacing-2) var(--spacing-0);
 }
 
 /* メニューが開いた状態 */
 .open {
-  right: 0; /* 画面内にスライド */
+  left: 0; /* 画面内にスライド */
 }
 
 .overlay.open {
