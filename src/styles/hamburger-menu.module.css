@@ -1,0 +1,80 @@
+/* PCでは非表示、モバイルのみ表示 */
+.container {
+  position: relative;
+  display: none;
+}
+
+@media (max-width: 42rem) {
+  .container {
+    display: block; /* スマホでは表示 */
+  }
+}
+
+/* ハンバーガーアイコン */
+.hamburgerButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001; /* メニューより上に */
+}
+
+/* メニューのオーバーレイ */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+  z-index: 1000;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+/* メニュー本体 */
+.nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* 初期状態では画面外 */
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  transition: right 0.3s ease; /* スライドアニメーション */
+  z-index: 1001;
+}
+
+/* メニューリスト */
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  margin-bottom: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.activeLink {
+  font-weight: bold;
+  color: #007bff; /* お好みの色 */
+}
+
+/* メニューが開いた状態 */
+.open {
+  right: 0; /* 画面内にスライド */
+}
+
+.overlay.open {
+  display: block;
+  opacity: 1;
+}

@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import SearchBar from "./search-bar"
+import HamburgerMenu from "./hamburger-menu"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -13,7 +14,8 @@ const Layout = ({ location, children }) => {
       <div>
         <div className="nav-container">
           <div className="inner-container">
-            <div>
+            <HamburgerMenu />
+            <div className="logo">
               <Link to="/">
                 <StaticImage
                   src="../images/coffee-logo.svg"
@@ -51,7 +53,8 @@ const Layout = ({ location, children }) => {
     header = (
       <div className="nav-container">
         <div className="inner-container">
-          <div>
+          <HamburgerMenu />
+          <div className="logo">
             <Link to="/">
               <StaticImage
                 src="../images/coffee-logo.svg"

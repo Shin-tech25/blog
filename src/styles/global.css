@@ -508,6 +508,10 @@ a:focus {
     font-size: var(--fontSize-4); /* スマホ画面でのh2フォントサイズを調整 */
   }
 
+  .logo {
+    display: none;
+  }
+
   .nav {
     display: none;
   }
