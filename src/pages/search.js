@@ -70,19 +70,20 @@ const SearchPage = ({ location }) => {
   return (
     <Layout location={location}>
       <h1>Search</h1>
-      <div>
-        <label htmlFor="searchInput">キーワードで検索:</label>
+      <div className={styles.searchContainer}>
+        <button type="submit" className={styles.searchButton}>
+          🔍
+        </button>
         <input
           type="text"
           id="searchInput"
           value={query}
           onChange={handleInputChange}
-          placeholder="検索ワード"
-          style={{ width: "300px", marginLeft: "0.5rem" }}
+          placeholder="キーワードで検索"
+          className={styles.searchInput}
         />
       </div>
 
-      {/* ここをブログ一覧と同じような構造にする */}
       <div className={styles.postList}>
         {results.map(post => (
           <PostItem

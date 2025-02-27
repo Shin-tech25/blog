@@ -1,0 +1,38 @@
+/* フォーム全体のコンテナ */
+.searchForm {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+/* 検索アイコン兼ボタン */
+.searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--fontSize-1);
+}
+
+/* テキスト入力欄 */
+.searchForm input {
+  border: none;
+  outline: none;
+  flex: 1; /* 横幅いっぱいに広げる */
+  margin-left: var(--spacing-3);
+  font-size: var(--fontSize-1);
+  color: #333;
+}
+
+.searchButton:hover,
+.searchForm input:focus {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    width: 100%;
+  }
+}
