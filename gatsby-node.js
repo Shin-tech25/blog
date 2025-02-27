@@ -1,5 +1,6 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
+const fs = require("fs")
 const kebabCase = require("lodash/kebabCase")
 
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -196,4 +197,45 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onPostBuild = async ({ graphql }) => {
+  const result = await graphql(`
+    {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            description
+            tags
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    console.error("Error:", result.errors)
+    return
+  }
+
+  const posts = result.data.allMarkdownRemark.nodes
+  // すでに他の用途で posts を使っているなら、このまま残す
+
+  // 検索用のデータだけ抽出
+  const searchData = posts.map(post => ({
+    title: post.frontmatter.title,
+    description: post.frontmatter.description,
+    tags: post.frontmatter.tags || [],
+    slug: post.fields.slug,
+  }))
+
+  fs.writeFileSync(
+    path.join(__dirname, "public", "search-index.json"),
+    JSON.stringify(searchData, null, 2)
+  )
+  console.log("Search index written to /public/search-index.json")
 }
