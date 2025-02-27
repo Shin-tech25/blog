@@ -205,13 +205,22 @@ exports.onPostBuild = async ({ graphql }) => {
       allMarkdownRemark {
         nodes {
           frontmatter {
+            templateKey
             title
+            date
             description
             tags
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED)
+              }
+            }
           }
           fields {
             slug
           }
+          excerpt(pruneLength: 2000)
+          rawMarkdownBody
         }
       }
     }
@@ -223,14 +232,20 @@ exports.onPostBuild = async ({ graphql }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const blogPosts = posts.filter(
+    post => post.frontmatter.templateKey === "blog-post"
+  )
   // すでに他の用途で posts を使っているなら、このまま残す
 
   // 検索用のデータだけ抽出
-  const searchData = posts.map(post => ({
+  const searchData = blogPosts.map(post => ({
     title: post.frontmatter.title,
     description: post.frontmatter.description,
     tags: post.frontmatter.tags || [],
+    date: post.frontmatter.date,
+    featuredImage: post.frontmatter.featuredImage,
     slug: post.fields.slug,
+    body: post.excerpt,
   }))
 
   fs.writeFileSync(
