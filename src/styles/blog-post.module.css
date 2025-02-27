@@ -70,7 +70,7 @@
   padding: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 42rem) {
   .blogPost header h1 {
     font-size: var(--fontSize-5);
     margin-top: var(--spacing-2);

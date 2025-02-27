@@ -31,8 +31,8 @@ const Layout = ({ location, children }) => {
               <Link to="/service">Service</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
-              <SearchBar />
             </nav>
+            <SearchBar />
           </div>
         </div>
         <div className="hero-image-container">
@@ -69,8 +69,8 @@ const Layout = ({ location, children }) => {
             <Link to="/service">Service</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
-            <SearchBar />
           </nav>
+          <SearchBar />
         </div>
       </div>
     )

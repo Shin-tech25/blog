@@ -99,7 +99,7 @@
 }
 
 /* スマートフォン対応 */
-@media (max-width: 767px) {
+@media (max-width: 42rem) {
   .postTitle {
     line-clamp: 2;
     -webkit-line-clamp: 2;

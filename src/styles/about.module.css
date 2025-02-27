@@ -157,7 +157,7 @@
   margin-bottom: var(--spacing-2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 42rem) {
   .portfolioItem {
     flex-direction: row;
     align-items: flex-start;
@@ -194,7 +194,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 42rem) {
   .portfolioItem {
     flex-direction: column;
     align-items: center;
