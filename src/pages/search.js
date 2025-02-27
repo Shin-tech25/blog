@@ -2,7 +2,10 @@
 
 import React, { useEffect, useMemo, useState } from "react"
 import Fuse from "fuse.js"
-import { Link } from "gatsby"
+import Layout from "../components/layout"
+import PostItem from "../components/post-item"
+
+import * as styles from "../styles/search.module.css"
 
 const SearchPage = ({ location }) => {
   const [query, setQuery] = useState("")
@@ -32,8 +35,8 @@ const SearchPage = ({ location }) => {
   const fuse = useMemo(
     () =>
       new Fuse(searchData, {
-        keys: ["title", "description", "tags"],
-        threshold: 0.3,
+        keys: ["title", "description", "tags", "body"],
+        threshold: 0.5, // 0に近いほど厳密、1.0に近いほど緩い
       }),
     [searchData]
   )
@@ -65,7 +68,7 @@ const SearchPage = ({ location }) => {
   }
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <Layout location={location}>
       <h1>Search</h1>
       <div>
         <label htmlFor="searchInput">キーワードで検索:</label>
@@ -74,19 +77,28 @@ const SearchPage = ({ location }) => {
           id="searchInput"
           value={query}
           onChange={handleInputChange}
-          style={{ width: "300px", marginLeft: "0.5rem" }}
           placeholder="検索ワード"
+          style={{ width: "300px", marginLeft: "0.5rem" }}
         />
       </div>
 
-      <ul style={{ marginTop: "1rem" }}>
+      {/* ここをブログ一覧と同じような構造にする */}
+      <div className={styles.postList}>
         {results.map(post => (
-          <li key={post.slug}>
-            <Link to={`/blog${post.slug}`}>{post.title}</Link>
-          </li>
+          <PostItem
+            key={post.slug}
+            post={{
+              slug: post.slug,
+              title: post.title,
+              date: post.date,
+              tags: post.tags,
+              description: post.description,
+              featuredImage: post.featuredImage,
+            }}
+          />
         ))}
-      </ul>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
