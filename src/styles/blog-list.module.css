@@ -83,18 +83,20 @@
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-2);
   list-style: none;
   padding: 0;
   margin: var(--spacing-4) 0;
+  overflow: hidden;
 }
 
 .pagination-item {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
+  width: var(--fontSize-4);
+  height: var(--fontSize-4);
+  line-height: var(--fontSize-4);
   text-align: center;
   border-radius: 50%;
   background-color: var(--color-accent);
@@ -116,7 +118,8 @@
 
 .pagination-next-prev {
   display: inline-block;
-  padding: var(--spacing-1) var(--spacing-3);
+  line-height: var(--fontSize-4);
+  padding: var(--spacing-0) var(--spacing-3);
   border-radius: var(--spacing-1);
   background-color: var(--color-accent);
   color: var(--color-text-light);
