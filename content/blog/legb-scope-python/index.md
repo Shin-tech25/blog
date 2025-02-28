@@ -4,7 +4,7 @@ title: "LEGB規則とPythonの変数スコープ"
 date: "2025-02-08"
 description: "Pythonで変数名がどのように解決されるかを示すLEGB規則（Local、Enclosing、Global、Built-in）について、例を交えながら詳しく解説します。"
 tags: ["Python"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python における変数スコープと名前解決の順序を理解することは、コードの予測可能な動作やバグの防止において非常に重要です。Python では、変数を参照する際に **LEGB 規則**（Local、Enclosing、Global、Built-in）に従います。この規則を正しく理解することで、スコープの境界を意識した適切なコード設計が可能になります。

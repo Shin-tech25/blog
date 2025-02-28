@@ -4,7 +4,7 @@ title: "64ビットARMとIntelアーキテクチャの違い"
 date: "2025-01-21"
 description: "64ビットARMアーキテクチャ（AArch64）と64ビットIntelアーキテクチャ（x86_64）の設計思想、性能、ソフトウェア互換性、そして歴史を詳しく解説します。それぞれの特徴を理解し、用途に適した選択をサポートします。"
 tags: ["CPUアーキテクチャ"]
-featuredImage: ../thumbnails/computer.jpg
+featuredImage: ../../thumbnails/computer.jpg
 ---
 
 近年、PC やサーバーだけでなく、モバイルデバイスや組み込みシステムの世界でも 64 ビットアーキテクチャが主流となっています。この記事では、64 ビット ARM アーキテクチャ（AArch64）と 64 ビット Intel アーキテクチャ（x86_64 または AMD64）の違いや、RISC と CISC という設計思想、そして x86-64 アーキテクチャの歴史について詳しく解説します。

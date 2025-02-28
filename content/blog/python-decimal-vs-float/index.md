@@ -4,7 +4,7 @@ title: "PythonのdecimalモジュールとFloatOperationトラップを理解す
 date: "2025-01-30"
 description: "Pythonのdecimalモジュールの基本から、float混在による誤差の問題、FloatOperationトラップの活用方法まで詳しく解説します。金融計算や科学計算におけるdecimalの有用性を理解しましょう。"
 tags: ["Python", "数値計算"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 # Python の decimal モジュールと FloatOperation トラップを理解する

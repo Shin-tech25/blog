@@ -8,7 +8,7 @@ tags:
   - "Python"
   - "Ruff"
   - "静的解析"
-featuredImage: ../thumbnails/visual-studio-code-icon.png
+featuredImage: ../../thumbnails/visual-studio-code-icon.png
 relatedPosts:
   - "python-flake8"
 ---

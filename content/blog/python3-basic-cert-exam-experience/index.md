@@ -4,7 +4,7 @@ title: "Python3 エンジニア認定基礎試験 受験記録"
 date: "2024-08-18"
 description: "Python3 エンジニア認定基礎試験を受験してきました。また、合格し体験記がPythonED様に記載されました。合格までの過程、Python3 エンジニア認定基礎試験の資格試験学習のメリットなどをまとめました。"
 tags: ["資格試験", "Python"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python3 エンジニア認定基礎試験を受験してきました。また、合格し体験記が PythonED 様に記載されたようです。以下がそのリンクになります。

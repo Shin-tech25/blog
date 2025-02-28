@@ -4,7 +4,7 @@ title: "FEKスタック(Fluentd & Elasticsearch & Kibana)によるログ監視�
 date: "2024-08-23"
 description: "FEKスタック（Fluentd, Elasticsearch, Kibana）を効率的にインストールし、設定するための手順を詳細に説明します。"
 tags: ["SRE", "Fluentd", "Elasticsearch", "Kibana", "ログ管理"]
-featuredImage: ../thumbnails/keyboard.jpg
+featuredImage: ../../thumbnails/keyboard.jpg
 ---
 
 # FEK スタック構築手順

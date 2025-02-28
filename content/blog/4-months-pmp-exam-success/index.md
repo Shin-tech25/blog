@@ -4,7 +4,7 @@ title: "PMP受験記録"
 date: "2024-07-18"
 description: "私は4か月間の学習期間の後、2024年6月にPMP試験に合格しました。PMP試験受験までの流れ、選定した教材、計画、試験当日の流れなどについてまとめました。"
 tags: ["PMP", "PMBOK", "資格試験"]
-featuredImage: ../thumbnails/exam.jpg
+featuredImage: ../../thumbnails/exam.jpg
 ---
 
 # 4 か月で PMP 試験合格：学習の流れ、教材選定、計画、試験当日の詳細

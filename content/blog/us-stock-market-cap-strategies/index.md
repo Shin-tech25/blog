@@ -4,7 +4,7 @@ title: "米国株投資における時価総額別の分類と投資戦略"
 date: "2025-02-01"
 description: "米国株市場での企業規模に基づく時価総額分類（Micro CapからMega Capまで）と、それぞれの特徴、リスク・リターン、投資戦略について詳しく解説。投資スタイルに応じたポートフォリオ構築のヒントを紹介します。"
 tags: ["米国株"]
-featuredImage: ../thumbnails/money.jpg
+featuredImage: ../../thumbnails/money.jpg
 ---
 
 米国株市場では、企業の規模を示す指標として「時価総額（Market Capitalization）」が重要な役割を果たします。本記事で紹介する内容はあくまで一般論であり、個別の投資判断については自身の状況や目的に応じて慎重に検討することが重要です。

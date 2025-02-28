@@ -4,7 +4,7 @@ title: "Pythonのenumモジュールの使い方と実践例"
 date: "2025-02-02"
 description: "Pythonのenumモジュールの基本構文から、状態管理、フラグ操作、APIステータス管理といった実践的な用途までを体系的に解説します。定数管理を効率化し、状態遷移やデータ整合性を強化するためのベストプラクティスを紹介します。"
 tags: ["Python", "enum"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python で定数を扱う際、単なる変数で管理する方法は手軽ですが、複雑な状態管理や選択肢が増えるとコードが煩雑になり、バグの温床となることがあります。こうした問題を解決するのが`enum`モジュールです。本記事では、`enum`の基本から実践的なユースケースまでを解説します。

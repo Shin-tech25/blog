@@ -4,7 +4,7 @@ title: "DNFによるコンテンツのインストール - DNF(2)"
 date: "2024-09-22"
 description: "DNFコマンドとパッケージ管理システムの概念について体系的にまとめました。今回は2回目になります。DNFコマンドによるコンテンツインストールを扱います。"
 tags: ["Linux", "dnf", "RHEL"]
-featuredImage: ../thumbnails/linux.jpg
+featuredImage: ../../thumbnails/linux.jpg
 relatedPosts:
   - dnf-1
   - dnf-error-check

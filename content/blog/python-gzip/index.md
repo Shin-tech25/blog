@@ -4,7 +4,7 @@ title: "Pythonでgzipファイルを扱う - gzip"
 date: "2025-02-09"
 description: "Python標準ライブラリのgzipモジュールを使って、gzip形式のファイルやデータを効率的に圧縮・展開する方法を徹底解説。基本的な使い方からエラー対処法、応用例まで幅広くカバーします。"
 tags: ["Python", "gzip", "データ圧縮"]
-featuredImage: ../thumbnails/archive-files.jpg
+featuredImage: ../../thumbnails/archive-files.jpg
 relatedPosts:
   - python-zipfile
   - python-tarfile

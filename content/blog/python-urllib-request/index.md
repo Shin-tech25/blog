@@ -4,7 +4,7 @@ title: "PythonでHTTPリクエストを送る - urllib.request"
 date: "2025-02-17"
 description: "Python標準ライブラリ urllib.request を使用して、GET・POST・DELETEなどのHTTPリクエストを送信し、レスポンスを取得する方法を解説します。"
 tags: ["Python", "urllib"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 relatedPosts:
   - python-urlencode-parse_qs-parse_qsl
 ---

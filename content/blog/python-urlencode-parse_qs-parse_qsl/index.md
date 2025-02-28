@@ -4,7 +4,7 @@ title: "URLクエリ文字列の生成と解析におけるPythonの標準ライ
 date: "2025-02-03"
 description: "Pythonの標準ライブラリであるurllib.parseモジュールを活用することで、これらのクエリ文字列を効率的に生成・解析できます。本記事では、urlencode、parse_qs、およびparse_qsl関数の役割や相互関係、具体的な使用方法について詳しく解説します。"
 tags: ["Python", "urllib"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 relatedPosts:
   - python-urllib-request
 ---

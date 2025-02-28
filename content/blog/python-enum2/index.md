@@ -7,7 +7,7 @@ tags:
   - Python
   - enum
   - ビット演算子
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 relatedPosts:
   - python-enum1
 ---

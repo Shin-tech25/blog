@@ -4,7 +4,7 @@ title: "Pythonの日付操作をより便利にする強力なサードパーテ
 date: "2025-02-08"
 description: "Python標準ライブラリdatetimeの強化版として活躍するdateutilモジュール。その柔軟な日付解析、相対日付計算、繰り返しルール指定などを具体例とともに詳しく解説します。"
 tags: ["Python", "dateutil", "サードパーティライブラリ"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 `dateutil` モジュールは、Python の標準ライブラリである `datetime` を強力に拡張するサードパーティライブラリです。このモジュールを使用することで、日付や時間に関する操作がより柔軟かつ便利になります。本記事では、`dateutil` の基本的な使い方から実用的な例までを解説します。

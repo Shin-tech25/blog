@@ -4,7 +4,7 @@ title: "Pythonのランダム操作：choice, choices, sample, shuffleを徹底�
 date: "2025-01-31"
 description: "Pythonのrandomモジュールを使って、シーケンスから要素をランダムに選択したり、並び替えたりする方法をわかりやすく紹介。choice, choices, sample, shuffleの使い分けや注意点、シード値による再現性についても詳しく解説します。"
 tags: ["Python", "数値計算"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 relatedPosts:
   - python-secrets
 ---

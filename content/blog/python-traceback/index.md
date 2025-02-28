@@ -4,7 +4,7 @@ title: "Pythonでスタックトレースを扱う - traceback"
 date: "2025-02-16"
 description: "Pythonの例外発生時に有用なスタックトレースを制御するtracebackモジュールについて、基本的な使用方法やログ出力の例を交えながら解説します。"
 tags: ["Python", "traceback"]
-featuredImage: ../thumbnails/traceback.png
+featuredImage: ../../thumbnails/traceback.png
 ---
 
 ## 概要

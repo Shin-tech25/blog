@@ -4,7 +4,7 @@ title: "Pythonでコード実行時間を計測する - timeit"
 date: "2025-02-08"
 description: "Pythonの標準ライブラリtimeitを使用してコードの実行時間を正確に測定し、ボトルネックを特定する方法を詳しく解説。コマンドラインとスクリプトでの使い方を網羅し、実用的な例も豊富に紹介します。"
 tags: ["Python", "timeit"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python でプログラムのパフォーマンスを向上させるためには、コードの実行時間を計測し、ボトルネックを見つけることが重要です。`timeit` モジュールは、この目的のために設計された標準ライブラリで、簡単かつ正確にコードの実行時間を測定することができます。本記事では、`timeit` モジュールの使用方法や、実用的な活用例について詳しく解説します。

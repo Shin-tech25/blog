@@ -4,7 +4,7 @@ title: "Pythonで例外クラスを特定する方法：デバッグから学ぶ
 date: "2025-01-17"
 description: "Pythonで例外クラスを適切に特定することで、エラーハンドリングを強化する方法について解説します。開発中に未知の例外に対応する実践的なアプローチも紹介。"
 tags: ["Python", "例外処理"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 ## Python における例外クラスの特定方法

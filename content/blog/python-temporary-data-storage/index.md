@@ -4,7 +4,7 @@ title: "Pythonによる一時データ保存のベストプラクティス"
 date: "2025-01-26"
 description: "Pythonでデータを一時的に保存するための方法を徹底解説します。ファイルシステムとメモリの違い、それぞれのツールの使い分けを具体例とともに紹介します。"
 tags: ["Python", "tempfile"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 データを一時的に保存する場面は、ファイル操作やデータ処理を行うエンジニアにとって頻繁に直面する課題です。Python は、こうしたニーズに対応するための便利なモジュールを複数提供しています。この記事では、**Python でデータを一時的に保存するためのツール**を、以下の観点で整理・解説します。

@@ -4,7 +4,7 @@ title: "シェルスクリプトからPythonを用いるためのシバン（She
 date: "2024-10-08"
 description: "シェルスクリプトでPythonを使用するためのシバン（Shebang）についての解説。仮想環境やシステム間の違いに対応するために、/usr/bin/env python3 を使う利点を説明します。"
 tags: ["Python", "Linux", "シェルスクリプト"]
-featuredImage: ../thumbnails/linux.jpg
+featuredImage: ../../thumbnails/linux.jpg
 ---
 
 シェルスクリプトから Python を用いるためのシバン（Shebang）は次のように記載すると良いです：

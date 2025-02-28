@@ -4,7 +4,7 @@ title: "Pythonによる公開鍵暗号化方式 - cryptography"
 date: "2025-02-15"
 description: "Pythonで公開鍵暗号化方式を実装するためにcryptographyライブラリを使用した方法を解説します。実際のコード例を通して、公開鍵と秘密鍵を利用した暗号化、復号化を学びます。"
 tags: ["Python", "暗号化", "cryptography", "セキュリティ"]
-featuredImage: ../thumbnails/security.jpg
+featuredImage: ../../thumbnails/security.jpg
 relatedPosts:
   - python-cryptgraphy1
 ---

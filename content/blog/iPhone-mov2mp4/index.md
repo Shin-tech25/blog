@@ -4,7 +4,7 @@ title: "iPhone動画ファイルのファイル名変更と形式変換方法"
 date: "2024-06-06"
 description: "iPhoneで撮影した動画ファイルのファイル名を撮影日時に基づいて変更し、形式をMOVからMP4に変換する方法を詳しく説明します。"
 tags: ["Linux", "ffmpeg", "xargs", "ライフハック"]
-featuredImage: ../thumbnails/pc-desk.jpg
+featuredImage: ../../thumbnails/pc-desk.jpg
 ---
 
 iPhone で撮影した動画は通常、「.MOV」または「.mov」という拡張子で保存されています。この拡張子は Apple の QuickTime フォーマットを示します。ここでは、動画ファイルのファイル名を撮影日時に基づいて変更する方法と、ファイル形式を MOV から MP4 に変換する方法を説明します。

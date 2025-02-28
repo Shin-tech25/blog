@@ -4,7 +4,7 @@ title: "Flake8によるPythonの静的解析、リファクタリング"
 date: "2024-10-09"
 description: "Flake8はPythonコードのスタイルガイドやプログラミングのベストプラクティスに基づいて、コードを自動的にチェックするためのツールです。具体的には、PythonコードのPEP 8（Pythonのスタイルガイド）準拠をチェックし、コードの品質を高めるための静的解析を行います。"
 tags: ["Python", "外部ライブラリ", "静的解析"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 ## Flake8 の概要

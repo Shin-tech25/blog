@@ -4,7 +4,7 @@ title: "Pythonでtarファイルを扱う - tarfile"
 date: "2025-02-09"
 description: "Pythonの標準ライブラリであるtarfileモジュールを使用して、tarファイルの作成、展開、操作方法を詳しく解説します。gzipやbz2形式の圧縮アーカイブの扱い方や便利なユースケースについても網羅しています。"
 tags: ["Python", "tarfile", "データ圧縮"]
-featuredImage: ../thumbnails/archive-files.jpg
+featuredImage: ../../thumbnails/archive-files.jpg
 relatedPosts:
   - python-zipfile
   - python-gzip

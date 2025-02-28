@@ -4,7 +4,7 @@ title: "Pythonでオブジェクトをコピーする: 参照、Sallow/Deep Copy
 date: "2025-02-09"
 description: "Pythonでのオブジェクトコピーに関する基本から応用までを解説。参照、浅いコピー（Shallow Copy）、深いコピー（Deep Copy）の違いと、それぞれの使い分けについて詳しく説明します。"
 tags: ["Python", "copy"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python では、オブジェクトのコピーにはさまざまな方法がありますが、その挙動を正しく理解することが重要です。特に、ミュータブルなオブジェクトをコピーする際には、「参照」「浅いコピー（Shallow Copy）」「深いコピー（Deep Copy）」の違いを理解する必要があります。本記事では、これらの違いを解説し、`copy` モジュールを活用した具体的なコピー方法について詳しく説明します。

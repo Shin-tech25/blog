@@ -4,7 +4,7 @@ title: "Pythonでセキュアな乱数を生成する - secrets"
 date: "2025-02-09"
 description: "Pythonのsecretsモジュールを使って、安全なパスワードやトークンを生成する方法を解説。タイミング攻撃への対策や実用例も詳しく紹介します。"
 tags: ["Python", "セキュリティ", "secrets", "random"]
-featuredImage: ../thumbnails/security.jpg
+featuredImage: ../../thumbnails/security.jpg
 relatedPosts:
   - python-random-choice-choices-sample-shuffle
   - python-hashlib

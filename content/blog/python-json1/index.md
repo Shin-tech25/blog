@@ -4,7 +4,7 @@ title: "Pythonで始めるJSON入門：基本からファイル操作、Web API�
 date: "2025-02-28"
 description: "この記事では、JSONの基本概念からPythonを使ったエンコード・デコード、ファイル操作、そしてWeb APIとの連携方法について、実例を交えて分かりやすく解説します。"
 tags: ["Python", "JSON", "WebAPI"]
-featuredImage: ../thumbnails/python3.jpg
+featuredImage: ../../thumbnails/python3.jpg
 relatedPosts:
 ---
 

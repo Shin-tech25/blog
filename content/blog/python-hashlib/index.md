@@ -4,7 +4,7 @@ title: "Pythonでハッシュ値を生成する方法 - hashlib"
 date: "2025-02-11"
 description: "Python標準ライブラリのhashlibモジュールを使用して、ハッシュ値の生成、暗号化、セキュリティ強化の方法を詳しく解説します。SHA-256やMD5を含むアルゴリズムの使い分けや、ファイルのチェックサム計算、鍵導出処理の実例も紹介。"
 tags: ["Python", "hashlib", "暗号化", "セキュリティ"]
-featuredImage: ../thumbnails/security.jpg
+featuredImage: ../../thumbnails/security.jpg
 relatedPosts:
   - python-secrets
 ---

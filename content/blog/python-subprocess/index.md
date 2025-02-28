@@ -4,7 +4,7 @@ title: "Pythonでサブプロセスを管理する方法 - subprocess"
 date: "2025-02-11"
 description: "Pythonの標準ライブラリsubprocessモジュールを使用して、システムコマンドの実行、プロセス管理、入出力のキャプチャ方法について詳しく解説します。初心者から上級者まで役立つ実践例を紹介。"
 tags: ["Python", "subprocess"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 ## 概要

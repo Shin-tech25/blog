@@ -4,7 +4,7 @@ title: "Pythonでデータをエンコード・デコードする - base64"
 date: "2025-02-08"
 description: "Pythonの標準ライブラリbase64を使い、バイナリデータをエンコード・デコードする方法を詳しく解説します。Web開発やデータ転送で役立つ実用例も紹介します。"
 tags: ["Python", "base64"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 # Python でデータをエンコード・デコードする - base64

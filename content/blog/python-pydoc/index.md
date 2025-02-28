@@ -4,7 +4,7 @@ title: "Pythonでドキュメントを自動生成するモジュール - pydoc"
 date: "2025-02-11"
 description: "Python標準ライブラリのpydocモジュールを使用して、ソースコードから自動的にドキュメントを生成する方法を解説します。オンラインヘルプ、HTMLドキュメント作成、HTTPサーバーによる閲覧方法について詳しく紹介します。"
 tags: ["Python", "pydoc"]
-featuredImage: ../thumbnails/python2.jpg
+featuredImage: ../../thumbnails/python2.jpg
 ---
 
 Python には、ソースコード内のコメントを利用してドキュメントを生成するための機能が用意されています。この機能を構築するための標準モジュールが「pydoc」です。pydoc を使用することで、ソースコード上のドキュメントから自動的に HTML やテキストベースのドキュメントを生成することが可能です。本記事は、pydoc の基礎的な機能と実用的な使い方について解説します。

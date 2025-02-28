@@ -4,7 +4,7 @@ title: "DNFの概要とパッケージ、リポジトリーの検索 - DNF(1)"
 date: "2024-09-17"
 description: "DNFコマンドとパッケージ管理システムの概念について体系的にまとめました。パッケージ管理は実務上よく使用されますが、しっかりと理解されている方は少ないと思います。そこで、自分の学習も兼ねてRedHat本家ドキュメントを参照しつつ編集しました。"
 tags: ["Linux", "dnf", "RHEL"]
-featuredImage: ../thumbnails/linux.jpg
+featuredImage: ../../thumbnails/linux.jpg
 relatedPosts:
   - dnf-2
   - dnf-error-check
