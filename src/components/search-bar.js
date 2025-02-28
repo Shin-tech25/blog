@@ -14,6 +14,10 @@ export default function SearchBar() {
         if (inputRef.current) {
           inputRef.current.focus()
         }
+      } else if (event.key === "Escape") {
+        if (inputRef.current) {
+          inputRef.current.blur() // フォーカス解除
+        }
       }
     }
 
