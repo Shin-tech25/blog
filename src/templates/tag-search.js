@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import PostItem from "../components/post-item"
 import Seo from "../components/seo"
-import { FaSearch } from "react-icons/fa"
+import { FaTag } from "react-icons/fa"
 import kebabCase from "lodash/kebabCase"
 import * as styles from "../styles/tag-search.module.css"
 
@@ -26,8 +26,8 @@ const TagSearch = ({ data, pageContext, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title={`tag: ${tag} | ${siteTitle}`} />
       <h1 className={styles.tagHeader}>
-        <FaSearch className={styles.tagIcon} /> tag: {tag} (posts: {totalCount},
-        page: {currentPage}/{numPages})
+        <FaTag className={styles.tagIcon} /> {tag} (posts: {totalCount}, page:{" "}
+        {currentPage}/{numPages})
       </h1>
 
       <div className={styles.postList}>

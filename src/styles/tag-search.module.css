@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: var(--spacing-2);
+  font-size: var(--fontSize-3);
 }
 
 .tagIcon {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-3);
   margin-right: var(--spacing-2);
   line-height: 1;
 }
@@ -67,4 +68,13 @@
 .pagination-next-prev:hover {
   background-color: var(--color-hover-title);
   color: white;
+}
+
+@media (max-width: 42rem) {
+  .tagHeader {
+    font-size: var(--fontSize-1);
+  }
+  .tagIcon {
+    font-size: var(--fontSize-1);
+  }
 }
