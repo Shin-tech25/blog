@@ -79,13 +79,29 @@ const Layout = ({ location, children }) => {
     )
   }
 
+  let footer = (
+    <div className="inner-container">
+      <nav className="footer-nav">
+        <Link to="/">Home</Link>
+        <Link to="/service">Service</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/tags">Tags</Link>
+      </nav>
+      <div className="footer-copy">
+        © {new Date().getFullYear()}, Built with{" "}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </div>
+    </div>
+  )
+
   return (
     <div className="site">
       <header className="global-header">{header}</header>
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
       </div>
-      {/* ...footer */}
+      <footer className="footer">{footer}</footer>
     </div>
   )
 }
