@@ -1,12 +1,14 @@
 const path = require("path")
-const { createFilePath } = require("gatsby-source-filesystem")
 const fs = require("fs")
+
+const { parse } = require("json2csv")
+const { createFilePath } = require("gatsby-source-filesystem")
 const kebabCase = require("lodash/kebabCase")
 
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
-const servicePost = path.resolve(`./src/templates/service-post.js`)
-const tagTemplate = path.resolve(`./src/templates/tag-search.js`)
-const blogListTemplate = path.resolve(`./src/templates/blog-list.js`) // 新しいテンプレートを追加
+const blogPost = path.resolve("./src/templates/blog-post.js")
+const servicePost = path.resolve("./src/templates/service-post.js")
+const tagTemplate = path.resolve("./src/templates/tag-search.js")
+const blogListTemplate = path.resolve("./src/templates/blog-list.js")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -202,7 +204,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.onPostBuild = async ({ graphql }) => {
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { frontmatter: { date: ASC } }) {
         nodes {
           frontmatter {
             templateKey
@@ -235,9 +237,8 @@ exports.onPostBuild = async ({ graphql }) => {
   const blogPosts = posts.filter(
     post => post.frontmatter.templateKey === "blog-post"
   )
-  // すでに他の用途で posts を使っているなら、このまま残す
 
-  // 検索用のデータだけ抽出
+  // 1. 検索用インデックスデータを生成
   const searchData = blogPosts.map(post => ({
     title: post.frontmatter.title,
     description: post.frontmatter.description,
@@ -253,4 +254,27 @@ exports.onPostBuild = async ({ graphql }) => {
     JSON.stringify(searchData, null, 2)
   )
   console.log("Search index written to /public/search-index.json")
+
+  // 2. CSV データ生成
+  const csvData = blogPosts.map((post, index) => ({
+    number: index + 1,
+    title: post.frontmatter.title,
+    date: post.frontmatter.date,
+    slug: post.fields.slug,
+    tags: post.frontmatter.tags ? post.frontmatter.tags.join(", ") : "", // カンマ区切り
+  }))
+
+  // CSV 変換
+  const csv = parse(csvData, {
+    fields: ["number", "title", "date", "slug", "tags"],
+  })
+
+  // UTF-8 BOM 付きで出力
+  fs.writeFileSync(
+    path.join(__dirname, "public", "posts.csv"),
+    "\uFEFF" + csv,
+    "utf8"
+  )
+
+  console.log("CSV file generated at /public/posts.csv")
 }
