@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "Pythonによる設定管理 - configparser"
 date: "2025-03-01"
 description: "INIファイルの基本構造や特徴、Pythonのconfigparserモジュールを使った設定管理の方法について、具体的なコード例と共に分かりやすく解説します。"
-tags: ["Python", "configparser", "設定管理"]
+tags: ["Python", "INI", "configparser", "設定管理", "技術記事"]
 featuredImage: ../../thumbnails/python3.jpg
 relatedPosts:
   - python-pyyaml
@@ -190,12 +190,57 @@ if config.has_section("USER_C"):
 
 ### 6.2 型変換の注意点
 
-`config["USER_A"]["limit"]` のように取得した値は文字列です。数値に変換したい場合は `int()` を、真偽値なら `config.getboolean()` を使います。  
-また、`true` / `false` / `on` / `off` / `yes` / `no` などの文字列は真偽値に変換できますが、それ以外の表現が混ざると正しくパースできないことがあります。
+#### INI ファイルの値は基本的に文字列
+
+`configparser` で INI ファイルを読み込むと、全てのオプションの値は文字列として扱われます。
+
+例えば、設定ファイルに
+
+```ini
+[DEFAULT]
+limit = 100
+```
+
+と記述されていても、
+
+```python
+limit_val = config["DEFAULT"]["limit"]
+```
+
+で取得した場合、`limit_val` は `"100"` という文字列になります。
+
+#### 数値に変換する場合
+
+計算や数値的な比較を行いたいときは、取得した文字列を整数や浮動小数点数に変換する必要があります。
+
+`config.getint()` や `config.getfloat()` を使うと、INI ファイル内の数値文字列を自動で変換してくれます。
 
 ```python
 limit_val = config.getint("DEFAULT", "limit")
 ```
+
+**注意点:**
+
+もし設定値に余計な空白や数字以外の文字が含まれている場合、変換処理で `ValueError` が発生する可能性があるため、設定ファイル側での記述ルールを統一しておくことが大切です。
+
+#### 真偽値（Boolean）に変換する場合
+
+真偽値として扱いたい場合、`config.getboolean()` を利用します。これにより、文字列が自動的に論理値に変換されます。
+
+```python
+active = config.getboolean("USER_A", "active")
+```
+
+**認識される文字列:**
+
+`getboolean()` は、以下の文字列表現を標準でサポートしています（大文字・小文字は区別されません）:
+
+- **True として認識:** `"1"`, `"yes"`, `"true"`, `"on"`
+- **False として認識:** `"0"`, `"no"`, `"false"`, `"off"`
+
+**注意点:**
+
+これ以外の表現（たとえば `"enabled"` や `"True!"` など）はサポートされておらず、変換に失敗する可能性があります。設定ファイルを書く際は、必ずこれらの標準的な表現に従うことが求められます。
 
 ### 6.3 補間エラー
 
