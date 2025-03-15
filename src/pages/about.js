@@ -146,6 +146,24 @@ const AboutPage = ({ location }) => {
                 </p>
               </div>
             </div>
+            <div className={styles.portfolioItem}>
+              <StaticImage
+                src="../images/vps-dev.png"
+                alt="vps-dev"
+                width={100}
+                height={100}
+                placeholder="blurred"
+              />
+              <div>
+                <a href="https://github.com/Shin-tech25/self-hosted-lab">
+                  Shin-tech25/self-hosted-lab
+                </a>
+                <p>
+                  VPS上の開発環境をコンテナで構築しています。GROWI
+                  Wiki/Redmine/Nextcloud/Keycloakを`docker-compose`で運用しています。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
