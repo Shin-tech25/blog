@@ -1,12 +1,13 @@
+/* ===== PC用デフォルト ===== */
 .container {
-  padding: 0;
-  /* 余白を削除 */
+  padding: 0; /* 余白を削除 */
 }
 
 .profileContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
   text-align: center;
   margin-bottom: var(--spacing-6);
 }
@@ -15,6 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .profileImage {
@@ -41,9 +43,8 @@
 }
 
 .profileText {
-  max-width: 600px;
-  margin: 0 0;
   padding: var(--spacing-4);
+  margin: 0 0;
 }
 
 .profileText p {
@@ -71,49 +72,34 @@
 }
 
 .skillTag {
-  background-color: #e0e0e0;
-  /* 背景色を追加 */
-  color: #333;
-  /* 文字色を設定 */
-  padding: 8px 12px;
-  /* パディングを調整 */
-  border-radius: 12px;
-  /* 丸みを追加 */
-  font-size: var(--fontSize-0);
-  /* 文字サイズを小さくする */
+  background-color: #e0e0e0; /* 背景色を追加 */
+  color: #333; /* 文字色を設定 */
+  padding: 8px 12px; /* パディングを調整 */
+  border-radius: 12px; /* 丸みを追加 */
+  font-size: var(--fontSize-0); /* 文字サイズを小さくする */
   line-height: var(--lineHeight-tight);
-  white-space: nowrap;
-  /* テキストの改行を防止 */
+  white-space: nowrap; /* テキストの改行を防止 */
 }
 
 .certificates {
-  list-style: none;
-  /* デフォルトのリストスタイルを削除 */
+  list-style: none; /* デフォルトのリストスタイルを削除 */
   padding: 0;
-  /* パディングを削除 */
   margin: 0;
-  /* マージンを削除 */
 }
 
 .certificates li {
   text-align: center;
-  margin-bottom: var(--spacing-2);
-  /* 各項目の間にスペースを追加 */
+  margin-bottom: var(--spacing-2); /* 各項目の間にスペースを追加 */
 }
 
 .certificates li::before {
   content: "";
   display: inline-block;
-  width: 8px;
-  /* バッジのサイズ */
-  height: 8px;
-  /* バッジのサイズ */
-  border-radius: 50%;
-  /* 丸い形にする */
-  background-color: var(--color-primary);
-  /* 初期色を設定 */
-  margin-right: var(--spacing-2);
-  /* テキストとの間にスペースを追加 */
+  width: 8px; /* バッジのサイズ */
+  height: 8px; /* バッジのサイズ */
+  border-radius: 50%; /* 丸い形にする */
+  background-color: var(--color-primary); /* 初期色を設定 */
+  margin-right: var(--spacing-2); /* テキストとの間にスペースを追加 */
 }
 
 .portfolios {
@@ -124,30 +110,32 @@
 
 .portfolioItem {
   display: flex;
+  flex-direction: row; /* PCの場合は横並び */
   align-items: flex-start;
   gap: var(--spacing-4);
   padding: var(--spacing-4) 0;
+  text-align: left;
 }
 
+/*
 .portfolioItem img {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: contain;
-  border-radius: 8px;
+  width: 100px;
+  height: auto;
 }
+*/
 
 .portfolioItem p {
   margin: 0;
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  margin-top: var(--spacing-0);
 }
 
-/* ポートフォリオアイテムの間隔を調整 */
+/* ポートフォリオアイテム内の説明部分 */
 .portfolioItem div {
   display: flex;
   flex-direction: column;
-  margin-left: var(--spacing-4);
-  /* ここで間隔を調整 */
+  margin-left: var(--spacing-4); /* ここで間隔を調整 */
 }
 
 .portfolioItem a {
@@ -157,43 +145,15 @@
   margin-bottom: var(--spacing-2);
 }
 
-@media (min-width: 42rem) {
-  .portfolioItem {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .portfolioItem img {
-    width: 100px;
-    height: auto;
-  }
-
-  .portfolioItem p {
-    margin-top: var(--spacing-0);
-  }
-
-  .profileContainer {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .profileText {
-    max-width: 50%;
-    text-align: left;
-    padding: 0;
-    /* 余白を削除 */
-  }
-
-  .profile {
-    max-width: 50%;
-    align-items: center;
-    text-align: center;
-  }
+.portfolioImageContainer {
+  width: 15%;
 }
 
+.portfolioTextContainer {
+  width: 85%;
+}
+
+/* ===== スマホ用上書き (幅 42rem 以下) ===== */
 @media (max-width: 42rem) {
   .portfolioItem {
     flex-direction: column;
@@ -201,19 +161,30 @@
     text-align: center;
   }
 
-  .portfolioItem img {
-    width: 100%;
-    max-width: 300px;
+  .portfolioItem div {
+    margin-left: 0;
   }
 
   .portfolioItem p {
     margin-top: var(--spacing-4);
   }
 
+  .portfolioImageContainer {
+    width: 35%;
+  }
+
+  .portfolioImageContainer gatsby-image-wrapper {
+    margin-left: 0px;
+  }
+
+  .portfolioTextContainer {
+    width: 100%;
+  }
+
   .profileContainer {
     flex-direction: column;
-    padding: var(--spacing-4);
-    /* スマートフォンでのパディング調整 */
+    padding: var(--spacing-4); /* スマホ用のパディング調整 */
+    text-align: center;
   }
 
   .profileText {

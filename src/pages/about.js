@@ -126,14 +126,16 @@ const AboutPage = ({ location }) => {
           <h2>Portfolios</h2>
           <div className={styles.portfolios}>
             <div className={styles.portfolioItem}>
-              <StaticImage
-                src="../images/coffee-logo.svg"
-                alt="coffee-logo"
-                width={100}
-                height={100}
-                placeholder="blurred"
-              />
-              <div>
+              <div className={styles.portfolioImageContainer}>
+                <StaticImage
+                  src="../images/coffee-logo.svg"
+                  alt="coffee-logo"
+                  placeholder="blurred"
+                  layout="constrained"
+                  objectFit="cover"
+                />
+              </div>
+              <div className={styles.portfolioTextContainer}>
                 <a href="https://github.com/Shin-tech25/blog">
                   Shin-tech25/blog
                 </a>
@@ -147,14 +149,16 @@ const AboutPage = ({ location }) => {
               </div>
             </div>
             <div className={styles.portfolioItem}>
-              <StaticImage
-                src="../images/vps-dev.png"
-                alt="vps-dev"
-                width={100}
-                height={100}
-                placeholder="blurred"
-              />
-              <div>
+              <div className={styles.portfolioImageContainer}>
+                <StaticImage
+                  src="../images/vps-dev.png"
+                  alt="vps-dev"
+                  placeholder="blurred"
+                  layout="constrained"
+                  objectFit="cover"
+                />
+              </div>
+              <div className={styles.portfolioTextContainer}>
                 <a href="https://github.com/Shin-tech25/self-hosted-lab">
                   Shin-tech25/self-hosted-lab
                 </a>
