@@ -162,9 +162,11 @@ const AboutPage = ({ location }) => {
                 <a href="https://github.com/Shin-tech25/self-hosted-lab">
                   Shin-tech25/self-hosted-lab
                 </a>
+                <p>VPS上の開発環境</p>
                 <p>
-                  VPS上の開発環境をコンテナで構築しています。GROWI
-                  Wiki/Redmine/Nextcloud/Keycloakを`docker-compose`で運用しています。
+                  GROWI
+                  Wiki/Redmine/Nextcloud/JupyterHubなどのアプリケーションをKeyCloakのOpenID
+                  Connectで連携させています。
                 </p>
               </div>
             </div>
