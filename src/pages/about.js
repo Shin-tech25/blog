@@ -101,7 +101,7 @@ const AboutPage = ({ location }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                PMP
+                Project Management Professional (PMP)
               </a>
             </li>
             <li>
@@ -110,7 +110,7 @@ const AboutPage = ({ location }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                LPIC-2
+                LPIC-2: Linux Engineer Certification
               </a>
             </li>
             <li>
@@ -119,7 +119,16 @@ const AboutPage = ({ location }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                AWS SAA
+                AWS Certified Solutions Architect – Associate
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://cbt.odyssey-com.co.jp/pythonic-exam/python3cpe.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Python 3 Certified Practical Programming Examination
               </a>
             </li>
           </ul>
