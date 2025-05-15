@@ -62,7 +62,7 @@ const AboutPage = ({ location }) => {
           <h2>Career</h2>
           <ul>
             <li>
-              2020/4 - 2022/11: SHIFT Inc.
+              2018/4 - 2022/11: SHIFT Inc.
               <p>
                 金融機関、企業、メーカー向けのコンサルティング。基盤環境のアーキテクチャ設計、提案、構築。
               </p>
@@ -85,11 +85,11 @@ const AboutPage = ({ location }) => {
             <span className={styles.skillTag}>Docker (3 years)</span>
             <span className={styles.skillTag}>Python (3 years)</span>
             <span className={styles.skillTag}>React (2 years)</span>
-            <span className={styles.skillTag}>GPU (2 years)</span>
-            <span className={styles.skillTag}>Slurm (2 years)</span>
-            <span className={styles.skillTag}>Django (1 year)</span>
+            <span className={styles.skillTag}>GPU (3 years)</span>
+            <span className={styles.skillTag}>Slurm (3 years)</span>
+            <span className={styles.skillTag}>Django (2 year)</span>
             <span className={styles.skillTag}>
-              Django REST Framework (1 year)
+              Django REST Framework (2 year)
             </span>
             <span className={styles.skillTag}>GraphQL (1 year)</span>
           </div>
