@@ -8,6 +8,7 @@ featuredImage: ../../thumbnails/linux.jpg
 relatedPosts:
   - dnf-1
   - dnf-2
+  - managing-dnf-history
 ---
 
 ## **`sudo dnf clean all && sudo dnf update` でリポジトリ構成のエラーを検証**

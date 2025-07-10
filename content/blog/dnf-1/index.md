@@ -8,6 +8,7 @@ featuredImage: ../../thumbnails/linux.jpg
 relatedPosts:
   - dnf-2
   - dnf-error-check
+  - managing-dnf-history
 ---
 
 ## 概要
