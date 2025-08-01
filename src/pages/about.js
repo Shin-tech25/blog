@@ -62,15 +62,15 @@ const AboutPage = ({ location }) => {
           <h2>Career</h2>
           <ul>
             <li>
-              2021/4 - 2022/10: SHIFT Inc.
+              2022/11 - 2025/7: Prometech Software Inc.
               <p>
-                金融機関、企業、メーカー向けのコンサルティング。基盤環境のアーキテクチャ設計、提案、構築。
+                HPC/AI業界にて大学や企業向けの科学計算基盤構築、自社サービス開発など。
               </p>
             </li>
             <li>
-              2022/11 - Now*: Prometech Software Inc.
+              2025/8 - Now*: Microsoft Japan Ltd.
               <p>
-                HPC/AI業界にて大学や企業向けの科学計算基盤構築、自社サービス開発など。
+                Technical expert handling critical issues in High Performance Computing support
               </p>
             </li>
           </ul>
