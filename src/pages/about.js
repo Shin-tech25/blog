@@ -62,15 +62,21 @@ const AboutPage = ({ location }) => {
           <h2>Career</h2>
           <ul>
             <li>
-              2022/11 - 2025/7: Prometech Software Inc.
-              <p>
-                HPC/AI業界にて大学や企業向けの科学計算基盤構築、自社サービス開発など。
-              </p>
-            </li>
-            <li>
               2025/8 - Now*: Microsoft Japan Ltd.
               <p>
                 Technical expert handling critical issues in High Performance Computing support
+              </p>
+            </li>
+            <li>
+              2022/11 - 2025/7: Prometech Software Inc.
+              <p>
+                Built scientific computing infrastructure for universities and enterprises in the HPC/AI domain, and developed in-house services.
+              </p>
+            </li>
+            <li>
+              2020/4 - 2022/10: SHIFT Inc.
+              <p>
+                Provided consulting services for financial institutions, enterprises, and manufacturers, including architecture design, proposal, and implementation of IT infrastructure.
               </p>
             </li>
           </ul>
