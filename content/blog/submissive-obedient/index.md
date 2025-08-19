@@ -4,7 +4,7 @@ title: "submissive and comparison"
 date: "2025-08-19"
 description: "English learning materials; submissive explanation."
 tags: ["English", "submissive", "obedient", "adjective"]
-featuredImage:
+featuredImage: ../../thumbnails/english-ant.png
 relatedPosts:
 ---
 
