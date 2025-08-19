@@ -2,5 +2,7 @@
   "git.ignoreLimitWarning": true,
   "files.exclude": {
     "**/.github/workflows/*.yml": true
-  }
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettierを使う例
 }
