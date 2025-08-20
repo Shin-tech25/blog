@@ -3,8 +3,8 @@ templateKey: blog-post
 title: "submissive and comparison"
 date: "2025-08-19"
 description: "English learning materials; submissive explanation."
-tags: ["English", "submissive", "obedient", "adjective"]
-featuredImage: ../../thumbnails/english-ant.png
+tags: ["English", "adjective"]
+featuredImage: ../../thumbnails/submissive.png
 relatedPosts:
 ---
 
