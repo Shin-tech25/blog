@@ -30,7 +30,7 @@ const BlogList = ({ data, pageContext, location }) => {
 
     return (
       <section className={styles.featuredTags}>
-        <h2 className={styles.sectionTitle}>人気のタグ</h2>
+        <h2 className={styles.sectionTitle}>Popular tags</h2>
         <ul className={styles.tagList}>
           {sortedTags.map(tag => (
             <li key={tag.fieldValue} className={styles.tagItem}>
@@ -54,7 +54,9 @@ const BlogList = ({ data, pageContext, location }) => {
   return (
     <Layout location={location}>
       {currentPage === 1 && <FeaturedSection />}
-      {currentPage === 1 && <h2 className={styles.sectionTitle}>最近の投稿</h2>}
+      {currentPage === 1 && (
+        <h2 className={styles.sectionTitle}>Recent activities</h2>
+      )}
 
       <div className={styles.postList}>
         {posts.nodes.map(post => (

@@ -40,7 +40,7 @@ const FeaturedArticles = () => {
 
   return (
     <section className={styles.featuredArticles}>
-      <h2 className={styles.sectionTitle}>人気の記事</h2>
+      <h2 className={styles.sectionTitle}>Popular articles</h2>
       <div className={styles.postList}>
         {popularSlugs.map(slug => {
           const found = allPosts.find(p => p.fields.slug === slug)
