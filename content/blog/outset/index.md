@@ -6,6 +6,7 @@ description: "English learning materials; outset explanation."
 tags: ["English", "noun"]
 featuredImage: ./outset.png
 relatedPosts:
+  - onset
 ---
 
 ## Meaning
