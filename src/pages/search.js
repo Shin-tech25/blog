@@ -79,7 +79,7 @@ const SearchPage = ({ location }) => {
           id="searchInput"
           value={query}
           onChange={handleInputChange}
-          placeholder="キーワードで検索"
+          placeholder="Enter keywords"
           className={styles.searchInput}
         />
       </div>

@@ -39,7 +39,7 @@ export default function SearchBar() {
       </button>
       <input
         type="text"
-        placeholder="キーワードで検索"
+        placeholder="Enter keywords"
         value={query}
         onChange={e => setQuery(e.target.value)}
         ref={inputRef} // 検索ボックスに `ref` を設定
