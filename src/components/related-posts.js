@@ -14,7 +14,7 @@ const RelatedPosts = ({ relatedPosts }) => {
 
   return (
     <div className={styles.relatedPostsWrapper}>
-      <h2 className={styles.relatedPostsTitle}>関連記事</h2>
+      <h2 className={styles.relatedPostsTitle}>Related articles</h2>
       <div className={styles.postList}>
         {relatedPosts.nodes.map(post => (
           <PostItem
