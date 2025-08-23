@@ -7,6 +7,8 @@ tags: ["English", "noun"]
 featuredImage: ./concession.png
 relatedPosts:
   - concede
+  - compromise
+  - compromise-vs-concession
 ---
 
 ## Meaning

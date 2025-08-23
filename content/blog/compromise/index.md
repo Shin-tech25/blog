@@ -6,6 +6,9 @@ description: "English learning materials; compromise explanation."
 tags: ["English", "noun", "verb"]
 featuredImage: ./compromise.png
 relatedPosts:
+  - compromise
+  - compromise-vs-concession
+  - concede
 ---
 
 ## Meaning

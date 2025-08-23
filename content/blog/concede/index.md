@@ -6,6 +6,9 @@ description: "English learning materials; concede explanation."
 tags: ["English", "verb"]
 featuredImage: ./concede.png
 relatedPosts:
+  - concession
+  - compromise
+  - compromise-vs-concession
 ---
 
 ## Meaning
