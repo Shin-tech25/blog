@@ -1,18 +1,33 @@
 /* ===== PC用デフォルト ===== */
 .container {
   padding: 0; /* 余白を削除 */
+  margin: 0;
 }
 
 .profileContainer {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  /* flex-direction: row-reverse; */
+  /* justify-content: space-between; */
   align-items: flex-start;
   text-align: center;
   margin-bottom: var(--spacing-6);
 }
 
+.profileText {
+  order: 1;
+  flex: 1 1 0;
+  padding: var(--spacing-0);
+  margin: 0 0;
+  text-align: left;
+}
+
+.profileText p {
+  margin-bottom: var(--spacing-3);
+}
+
 .profile {
+  order: 2;
+  flex: 0 0 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +40,12 @@
 }
 
 .name {
-  font-size: var(--fontSize-3);
+  font-size: var(--fontSize-2);
   margin: var(--spacing-0);
 }
 
 .title {
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-1);
   color: var(--color-text-light);
   margin-bottom: var(--spacing-4);
 }
@@ -40,15 +55,6 @@
   justify-content: center;
   gap: var(--spacing-3);
   font-size: var(--fontSize-4);
-}
-
-.profileText {
-  padding: var(--spacing-4);
-  margin: 0 0;
-}
-
-.profileText p {
-  margin-bottom: var(--spacing-3);
 }
 
 .content {
@@ -71,6 +77,12 @@
   margin-top: var(--spacing-4);
 }
 
+.career {
+  list-style: none; /* デフォルトのリストスタイルを削除 */
+  padding: 0;
+  margin: 0;
+}
+
 .skillTag {
   background-color: #e0e0e0; /* 背景色を追加 */
   color: #333; /* 文字色を設定 */
@@ -88,7 +100,7 @@
 }
 
 .certificates li {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-2); /* 各項目の間にスペースを追加 */
 }
 
@@ -112,7 +124,7 @@
   display: flex;
   flex-direction: row; /* PCの場合は横並び */
   align-items: flex-start;
-  gap: var(--spacing-4);
+  gap: var(--spacing-8);
   padding: var(--spacing-4) 0;
   text-align: left;
 }
@@ -135,7 +147,7 @@
 .portfolioItem div {
   display: flex;
   flex-direction: column;
-  margin-left: var(--spacing-4); /* ここで間隔を調整 */
+  margin-left: var(--spacing-0); /* ここで間隔を調整 */
 }
 
 .portfolioItem a {
@@ -155,6 +167,10 @@
 
 /* ===== スマホ用上書き (幅 42rem 以下) ===== */
 @media (max-width: 42rem) {
+  .container {
+    margin: 0 var(--spacing-4);
+  }
+
   .portfolioItem {
     flex-direction: column;
     align-items: center;
@@ -183,12 +199,17 @@
 
   .profileContainer {
     flex-direction: column;
-    padding: var(--spacing-4); /* スマホ用のパディング調整 */
     text-align: center;
+    align-items: center;
+  }
+
+  .profile {
+    order: 1;
   }
 
   .profileText {
     padding-left: 0;
     padding-right: 0;
+    text-align: left;
   }
 }

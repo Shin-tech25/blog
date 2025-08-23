@@ -22,7 +22,9 @@ const AboutPage = ({ location }) => {
               height={150}
             />
             <h1 className={styles.name}>Shin Mikami</h1>
-            <p className={styles.title}>HPC/AI/Infrastructure Engineer</p>
+            <p className={styles.title}>
+              Azure HPC+AI SEE@Microsoft Japan Ltd.
+            </p>
             <div className={styles.socials}>
               <a
                 href="https://www.linkedin.com/in/mshin0509/"
@@ -40,13 +42,19 @@ const AboutPage = ({ location }) => {
           </div>
           <div className={styles.profileText}>
             <p>
-              エンタープライズ基盤環境のマイグレーション、アーキテクチャ設計、構築などに従事。現在は、HPC/AI業界にて大学や企業向けの科学計算基盤構築や、自社サービスの開発を行う。
+              Engaged in migration, architecture design, and construction of
+              enterprise infrastructure environments. Currently involved in
+              building scientific computing platforms for universities and
+              enterprises in the HPC/AI industry, as well as developing in-house
+              services.
             </p>
             <p>
-              Ansible、Terraform、Docker、K8s、CI/CDパイプラインなどのモダンインフラ技術に加えて、GPUクラスタなどの計算資源構築が強み。
+              Strong expertise in modern infrastructure technologies such as
+              Ansible, Terraform, Docker, Kubernetes, and CI/CD pipelines, along
+              with experience in building computing resources like GPU clusters.
             </p>
             <p>
-              プロジェクトマネジメント力を証明するため、
+              Acquired the
               <a
                 href="https://www.pmi.org/certifications/project-management-pmp"
                 target="_blank"
@@ -54,29 +62,34 @@ const AboutPage = ({ location }) => {
               >
                 PMP®
               </a>
-              資格を取得。
+              certification to demonstrate project management capabilities.
             </p>
           </div>
         </div>
         <div className={styles.content}>
           <h2>Career</h2>
-          <ul>
+          <ul className={styles.career}>
             <li>
               2025/8 - Now*: Microsoft Japan Ltd.
               <p>
-                Technical expert handling critical issues in High Performance Computing support
+                Technical expert handling critical issues in High Performance
+                Computing support
               </p>
             </li>
             <li>
               2022/11 - 2025/7: Prometech Software Inc.
               <p>
-                Built scientific computing infrastructure for universities and enterprises in the HPC/AI domain, and developed in-house services.
+                Built scientific computing infrastructure for universities and
+                enterprises in the HPC/AI domain, and developed in-house
+                services.
               </p>
             </li>
             <li>
               2020/4 - 2022/10: SHIFT Inc.
               <p>
-                Provided consulting services for financial institutions, enterprises, and manufacturers, including architecture design, proposal, and implementation of IT infrastructure.
+                Provided consulting services for financial institutions,
+                enterprises, and manufacturers, including architecture design,
+                proposal, and implementation of IT infrastructure.
               </p>
             </li>
           </ul>
@@ -155,11 +168,12 @@ const AboutPage = ({ location }) => {
                   Shin-tech25/blog
                 </a>
                 <p>
-                  ポートフォリオサイトのレポジトリです。
+                  This is the repository for my portfolio site. It is developed
+                  using
                   <a href="https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog">
                     gatsby-starter-blog
                   </a>
-                  を用いて開発しています。
+                  .
                 </p>
               </div>
             </div>
@@ -177,11 +191,10 @@ const AboutPage = ({ location }) => {
                 <a href="https://github.com/Shin-tech25/self-hosted-lab">
                   Shin-tech25/self-hosted-lab
                 </a>
-                <p>VPS上の開発環境</p>
+                <p>Development environment on VPS</p>
                 <p>
-                  GROWI
-                  Wiki/Redmine/Nextcloud/JupyterHubなどのアプリケーションをKeyCloakのOpenID
-                  Connectで連携させています。
+                  Applications such as GROWI Wiki, Redmine, Nextcloud, and
+                  JupyterHub are integrated using Keycloak with OpenID Connect.
                 </p>
               </div>
             </div>
