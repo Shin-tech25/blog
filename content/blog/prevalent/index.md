@@ -6,6 +6,7 @@ description: "English learning materials; prevalent explanation."
 tags: ["English", "adjective"]
 featuredImage: ./prevalent.png
 relatedPosts:
+  - prevalent-vs-prevailing
 ---
 
 ## Meaning
