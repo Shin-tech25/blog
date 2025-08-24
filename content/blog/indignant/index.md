@@ -1,16 +1,15 @@
 ---
 templateKey: blog-post
-title: "indigrant meaning and examples"
+title: "indignant meaning and examples"
 date: "2025-08-24"
-description: "English learning materials; indigrant explanation."
+description: "English learning materials; indignant explanation."
 tags: ["English", "adjective"]
-featuredImage: ./indigrant.png
+featuredImage: ./indignant.png
 relatedPosts:
 ---
 
 ## Meaning
 
-It seems you meant **"indignant"** (common spelling).
 _Indignant_ means "feeling or showing anger or annoyance because of unfair treatment."
 
 For example, if someone is treated unjustly, they may feel indignant.
