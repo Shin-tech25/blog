@@ -6,6 +6,7 @@ description: "English learning materials; adapt explanation."
 tags: ["English", "verb"]
 featuredImage: ./adapt.png
 relatedPosts:
+  - adapt-100examples
 ---
 
 ## Meaning
