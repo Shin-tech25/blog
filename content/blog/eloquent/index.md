@@ -6,6 +6,7 @@ description: "English learning materials; eloquent explanation."
 tags: ["English", "adjective"]
 featuredImage: ./eloquent.png
 relatedPosts:
+  - articulate
 ---
 
 ## Meaning
