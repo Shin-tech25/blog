@@ -6,6 +6,7 @@ description: "English learning materials; hindrance explanation."
 tags: ["English", "noun"]
 featuredImage: ./hindrance.png
 relatedPosts:
+  - impediment
 ---
 
 ## Meaning
