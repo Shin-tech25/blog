@@ -6,6 +6,7 @@ description: "English learning materials; extensive explanation."
 tags: ["English", "adjective"]
 featuredImage: ./extensive.png
 relatedPosts:
+  - extension
 ---
 
 ## Meaning
