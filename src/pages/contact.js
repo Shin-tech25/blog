@@ -16,12 +16,23 @@ const ContactPage = ({ location }) => {
     try {
       console.log("Sending data:", data)
 
-      const response = await fetch(process.env.GATSBY_CONTACT_FORM_API_URL, {
+      // 1) 環境変数から完全なAPI URLを取得（必ず "GATSBY_" プレフィックス）
+      const API_URL = process.env.GATSBY_CONTACT_FORM_API_URL
+      console.log("POST to:", API_URL)
+      if (!API_URL) {
+        alert(
+          "Contact API endpoint is not configured. Please set GATSBY_CONTACT_FORM_API_URL at build time."
+        )
+        return
+      }
+
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
+        mode: "cors",
       })
 
       console.log("Response status:", response.status)
