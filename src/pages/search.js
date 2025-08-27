@@ -79,7 +79,7 @@ const SearchPage = ({ location }) => {
           id="searchInput"
           value={query}
           onChange={handleInputChange}
-          placeholder="Enter keywords"
+          placeholder="Press / to focus here"
           className={styles.searchInput}
         />
       </div>
