@@ -36,7 +36,7 @@ const ContactPage = ({ location }) => {
       reset() // フォームをリセット
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error)
-      alert("お問い合わせの送信中にエラーが発生しました。")
+      alert("An error occurred while sending your inquiry.")
     }
   }
 
@@ -44,7 +44,8 @@ const ContactPage = ({ location }) => {
     <Layout location={location}>
       <Seo title="Contact" />
       <p className={styles.intro}>
-        お仕事の依頼や記事に関することなどは以下のフォームからどうぞ。
+        For business inquiries or matters related to articles, please use the
+        form below.
       </p>
       <div className={styles.container}>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
