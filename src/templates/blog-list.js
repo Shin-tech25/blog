@@ -4,6 +4,7 @@ import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 import PostItem from "../components/post-item"
 import FeaturedArticles from "../components/featured-articles"
+import Pagination from "../components/pagination"
 import * as styles from "../styles/blog-list.module.css"
 
 const BlogList = ({ data, pageContext, location }) => {
@@ -57,7 +58,6 @@ const BlogList = ({ data, pageContext, location }) => {
       {currentPage === 1 && (
         <h2 className={styles.sectionTitle}>Recent activities</h2>
       )}
-
       <div className={styles.postList}>
         {posts.nodes.map(post => (
           <PostItem
@@ -75,42 +75,11 @@ const BlogList = ({ data, pageContext, location }) => {
       </div>
 
       {/* ページネーション */}
-      <div className={styles.paginationWrapper}>
-        <ul className={styles.pagination}>
-          {currentPage > 1 && (
-            <li>
-              <Link
-                to={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}/`}
-                className={styles.paginationNextPrev}
-              >
-                Prev
-              </Link>
-            </li>
-          )}
-          {Array.from({ length: numPages }).map((_, index) => (
-            <li key={index}>
-              <Link
-                to={index === 0 ? `/` : `/page/${index + 1}/`}
-                className={`${styles.paginationItem} ${
-                  currentPage === index + 1 ? styles.active : ""
-                }`}
-              >
-                {index + 1}
-              </Link>
-            </li>
-          ))}
-          {currentPage < numPages && (
-            <li>
-              <Link
-                to={`/page/${currentPage + 1}/`}
-                className={styles.paginationNextPrev}
-              >
-                Next
-              </Link>
-            </li>
-          )}
-        </ul>
-      </div>
+      <Pagination
+        current={currentPage}
+        totalPages={numPages}
+        basePath="/page"
+      />
     </Layout>
   )
 }

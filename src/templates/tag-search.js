@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import PostItem from "../components/post-item"
 import Seo from "../components/seo"
 import { FaTag } from "react-icons/fa"
 import kebabCase from "lodash/kebabCase"
+import Pagination from "../components/pagination"
 import * as styles from "../styles/tag-search.module.css"
 
 const TagSearch = ({ data, pageContext, location }) => {
@@ -47,52 +48,11 @@ const TagSearch = ({ data, pageContext, location }) => {
       </div>
 
       {/* 🔹 ページネーション */}
-      {numPages > 1 && (
-        <div className={styles.paginationWrapper}>
-          <ul className={styles.pagination}>
-            {currentPage > 1 && (
-              <li>
-                <Link
-                  to={
-                    currentPage - 1 === 1
-                      ? `/tags/${kebabCase(tag)}`
-                      : `/tags/${kebabCase(tag)}/page/${currentPage - 1}`
-                  }
-                  className={styles.paginationNextPrev}
-                >
-                  Prev
-                </Link>
-              </li>
-            )}
-            {Array.from({ length: numPages }).map((_, index) => (
-              <li key={index}>
-                <Link
-                  to={
-                    index === 0
-                      ? `/tags/${kebabCase(tag)}`
-                      : `/tags/${kebabCase(tag)}/page/${index + 1}`
-                  }
-                  className={`${styles.paginationItem} ${
-                    currentPage === index + 1 ? styles.active : ""
-                  }`}
-                >
-                  {index + 1}
-                </Link>
-              </li>
-            ))}
-            {currentPage < numPages && (
-              <li>
-                <Link
-                  to={`/tags/${kebabCase(tag)}/page/${currentPage + 1}`}
-                  className={styles.paginationNextPrev}
-                >
-                  Next
-                </Link>
-              </li>
-            )}
-          </ul>
-        </div>
-      )}
+      <Pagination
+        current={currentPage}
+        totalPages={numPages}
+        basePath={`/tags/${kebabCase(tag)}/page`}
+      />
     </Layout>
   )
 }
