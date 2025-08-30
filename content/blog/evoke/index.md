@@ -6,6 +6,9 @@ description: "English learning materials; evoke explanation."
 tags: ["English", "verb"]
 featuredImage: ./evoke.png
 relatedPosts:
+  - invoke
+  - provoke
+  - evoke-invoke-provoke-comparison
 ---
 
 ## Meaning
