@@ -101,6 +101,7 @@
 /* スマートフォン対応 */
 @media (max-width: 42rem) {
   .postTitle {
+    font-size: var(--fontSize-2);
     line-clamp: 2;
     -webkit-line-clamp: 2;
   }
