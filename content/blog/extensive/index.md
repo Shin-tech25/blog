@@ -7,6 +7,7 @@ tags: ["English", "adjective"]
 featuredImage: ./extensive.png
 relatedPosts:
   - extension
+  - exhaustive
 ---
 
 ## Meaning
