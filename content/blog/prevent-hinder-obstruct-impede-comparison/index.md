@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: "prevent meaning and examples"
+title: "prevent hinder obstruct impede comparison"
 date: "2025-09-05"
 description: "English learning materials; prevent, hinder, obstruct, impede comparison."
-tags: ["English", "verb"]
+tags: ["English", "verb", "comparison"]
 featuredImage: ./prevent.png
 relatedPosts:
   - prevent
