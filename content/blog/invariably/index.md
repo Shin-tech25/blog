@@ -6,6 +6,7 @@ description: "English learning materials; invariably explanation."
 tags: ["English", "adverb"]
 featuredImage: ./invariably.png
 relatedPosts:
+  - invariable
 ---
 
 ## Meaning
