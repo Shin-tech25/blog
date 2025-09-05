@@ -6,6 +6,7 @@ description: "English learning materials; discord explanation."
 tags: ["English", "noun", "verb"]
 featuredImage: ./discord.png
 relatedPosts:
+  - discordant
 ---
 
 ## Meaning
