@@ -9,6 +9,7 @@ relatedPosts:
   - hinder
   - obstruct
   - impede
+  - prevent-hinder-obstruct-impede-comparison
 ---
 
 ## Meaning
