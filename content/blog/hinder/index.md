@@ -10,6 +10,7 @@ relatedPosts:
   - prevent
   - obstruct
   - impede
+  - prevent-hinder-obstruct-impede-comparison
 ---
 
 ## Meaning
