@@ -7,6 +7,7 @@ tags: ["English", "noun"]
 featuredImage: ./hindrance.png
 relatedPosts:
   - impediment
+  - hinder
 ---
 
 ## Meaning
