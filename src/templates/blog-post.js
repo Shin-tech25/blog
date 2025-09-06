@@ -74,7 +74,7 @@ const BlogPostTemplate = ({
               <RedditIcon size={32} round={true} />
             </RedditShareButton>
           </div>
-          <small>{post.frontmatter.date}</small>
+          <small className={styles.date}>{post.frontmatter.date}</small>
           <div className={styles.tagWrapper}>
             {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
               <ul className={styles.tagList}>
