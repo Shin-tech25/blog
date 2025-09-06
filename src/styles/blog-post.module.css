@@ -3,37 +3,17 @@
   color: var(--color-text);
 }
 
-.blogPost header {
-  margin-bottom: var(--spacing-6);
-}
-
-.blogPost header h1 {
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
-}
-
-.blogPost header small {
-  font-size: var(--fontSize-2);
-  font-family: var(--font-heading);
-  margin-bottom: var(--spacing-4);
-}
-
-.titleHeader {
-  margin-bottom: 0.75rem;
-}
-
 .titleRow {
   display: flex;
   align-items: center; /* ← タイトルとサムネイルを縦中央に */
-  gap: 16px;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-6);
 }
 
 .titleThumb {
   flex: 0 0 auto;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -44,8 +24,18 @@
 }
 
 .title {
-  margin: 0; /* 既存の h1 にデフォルト余白があれば打消し */
+  font-weight: var(--fontWeight-black);
+  font-size: var(--fontSize-5);
+  color: var(--color-heading-black);
+  margin: 0;
   line-height: 1.15;
+  text-align: left;
+}
+
+.date {
+  font-size: var(--fontSize-2);
+  font-family: var(--font-heading);
+  margin-bottom: var(--spacing-4);
 }
 
 .tagWrapper {
@@ -99,18 +89,17 @@
 }
 
 @media (max-width: 42rem) {
-  .blogPost header h1 {
+  .title {
     font-size: var(--fontSize-3);
-    margin-top: var(--spacing-2);
   }
 
-  .blogPost header small {
+  .date {
     font-size: var(--fontSize-1);
   }
 
   .titleThumb {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 5px;
   }
 }
