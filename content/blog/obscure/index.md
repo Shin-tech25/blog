@@ -6,6 +6,7 @@ description: "English learning materials; obscure explanation."
 tags: ["English", "adjective", "verb"]
 featuredImage: ./obscure.png
 relatedPosts:
+  - ambiguous
 ---
 
 ## Meaning
