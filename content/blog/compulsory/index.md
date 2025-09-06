@@ -6,6 +6,7 @@ description: "English learning materials; compulsory explanation."
 tags: ["English", "adjective"]
 featuredImage: ./compulsory.png
 relatedPosts:
+  - mandatory
 ---
 
 ## Meaning
