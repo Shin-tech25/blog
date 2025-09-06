@@ -4,7 +4,7 @@ title: "But that's not always the case meaning and examples"
 date: "2025-09-06"
 description: "English learning materials; But that's not always the case explanation."
 tags: ["English", "phrase", "sentence"]
-featuredImage: ./but-thats-not-always-the-case.png
+featuredImage: ./but-that-is-not-always-the-case.png
 relatedPosts:
 ---
 
