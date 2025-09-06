@@ -1,4 +1,5 @@
 import * as React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 import {
@@ -23,6 +24,9 @@ const BlogPostTemplate = ({
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
   const shareUrl = location.href
+  const fm = post.frontmatter
+  const thumbImage =
+    getImage(fm?.featuredImage?.childImageSharp?.gatsbyImageData) || null
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -32,7 +36,30 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <div className={styles.titleRow}>
+            {/* サムネイル（ある時だけ表示） */}
+            {thumbImage ? (
+              <GatsbyImage
+                image={thumbImage}
+                alt={`${fm.title} thumbnail`}
+                className={styles.titleThumb}
+                imgClassName={styles.titleThumbImg}
+              />
+            ) : fm?.thumbnail?.publicURL ? (
+              <img
+                src={fm.thumbnail.publicURL}
+                alt={`${fm.title} thumbnail`}
+                className={styles.titleThumb}
+                width="96"
+                height="96"
+                loading="eager"
+                decoding="async"
+              />
+            ) : null}
+            <h1 className={styles.title} itemProp="headline">
+              {fm.title}
+            </h1>
+          </div>
           <div className={styles.socialLinks}>
             <FacebookShareButton url={shareUrl}>
               <FacebookIcon size={32} round={true} />
@@ -124,6 +151,17 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         tags
+        featuredImage {
+          publicURL
+          childImageSharp {
+            gatsbyImageData(
+              width: 96
+              height: 96
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
     }
     relatedPosts: allMarkdownRemark(
