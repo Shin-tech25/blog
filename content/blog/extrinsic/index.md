@@ -58,5 +58,4 @@ relatedPosts:
 - External
 - Outside
 - Extraneous
-- Superficial
 - Foreign
