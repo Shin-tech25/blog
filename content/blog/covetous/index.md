@@ -6,6 +6,7 @@ description: "English learning materials; covetous explanation."
 tags: ["English", "adjective"]
 featuredImage: ./covetous.png
 relatedPosts:
+  - envious
 ---
 
 ## Meaning
