@@ -6,6 +6,8 @@ description: "English learning materials; forfeit explanation."
 tags: ["English", "verb", "noun"]
 featuredImage: ./forfeit.png
 relatedPosts:
+  - relinquish
+  - waive
 ---
 
 ## Meaning
