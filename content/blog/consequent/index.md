@@ -6,6 +6,7 @@ description: "English learning materials; consequent explanation."
 tags: ["English", "adjective"]
 featuredImage: ./consequent.png
 relatedPosts:
+  - subsequent
 ---
 
 ## Meaning
