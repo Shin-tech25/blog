@@ -6,6 +6,7 @@ description: "English learning materials; eminent explanation."
 tags: ["English", "adjective"]
 featuredImage: ./eminent.png
 relatedPosts:
+  - prominent
 ---
 
 ## Meaning
