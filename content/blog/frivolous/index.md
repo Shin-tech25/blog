@@ -52,6 +52,5 @@ relatedPosts:
 - Silly
 - Unimportant
 - Petty
-- Superficial
 - Idle
 - Insignificant
