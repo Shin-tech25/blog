@@ -6,6 +6,7 @@ description: "English learning materials; cursory explanation."
 tags: ["English", "adjective"]
 featuredImage: ./cursory.png
 relatedPosts:
+  - superficial
 ---
 
 ## Meaning
