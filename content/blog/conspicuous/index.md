@@ -6,6 +6,7 @@ description: "English learning materials; conspicuous explanation."
 tags: ["English", "adjective"]
 featuredImage: ./conspicuous.png
 relatedPosts:
+  - prominent
 ---
 
 ## Meaning
