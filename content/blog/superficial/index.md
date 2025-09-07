@@ -1,59 +1,64 @@
 ---
 templateKey: blog-post
-title: "superstitious meaning and examples"
+title: "superficial meaning and examples"
 date: "2025-09-07"
-description: "English learning materials; superstitious explanation."
+description: "English learning materials; superficial explanation."
 tags: ["English", "adjective"]
-featuredImage: ./superstitious.png
+featuredImage: ./superficial.png
 relatedPosts:
+  - cursory
 ---
 
 ## Meaning
 
-_Superstitious_ is an **adjective** that describes someone who believes in superstitions—irrational or supernatural beliefs that certain actions, objects, or events can bring good luck, bad luck, or influence the future.
+_Superficial_ means concerned only with what is on the surface or appears to be true, without looking deeply into the real nature of something. It can also mean shallow, lacking depth, or not thorough.
 
 ## Grammar and Usage
 
-- Part of speech: **Adjective**
-- Used to describe people, actions, or attitudes influenced by superstition.
-- Typical structure:
+- **Part of speech**: Adjective
+- Used to describe people, actions, observations, or appearances.
+- Sentence structure:
 
-  - _be superstitious about \[something]_
-  - _superstitious belief/tradition/custom_
+  - _be + superficial_
+  - _a superficial + noun_
 
 ## Common Phrases
 
-- **superstitious belief**
-- **superstitious ritual**
-- **superstitious fear**
-- **deeply superstitious**
+- **superficial knowledge** – shallow or limited understanding
+- **superficial appearance** – only looking at the surface, not the substance
+- **superficial relationship** – lacking depth or emotional closeness
+- **superficial injury** – not deep, only affecting the surface of the skin
 
 ## Collocations
 
-- **Noun + superstitious**: people, belief, practice, fear
-- **Adverb + superstitious**: deeply, strongly, very
-- **Verb + superstitious**: remain, become, seem
+- superficial charm
+- superficial analysis
+- superficial similarity
+- superficial wound
+- superficial beauty
 
 ## Examples
 
-1. She is superstitious about walking under ladders.
-2. Many athletes are superstitious and wear the same socks for every game.
-3. He laughed at his grandmother’s superstitious beliefs about black cats.
-4. Some sailors are traditionally very superstitious.
-5. I’m not superstitious, but I still knock on wood for good luck.
-6. His superstitious nature made him avoid the number 13.
-7. They performed a superstitious ritual before starting the journey.
-8. People in ancient times were more superstitious than today.
+1. His analysis of the problem was too superficial and missed the key issues.
+2. She has only a superficial knowledge of history.
+3. The cut was superficial and did not require stitches.
+4. Their friendship was superficial, based only on convenience.
+5. At first glance, the houses looked similar, but the similarity was only superficial.
+6. He is often accused of being superficial in his thinking.
+7. The movie was entertaining but rather superficial.
+8. Superficial beauty does not last forever.
 
 ## Synonyms or Related
 
-- irrational
-- mythical
-- credulous
-- unfounded
+- shallow
+- surface-level
+- cursory
+- trivial
+- flimsy
 
 ## Antonym
 
-- rational
-- logical
-- scientific
+- profound
+- deep
+- thorough
+- genuine
