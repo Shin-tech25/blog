@@ -7,6 +7,7 @@ tags: ["English", "adjective"]
 featuredImage: ./prevalent.png
 relatedPosts:
   - prevalent-vs-prevailing
+  - pervasive
 ---
 
 ## Meaning
