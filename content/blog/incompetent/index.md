@@ -6,6 +6,7 @@ description: "English learning materials; incompetent explanation."
 tags: ["English", "adjective"]
 featuredImage: ./incompetent.png
 relatedPosts:
+  - competent
 ---
 
 ## Meaning
