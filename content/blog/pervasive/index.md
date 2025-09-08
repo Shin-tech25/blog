@@ -6,6 +6,7 @@ description: "English learning materials; pervasive explanation."
 tags: ["English", "adjective"]
 featuredImage: ./pervasive.png
 relatedPosts:
+  - prevalent
 ---
 
 ## Meaning
