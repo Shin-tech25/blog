@@ -6,6 +6,7 @@ description: "English learning materials; perplex explanation."
 tags: ["English", "verb"]
 featuredImage: ./perplex.png
 relatedPosts:
+  - confound
 ---
 
 ## Meaning
