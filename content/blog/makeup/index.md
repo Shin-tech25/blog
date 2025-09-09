@@ -1,13 +1,11 @@
 ---
-
 templateKey: blog-post
 title: "makeup meaning and examples"
 date: "2025-09-09"
 description: "English learning materials; makeup explanation."
-tags: \["English", "noun", "verb"]
-featuredImage: ../../thumbnails/makeup.png
+tags: ["English", "noun", "verb"]
+featuredImage: ./makeup.png
 relatedPosts:
-
 ---
 
 ## Meaning
