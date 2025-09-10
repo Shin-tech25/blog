@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: "around-the-clock meaning and examples"
+title: "around the clock meaning and examples"
 date: "2025-09-09"
 description: "English learning materials; around-the-clock explanation."
 tags: ["English", "adverb", "phrase"]
