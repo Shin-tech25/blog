@@ -4,7 +4,7 @@ title: "credit A with B meaning and examples"
 date: "2025-09-09"
 description: "English learning materials; credit A with B explanation."
 tags: ["English", "verb", "phrasal verbs"]
-featuredImage: ./credit-A-with-B.png
+featuredImage: ./credit-a-with-b.png
 relatedPosts:
 ---
 
