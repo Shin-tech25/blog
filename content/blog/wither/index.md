@@ -6,6 +6,7 @@ description: "English learning materials; wither explanation."
 tags: ["English", "verb"]
 featuredImage: ./wither.png
 relatedPosts:
+  - shrivel
 ---
 
 ## Meaning
