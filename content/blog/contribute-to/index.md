@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "contribute to meaning and examples"
 date: "2025-09-12"
 description: "English learning materials; contribute to explanation."
-tags: ["English", "verb"]
+tags: ["English", "phrasal verb"]
 featuredImage: ./contribute-to.png
 relatedPosts:
 ---
