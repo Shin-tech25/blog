@@ -6,6 +6,8 @@ description: "English learning materials; restrict explanation."
 tags: ["English", "verb"]
 featuredImage: ./restrict.png
 relatedPosts:
+  - prohibit
+  - forbid
 ---
 
 ## Meaning
