@@ -11,8 +11,7 @@ aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET" \
   --exclude "*.html" \
   --exclude "page-data/*" \
   --exclude "rss.xml" \
-  --size-only \
-  --only-show-errors
+  --size-only
 
 # 2) HTML / page-data → デフォルト（サイズ＋時刻）で確実に反映
 aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET" \
@@ -20,8 +19,7 @@ aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET" \
   --exclude "*" \
   --include "*.html" \
   --include "page-data/*" \
-  --include "rss.xml" \
-  --only-show-errors
+  --include "rss.xml"
 echo "Deployment to S3 completed."
 
 # Create invalidation
