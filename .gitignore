@@ -56,7 +56,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+#public # Get public data on GitHub Actions
 
 # Mac files
 .DS_Store
