@@ -6,6 +6,7 @@ description: "English learning materials; commend explanation."
 tags: ["English", "verb"]
 featuredImage: ./commend.png
 relatedPosts:
+  - commendable
 ---
 
 ## Meaning
