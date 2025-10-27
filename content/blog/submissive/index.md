@@ -6,6 +6,7 @@ description: "English learning materials; submissive explanation."
 tags: ["English", "adjective"]
 featuredImage: ./submissive.png
 relatedPosts:
+  - submission
 ---
 
 ## Meaning
