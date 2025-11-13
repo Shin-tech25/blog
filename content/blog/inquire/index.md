@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "inquire meaning and examples"
-date: "2025-08-23"
+date: "2025-11-05"
 description: "English learning materials; inquire explanation."
 tags: ["English", "verb"]
 featuredImage: ./inquire.png
@@ -10,48 +10,63 @@ relatedPosts:
 
 ## Meaning
 
-- **Verb**: To ask for information; to investigate formally.
-
-It is often used in both everyday situations ("to ask") and formal/legal contexts ("to investigate").
-_Note_: "inquire" and "enquire" are largely interchangeable, though **inquire** is preferred in American English, while **enquire** is more common in British English (except in legal or official contexts where "inquire" is still used).
+_Inquire_ means **to ask for information** or **to investigate something carefully**. It is often used in formal or polite contexts, similar to “ask,” but more official or serious in tone.
 
 ## Grammar and Usage
 
-- **Verb (intransitive)**: "to inquire about sth" → to ask about something.
-- **Verb (transitive)**: "to inquire whether/if" → to ask a specific question.
-- **Formal usage**: "to inquire into sth" → to investigate something.
+- **Part of speech:** Verb (both transitive and intransitive)
+- **Transitive:** _inquire about something_ (ask for information)
+- **Intransitive:** _inquire into something_ (investigate deeply)
 
-Typical structures:
+**Common structures:**
 
-- inquire about + noun
-- inquire whether/if + clause
-- inquire into + issue/matter
+- inquire about + noun (ask for information)
+  → _He inquired about the price._
+- inquire into + noun (investigate formally)
+  → _The police are inquiring into the cause of the fire._
+- inquire whether / if + clause
+  → _She inquired whether the meeting had been postponed._
 
 ## Common Phrases
 
-- inquire about prices
-- inquire whether something is possible
-- inquire into the matter
-- make inquiries
-- police inquiry
+- **inquire about a job**
+- **inquire into a matter**
+- **inquire at the desk**
+- **inquire whether...**
+- **make an inquiry**
 
 ## Collocations
 
-- **Verb + inquire**: politely inquire, formally inquire
-- **Prepositions**: inquire about, inquire into, inquire after (to ask about someone’s health or situation)
-- **Noun forms**: inquiry (countable/uncountable)
+- **inquire about** a position, product, schedule
+- **inquire into** a problem, incident, allegation
+- **inquire at** the counter, the office
+- **politely / formally inquire**
+- **customer / police inquiry**
 
 ## Examples
 
-1. She inquired about the train schedule.
-2. May I inquire whether this seat is taken?
-3. The police will inquire into the cause of the accident.
-4. He inquired after your health yesterday.
-5. I called to inquire about your services.
-6. The lawyer inquired whether his client was present.
-7. The committee will inquire into the company’s practices.
-8. She politely inquired if I needed help.
+1. She inquired about the opening hours of the museum.
+2. I called to inquire whether my order had been shipped.
+3. The committee will inquire into the recent budget misuse.
+4. He inquired at the front desk for directions to the hall.
+5. Reporters are inquiring into the company’s sudden collapse.
+6. May I inquire about your travel plans?
+7. The government plans to inquire into the cause of the accident.
+8. The customer inquired about the availability of the new model.
+9. We inquired at the hotel reception for a taxi.
+10. The teacher inquired why the student was absent.
 
 ## Synonyms or Related
 
-- ask, question, request information, interrogate (formal, stronger), investigate, probe.
+- ask
+- question
+- request
+- investigate
+- probe
+- examine
+
+## Antonym
+
+- ignore
+- overlook
+- neglect
