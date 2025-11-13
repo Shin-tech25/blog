@@ -6,6 +6,7 @@ description: "English learning materials; interrogation explanation."
 tags: ["English", "noun"]
 featuredImage: ./interrogation.png
 relatedPosts:
+  - interrogate
 ---
 
 ## Meaning
