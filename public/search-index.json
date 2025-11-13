@@ -534,6 +534,42 @@
     "body": "Python で乱数を扱うには、標準ライブラリの  モジュールを使います。数値の乱数生成はもちろん、シーケンス（リストやタプルなど）からランダムに要素を選びたいときにも役立ちます。本記事では、シーケンス内の要素をランダムに選択・抽出・並び替えするための関数を詳しく見ていきましょう。 1. ：ランダムに 1 要素を選ぶ 概要  は、与えられたシーケンス（リスト、タプル、文字列など）から、ランダムに 1 つの要素を取得します。実行するたびに異なる要素が返される可能性があるのが特徴です。 使用例 ポイント 文字列に対しても利用できます：  →  〜  のいずれか 1 文字。 単純に「ランダムでひとつだけ選びたい」というシチュエーションで便利です。 2. ：重複を許して複数要素を選ぶ 概要  は、シーケンスから複数の要素を選択しますが、同じ要素を何度も選択する可能性がある「復元抽出」方式です。 引数で取得したい要素の数を指定します。 使用例 ポイント 大量のサンプルが必要なときに便利です。例えばガチャの結果を 10 回連続で取得するなど。 同じ要素が何度も含まれるかもしれない点に注意が必要です。 3. ：重複を許さずに複数要素を選ぶ 概要  は、シーケンスから複数の要素を重複なく取得する「非復元抽出」を行います。  引数で取得したい要素の数を指定し、抽出した要素を要素数  のリストで返します。 使用例 すべての要素を一度だけランダムに取得したい場合 ポイント 同じ要素が 2 度選ばれることはありません。 ランダムに選んだ要素を漏れなく 1 回だけ使いたいときに便利です。 4. ：リストを破壊的にシャッフルする 概要  はリストの要素をそのまま並べ替え、順序をランダムに変更します。戻り値は  なので、リストそのものの並びが変わったと理解しておきましょう。 使用例 ポイント タプルや文字列など、イミュータブルなシーケンスには使用できません（リストに変換する必要があります）。 トランプの山札をシャッフルするなど、「もとの順序が直接ランダムに変わる」イメージが必要なときに便利です。 5. 使い分けのポイント 1 要素だけランダムに取りたい →  重複を許しながら複数要素を選びたい →  重複を許さずに複数要素を選びたい →  シーケンスそのものをランダムな順序に並べ替えたい →  応用: 「全要素をランダムな順番で取得したい」場合は、 を使って、シーケンス全体を並べ替えた新しいリストを作成するか、 で元のリスト自体を並べ替える方法があります。 6. シード値による再現性 乱数は実行のたびに変わるため、テストやデバッグでは同じ結果が欲しいときがあります。その場合は  を使うと、同じ順序の乱数が得られます。 まとめ , , ,  を使い分けることで、ランダムに要素を取り出すあらゆるニーズに対応できます。 ランダムに要素を抽出するときは、「重複を許すか・許さないか」「もとのリストを変更していいか」などの要件をまずはっきりさせましょう。 大量のデータ生成やゲームの山札、実験データのシャッフルなど、多岐にわたる場面で活躍します。 Python でのランダム処理を自在に扱い、柔軟なデータ操作を行いましょう！"
   },
   {
+    "title": "Building a Miniature HPC Cluster: Design, Deployment, and Operations",
+    "description": "This post is frontline post of VPS cluster series. It covers simulated High-Performance Computing (HPC) cluster design, build, and operation, implemented by Slurm, BeeGFS, Ansible, Grafana...,etc, and also covers fundamental knowledge of distributed computing.",
+    "tags": [
+      "HPC",
+      "Slurm",
+      "BeeGFS"
+    ],
+    "date": "2025-01-31",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#183848",
+          "images": {
+            "fallback": {
+              "src": "/static/8c4abe38f1c655873003cb613ce2fca0/b5658/building-a-miniature-hpc-cluster.png",
+              "srcSet": "/static/8c4abe38f1c655873003cb613ce2fca0/acb7c/building-a-miniature-hpc-cluster.png 256w,\n/static/8c4abe38f1c655873003cb613ce2fca0/ccc41/building-a-miniature-hpc-cluster.png 512w,\n/static/8c4abe38f1c655873003cb613ce2fca0/b5658/building-a-miniature-hpc-cluster.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/8c4abe38f1c655873003cb613ce2fca0/22bfc/building-a-miniature-hpc-cluster.webp 256w,\n/static/8c4abe38f1c655873003cb613ce2fca0/d689f/building-a-miniature-hpc-cluster.webp 512w,\n/static/8c4abe38f1c655873003cb613ce2fca0/67ded/building-a-miniature-hpc-cluster.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/building-a-miniature-hpc-cluster/",
+    "body": "Introduction As part of my continuous technical exploration in the field of High-Performance Computing (HPC), I have embarked on a personal initiative to design, build, and operate a simulated HPC cluster in a small-scale VPS environment.\nWhile I work professionally in the Microsoft Azure HPC engineering team, this project serves both as a learning sandbox and a technical memorandum, documenting experiments, insights, and lessons learned through hands-on practice. This article serves as the frontline post of a long-term series covering the entire process—from network design to deployment, scaling, monitoring, and automation. Future articles will be referenced here for easy navigation. Project Overview The primary goal of this project is not performance benchmarking, but rather architectural fidelity and operational realism.\nI aim to replicate the structure and behavior of an HPC cluster using minimal virtual resources, focusing on the interactions and integrations of key components. Initial Environment Component Description OS Rocky Linux 9.3 Nodes 3 VPS instances (management, compute, and storage) Network WireGuard-based full-mesh VPN Architecture Simulated HPC cluster (expandable) The cluster will initially consist of three nodes, but the design will allow gradual scaling to larger environments over time. Technical Scope Throughout this series, I will cover a variety of advanced HPC infrastructure topics, including but not limited to: Cluster Networking\nWireGuard VPN configuration for secure inter-node communication across public VPS providers. Distributed File Systems\nBeeGFS deployment and scaling from single-node to buddy-mirroring configurations. Job Scheduling & Management\nSlurm setup and tuning, Slurm HA configuration, and integration with Slurm REST API. Configuration Management\nEnvironment provisioning and maintenance using Ansible and Terraform. Monitoring and Observability\nImplementing job-level monitoring, system metrics collection, and performance…"
+  },
+  {
     "title": "米国株投資における時価総額別の分類と投資戦略",
     "description": "米国株市場での企業規模に基づく時価総額分類（Micro CapからMega Capまで）と、それぞれの特徴、リスク・リターン、投資戦略について詳しく解説。投資スタイルに応じたポートフォリオ構築のヒントを紹介します。",
     "tags": [
@@ -3231,41 +3267,6 @@
     "body": "Meaning Verb: To arouse someone’s curiosity or interest; to fascinate. Noun: A secret plan or scheme, often involving deception or trickery. Grammar and Usage Verb (transitive): \"to intrigue someone\" → to make someone curious or fascinated. Example: \"The story intrigued me.\" Verb (intransitive): less common, used in the sense of plotting or scheming. Noun (countable/uncountable): \"an intrigue\" → a plot, conspiracy, or complicated secret plan. Typical structures: Verb: \"intrigue sb with sth\" Noun: \"political intrigue,\" \"court intrigue,\" \"romantic intrigue.\" Common Phrases political intrigue court intrigue romantic intrigue full of intrigue intrigue against someone Collocations Verb + intrigue: deeply intrigue, continue to intrigue Noun + intrigue: web of intrigue, world of intrigue Adjective + intrigue: political intrigue, mysterious intrigue Examples The mysterious artifact intrigued the archaeologists. Her unusual behavior intrigued everyone at the party. The detective was intrigued by the strange clues. Political intrigue was common in royal courts. The film is full of intrigue and suspense. She was intrigued by his knowledge of ancient history. A web of intrigue surrounded the corporate scandal. His secretive actions intrigued his colleagues. The book’s ending continues to intrigue readers. The palace was filled with intrigue and betrayal. Synonyms or Related Verb: fascinate, attract, captivate, engross, absorb. Noun: plot, scheme, conspiracy, deception, trickery."
   },
   {
-    "title": "inquire meaning and examples",
-    "description": "English learning materials; inquire explanation.",
-    "tags": [
-      "English",
-      "verb"
-    ],
-    "date": "2025-08-23",
-    "featuredImage": {
-      "childImageSharp": {
-        "gatsbyImageData": {
-          "layout": "constrained",
-          "backgroundColor": "#f8e8d8",
-          "images": {
-            "fallback": {
-              "src": "/static/b8443e33d4c0982eeedeaac419fdf6b9/b5658/inquire.png",
-              "srcSet": "/static/b8443e33d4c0982eeedeaac419fdf6b9/acb7c/inquire.png 256w,\n/static/b8443e33d4c0982eeedeaac419fdf6b9/ccc41/inquire.png 512w,\n/static/b8443e33d4c0982eeedeaac419fdf6b9/b5658/inquire.png 1024w",
-              "sizes": "(min-width: 1024px) 1024px, 100vw"
-            },
-            "sources": [
-              {
-                "srcSet": "/static/b8443e33d4c0982eeedeaac419fdf6b9/22bfc/inquire.webp 256w,\n/static/b8443e33d4c0982eeedeaac419fdf6b9/d689f/inquire.webp 512w,\n/static/b8443e33d4c0982eeedeaac419fdf6b9/67ded/inquire.webp 1024w",
-                "type": "image/webp",
-                "sizes": "(min-width: 1024px) 1024px, 100vw"
-              }
-            ]
-          },
-          "width": 1024,
-          "height": 1024
-        }
-      }
-    },
-    "slug": "/inquire/",
-    "body": "Meaning Verb: To ask for information; to investigate formally. It is often used in both everyday situations (\"to ask\") and formal/legal contexts (\"to investigate\").\nNote: \"inquire\" and \"enquire\" are largely interchangeable, though inquire is preferred in American English, while enquire is more common in British English (except in legal or official contexts where \"inquire\" is still used). Grammar and Usage Verb (intransitive): \"to inquire about sth\" → to ask about something. Verb (transitive): \"to inquire whether/if\" → to ask a specific question. Formal usage: \"to inquire into sth\" → to investigate something. Typical structures: inquire about + noun inquire whether/if + clause inquire into + issue/matter Common Phrases inquire about prices inquire whether something is possible inquire into the matter make inquiries police inquiry Collocations Verb + inquire: politely inquire, formally inquire Prepositions: inquire about, inquire into, inquire after (to ask about someone’s health or situation) Noun forms: inquiry (countable/uncountable) Examples She inquired about the train schedule. May I inquire whether this seat is taken? The police will inquire into the cause of the accident. He inquired after your health yesterday. I called to inquire about your services. The lawyer inquired whether his client was present. The committee will inquire into the company’s practices. She politely inquired if I needed help. Synonyms or Related ask, question, request information, interrogate (formal, stronger), investigate, probe."
-  },
-  {
     "title": "interject meaning and examples",
     "description": "English learning materials; interject explanation.",
     "tags": [
@@ -5694,41 +5695,6 @@
     "body": "Meaning Grievance is a noun that refers to a complaint, concern, or feeling of unfair treatment, often in the workplace or within an organization. It can also mean a cause of distress or a reason for dissatisfaction. Grammar and Usage Part of speech: Noun Common structures: “file a grievance” (submit a formal complaint) “have a grievance against” (hold a complaint about someone/something) “air one’s grievances” (express dissatisfaction openly) Common Phrases File a grievance – make an official complaint. Grievance procedure – a formal process for handling complaints. Personal grievance – individual complaint about unfair treatment. Air grievances – publicly express complaints. Collocations Adjectives + grievance: legitimate grievance, long-standing grievance, minor grievance, personal grievance Verbs + grievance: express grievances, file grievances, address grievances, resolve grievances Examples The employee filed a grievance against the manager for unfair treatment. He had a long-standing grievance about being overlooked for promotion. The union is addressing the grievances of its members. She aired her grievances during the meeting. The company has a grievance procedure to handle staff complaints. Their main grievance was the lack of proper safety equipment. Minor grievances can sometimes lead to major disputes if ignored. The court ruled that his grievance was legitimate. Synonyms or Related Complaint Protest Objection Dissatisfaction Injustice Dispute"
   },
   {
-    "title": "affliction meaning and examples",
-    "description": "English learning materials; affliction explanation.",
-    "tags": [
-      "English",
-      "noun"
-    ],
-    "date": "2025-08-25",
-    "featuredImage": {
-      "childImageSharp": {
-        "gatsbyImageData": {
-          "layout": "constrained",
-          "backgroundColor": "#f8e8c8",
-          "images": {
-            "fallback": {
-              "src": "/static/aabab49cc28430e1c13da52e9a69f7a2/b5658/affliction.png",
-              "srcSet": "/static/aabab49cc28430e1c13da52e9a69f7a2/acb7c/affliction.png 256w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/ccc41/affliction.png 512w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/b5658/affliction.png 1024w",
-              "sizes": "(min-width: 1024px) 1024px, 100vw"
-            },
-            "sources": [
-              {
-                "srcSet": "/static/aabab49cc28430e1c13da52e9a69f7a2/22bfc/affliction.webp 256w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/d689f/affliction.webp 512w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/67ded/affliction.webp 1024w",
-                "type": "image/webp",
-                "sizes": "(min-width: 1024px) 1024px, 100vw"
-              }
-            ]
-          },
-          "width": 1024,
-          "height": 1024
-        }
-      }
-    },
-    "slug": "/affliction/",
-    "body": "Meaning Affliction is a noun that refers to something that causes pain, suffering, or distress, whether physical, emotional, or social. It can describe both the condition of suffering and the cause itself. Grammar and Usage Part of speech: Noun Common structures: “suffer from an affliction” (be affected by a painful condition) “an affliction of + body part/mind” “cause of affliction” Common Phrases Suffer from an affliction – to endure a painful condition. Chronic affliction – long-term suffering. Mental affliction – emotional or psychological pain. Source of affliction – cause of suffering. Collocations Adjectives + affliction: great affliction, painful affliction, chronic affliction, serious affliction Verbs + affliction: endure affliction, suffer affliction, relieve affliction, cause affliction Examples He has suffered from a rare affliction since childhood. Poverty can be a serious affliction for many families. The disease is one of the most common afflictions in the region. Despite her affliction, she remained optimistic and kind. Loneliness is often described as a modern affliction. The medicine helped relieve his affliction. They supported her through the affliction of losing a loved one. War brought affliction to countless innocent people. Synonyms or Related Suffering Hardship Misery Distress Pain Illness Trouble"
-  },
-  {
     "title": "exemption meaning and examples",
     "description": "English learning materials; exemption explanation.",
     "tags": [
@@ -6756,6 +6722,41 @@
     },
     "slug": "/adapt/",
     "body": "Meaning Adapt means to change or adjust something in order to suit new conditions, a different purpose, or a particular environment. It refers to making modifications so that something (or someone) can function better in a new situation. Grammar and Usage Verb (transitive): adapt sth to sth → to change something to make it suitable.\nExample: She adapted the book into a play. Verb (intransitive): adapt to sth → to adjust oneself to new conditions.\nExample: He quickly adapted to his new job. Verb patterns: adapt sth to sth adapt for sth adapt to sth Common Phrases adapt to change adapt to the environment adapt oneself to circumstances adapt a novel into a movie Collocations verb + adapt: learn to adapt, fail to adapt, gradually adapt adapt + noun: adapt methods, adapt style, adapt behavior adapt + to: adapt to climate, adapt to technology, adapt to life Examples Children usually adapt quickly to new schools. The software was adapted for international users. Soldiers must adapt to harsh environments. She adapted her speech to suit the audience. The company had to adapt to the changing market. He adapted well to life in a foreign country. The book was adapted into a successful film. Animals adapt to survive in extreme climates. Synonyms or Related adjust modify alter accommodate conform evolve"
+  },
+  {
+    "title": "affliction meaning and examples",
+    "description": "English learning materials; affliction explanation.",
+    "tags": [
+      "English",
+      "noun"
+    ],
+    "date": "2025-08-25",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/aabab49cc28430e1c13da52e9a69f7a2/b5658/affliction.png",
+              "srcSet": "/static/aabab49cc28430e1c13da52e9a69f7a2/acb7c/affliction.png 256w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/ccc41/affliction.png 512w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/b5658/affliction.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/aabab49cc28430e1c13da52e9a69f7a2/22bfc/affliction.webp 256w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/d689f/affliction.webp 512w,\n/static/aabab49cc28430e1c13da52e9a69f7a2/67ded/affliction.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/affliction/",
+    "body": "Meaning Affliction is a noun that refers to something that causes pain, suffering, or distress, whether physical, emotional, or social. It can describe both the condition of suffering and the cause itself. Grammar and Usage Part of speech: Noun Common structures: “suffer from an affliction” (be affected by a painful condition) “an affliction of + body part/mind” “cause of affliction” Common Phrases Suffer from an affliction – to endure a painful condition. Chronic affliction – long-term suffering. Mental affliction – emotional or psychological pain. Source of affliction – cause of suffering. Collocations Adjectives + affliction: great affliction, painful affliction, chronic affliction, serious affliction Verbs + affliction: endure affliction, suffer affliction, relieve affliction, cause affliction Examples He has suffered from a rare affliction since childhood. Poverty can be a serious affliction for many families. The disease is one of the most common afflictions in the region. Despite her affliction, she remained optimistic and kind. Loneliness is often described as a modern affliction. The medicine helped relieve his affliction. They supported her through the affliction of losing a loved one. War brought affliction to countless innocent people. Synonyms or Related Suffering Hardship Misery Distress Pain Illness Trouble"
   },
   {
     "title": "extension meaning and examples",
@@ -10456,41 +10457,6 @@
     "body": "Meaning A subsidy is money given (usually by a government, organization, or institution) to support an industry, activity, or group of people. It is intended to reduce costs, encourage certain behavior, or make services more affordable. Grammar and Usage Part of speech: Noun (countable, plural: subsidies) Used to refer to financial support or aid. Common structure: government subsidy for/to something receive a subsidy cut/reduce/increase subsidies Common Phrases government subsidy – financial aid provided by the state. agricultural subsidy – money given to farmers to support production. fuel subsidy – financial aid to reduce fuel costs. subsidy program – an official plan to provide financial assistance. Collocations verb + subsidy: receive a subsidy, provide a subsidy, grant a subsidy, cut subsidies, eliminate subsidies adjective + subsidy: generous subsidy, large subsidy, government subsidy, agricultural subsidy subsidy + noun: subsidy policy, subsidy program, subsidy scheme Examples The government provides subsidies to farmers to stabilize food prices. Many countries offer fuel subsidies to make transportation more affordable. The company received a subsidy from the city to expand its factory. Several industries depend heavily on government subsidies. The education ministry announced new subsidy programs for low-income families. Environmental groups argue that fossil fuel subsidies should be eliminated. The government has cut subsidies for luxury housing projects. Without subsidies, small farmers would struggle to survive. Synonyms or Related financial aid grant allowance assistance support funding"
   },
   {
-    "title": "interrogation meaning and examples",
-    "description": "English learning materials; interrogation explanation.",
-    "tags": [
-      "English",
-      "noun"
-    ],
-    "date": "2025-09-01",
-    "featuredImage": {
-      "childImageSharp": {
-        "gatsbyImageData": {
-          "layout": "constrained",
-          "backgroundColor": "#f8e8c8",
-          "images": {
-            "fallback": {
-              "src": "/static/db1f41b158fe09a86c138c946180b9fb/b5658/interrogation.png",
-              "srcSet": "/static/db1f41b158fe09a86c138c946180b9fb/acb7c/interrogation.png 256w,\n/static/db1f41b158fe09a86c138c946180b9fb/ccc41/interrogation.png 512w,\n/static/db1f41b158fe09a86c138c946180b9fb/b5658/interrogation.png 1024w",
-              "sizes": "(min-width: 1024px) 1024px, 100vw"
-            },
-            "sources": [
-              {
-                "srcSet": "/static/db1f41b158fe09a86c138c946180b9fb/22bfc/interrogation.webp 256w,\n/static/db1f41b158fe09a86c138c946180b9fb/d689f/interrogation.webp 512w,\n/static/db1f41b158fe09a86c138c946180b9fb/67ded/interrogation.webp 1024w",
-                "type": "image/webp",
-                "sizes": "(min-width: 1024px) 1024px, 100vw"
-              }
-            ]
-          },
-          "width": 1024,
-          "height": 1024
-        }
-      }
-    },
-    "slug": "/interrogation/",
-    "body": "Meaning Interrogation is a noun that means the formal act of asking someone many questions, often in an official or forceful way, especially by police, military, or authorities. It can also generally mean intense questioning. Grammar and Usage Part of speech: Noun Used with verbs like conduct, face, undergo, carry out. Typical structures: subject + face/undergo interrogation conduct/carry out an interrogation of sb Common Phrases police interrogation – questioning by the police under interrogation – being questioned formally interrogation room – the place where questioning happens intense interrogation – very thorough or harsh questioning Collocations face interrogation undergo interrogation harsh interrogation detailed interrogation military interrogation Examples The suspect was taken into custody for interrogation. She remained calm during the police interrogation. The lawyer requested to be present at the interrogation. Prisoners of war often face harsh interrogations. His strange behavior led to further interrogation by the authorities. The detective conducted an interrogation that lasted for hours. Journalists faced interrogation at the border. The witness refused to answer some questions during interrogation. Synonyms or Related Questioning Interview (in some official contexts) Cross-examination Inquiry Examination"
-  },
-  {
     "title": "impair meaning and examples",
     "description": "English learning materials; impair explanation.",
     "tags": [
@@ -10629,6 +10595,41 @@
     },
     "slug": "/habitat/",
     "body": "Meaning Habitat is a noun that refers to the natural environment where a particular animal, plant, or organism lives and grows. It can also mean the typical environment in which a person or group usually lives or operates. Grammar and Usage Part of speech: noun Used to describe a living place or environment. Typical structures: \"the habitat of [animal/plant]\" \"in its natural habitat\" \"destroy the habitat\" Common Phrases natural habitat – the environment where a species normally lives. loss of habitat – destruction or reduction of living spaces for animals/plants. habitat restoration – efforts to return an area to its natural state. Collocations protect habitat destroy habitat suitable habitat marine habitat forest habitat Examples The panda’s natural habitat is the bamboo forests of China. Pollution has destroyed the natural habitat of many fish species. The desert is a harsh habitat for most animals. Some birds migrate to find a more suitable habitat in winter. Human activities often lead to the loss of wildlife habitats. Coral reefs are a vital habitat for thousands of marine species. A zoo is not the same as an animal’s natural habitat. Conservation groups work hard on habitat restoration projects. Synonyms or Related environment surroundings ecosystem territory dwelling place"
+  },
+  {
+    "title": "interrogation meaning and examples",
+    "description": "English learning materials; interrogation explanation.",
+    "tags": [
+      "English",
+      "noun"
+    ],
+    "date": "2025-09-01",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/db1f41b158fe09a86c138c946180b9fb/b5658/interrogation.png",
+              "srcSet": "/static/db1f41b158fe09a86c138c946180b9fb/acb7c/interrogation.png 256w,\n/static/db1f41b158fe09a86c138c946180b9fb/ccc41/interrogation.png 512w,\n/static/db1f41b158fe09a86c138c946180b9fb/b5658/interrogation.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/db1f41b158fe09a86c138c946180b9fb/22bfc/interrogation.webp 256w,\n/static/db1f41b158fe09a86c138c946180b9fb/d689f/interrogation.webp 512w,\n/static/db1f41b158fe09a86c138c946180b9fb/67ded/interrogation.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/interrogation/",
+    "body": "Meaning Interrogation is a noun that means the formal act of asking someone many questions, often in an official or forceful way, especially by police, military, or authorities. It can also generally mean intense questioning. Grammar and Usage Part of speech: Noun Used with verbs like conduct, face, undergo, carry out. Typical structures: subject + face/undergo interrogation conduct/carry out an interrogation of sb Common Phrases police interrogation – questioning by the police under interrogation – being questioned formally interrogation room – the place where questioning happens intense interrogation – very thorough or harsh questioning Collocations face interrogation undergo interrogation harsh interrogation detailed interrogation military interrogation Examples The suspect was taken into custody for interrogation. She remained calm during the police interrogation. The lawyer requested to be present at the interrogation. Prisoners of war often face harsh interrogations. His strange behavior led to further interrogation by the authorities. The detective conducted an interrogation that lasted for hours. Journalists faced interrogation at the border. The witness refused to answer some questions during interrogation. Synonyms or Related Questioning Interview (in some official contexts) Cross-examination Inquiry Examination"
   },
   {
     "title": "adolescent meaning and examples",
@@ -33341,5 +33342,1100 @@
     },
     "slug": "/warrant/",
     "body": "Meaning Warrant can be used both as a noun and a verb, with related but distinct meanings. As a noun: an official document or authorization giving legal or formal permission to do something (e.g., an arrest warrant). As a verb: to justify or give reason for something; to make something necessary or reasonable. Grammar and Usage As a Noun a warrant for + noun/verb-ing – used to express official authorization. a warrant for arrest, a search warrant The police issued a warrant for his arrest. As a Verb warrant + noun – to justify or make something necessary. The results do not warrant further investigation. Nothing in his behavior warrants such harsh criticism. It is typically transitive, taking a direct object. Common Patterns: warrant doing something (slightly formal) be warranted = be justified Your concern is completely warranted. Common Phrases arrest warrant – legal document authorizing arrest search warrant – document allowing police to search property death warrant – official order for execution warrant officer – military rank without warrant – without legal or reasonable justification Collocations issue a warrant obtain a warrant execute a warrant a warrant for arrest fully warrant reasonably warrant not warrant attention Examples The judge issued a warrant for the suspect’s arrest. Police cannot enter your house without a warrant. The company’s actions did not warrant such strong criticism. The evidence does not warrant a full investigation. His fear was perfectly warranted given the circumstances. The officer executed the warrant early in the morning. This minor mistake hardly warrants punishment. The situation warrants immediate attention. He signed the death warrant for the condemned prisoner. Your concern is warranted, but let’s wait for confirmation. Synonyms or Related justify authorize permit validate sanction Antonym forbid prohibit invalidate disallow"
+  },
+  {
+    "title": "afflict meaning and examples",
+    "description": "English learning materials; afflict explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/d8e0701667bac91e5d3d8b3063787556/b5658/afflict.png",
+              "srcSet": "/static/d8e0701667bac91e5d3d8b3063787556/acb7c/afflict.png 256w,\n/static/d8e0701667bac91e5d3d8b3063787556/ccc41/afflict.png 512w,\n/static/d8e0701667bac91e5d3d8b3063787556/b5658/afflict.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/d8e0701667bac91e5d3d8b3063787556/22bfc/afflict.webp 256w,\n/static/d8e0701667bac91e5d3d8b3063787556/d689f/afflict.webp 512w,\n/static/d8e0701667bac91e5d3d8b3063787556/67ded/afflict.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/afflict/",
+    "body": "Meaning Afflict means to cause pain, suffering, or distress to someone or something. It usually describes physical, emotional, or mental hardship. Grammar and Usage Part of speech: verb (transitive) Typical structure: afflict somebody/something with something Often used in the passive voice: be afflicted with/by something More common in formal or literary English. Example structures be afflicted with a disease be afflicted by poverty afflict someone with guilt Common Phrases be afflicted with an illness be afflicted by hardship afflict the community afflict the poor Collocations Combination Example afflict + population The population was afflicted by hunger. afflict + person/group War afflicted millions of people. be afflicted with + illness She was afflicted with asthma. be afflicted by + problem The country was afflicted by corruption. Examples The region was afflicted by drought for several years. He was afflicted with severe headaches. Many people are afflicted by loneliness in old age. The town was afflicted by poverty and disease. She felt afflicted with guilt after lying to her friend. The entire area was afflicted by floods. He was afflicted with insomnia for months. Economic instability afflicts many developing countries. Synonyms or Related torment distress trouble plague oppress Antonym relieve comfort soothe"
+  },
+  {
+    "title": "decipher meaning and examples",
+    "description": "English learning materials; decipher explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/5a6a7109d1f6b82310be8a04e3c1d5a6/b5658/decipher.png",
+              "srcSet": "/static/5a6a7109d1f6b82310be8a04e3c1d5a6/acb7c/decipher.png 256w,\n/static/5a6a7109d1f6b82310be8a04e3c1d5a6/ccc41/decipher.png 512w,\n/static/5a6a7109d1f6b82310be8a04e3c1d5a6/b5658/decipher.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/5a6a7109d1f6b82310be8a04e3c1d5a6/22bfc/decipher.webp 256w,\n/static/5a6a7109d1f6b82310be8a04e3c1d5a6/d689f/decipher.webp 512w,\n/static/5a6a7109d1f6b82310be8a04e3c1d5a6/67ded/decipher.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/decipher/",
+    "body": "Meaning To decipher means to figure out or make sense of something that is difficult to understand or unreadable — such as a code, handwriting, or hidden meaning.\nIt often implies effort in interpreting something unclear or complex. Grammar and Usage Part of speech: Verb Verb type: Transitive (takes an object) Patterns: decipher something\ne.g. He deciphered the secret message. decipher meaning/writing/code\ne.g. Can you decipher his handwriting? Tense examples: Present: I decipher the message. Past: She deciphered the code. Gerund: Deciphering old scripts is difficult. Common Phrases decipher a code – to solve a coded message decipher handwriting – to read unclear writing decipher a message/text – to understand something hidden decipher meaning/significance – to interpret something deeper Collocations Verb + Noun Example decipher a code Scientists deciphered the DNA code. decipher handwriting I can’t decipher his messy handwriting. decipher meaning She tried to decipher the meaning behind his smile. decipher symbols Archaeologists deciphered ancient symbols. Examples It took years to decipher the ancient hieroglyphs on the temple walls. I couldn’t decipher what he wrote in his note. The detective deciphered the coded message left at the crime scene. Linguists are still trying to decipher the lost language of that civilization. She tried to decipher his true feelings from his tone. The software helps decipher old texts scanned from manuscripts. It’s hard to decipher sarcasm in online messages. They finally deciphered the mysterious numbers on the wall. Synonyms or Related decode interpret translate figure out make out unravel Antonym encode encrypt conceal obscure"
+  },
+  {
+    "title": "detour meaning and examples",
+    "description": "English learning materials; detour explanation.",
+    "tags": [
+      "English",
+      "noun",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/c7be9961dd9ace6fed8767ff1ae4e3c0/b5658/detour.png",
+              "srcSet": "/static/c7be9961dd9ace6fed8767ff1ae4e3c0/acb7c/detour.png 256w,\n/static/c7be9961dd9ace6fed8767ff1ae4e3c0/ccc41/detour.png 512w,\n/static/c7be9961dd9ace6fed8767ff1ae4e3c0/b5658/detour.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/c7be9961dd9ace6fed8767ff1ae4e3c0/22bfc/detour.webp 256w,\n/static/c7be9961dd9ace6fed8767ff1ae4e3c0/d689f/detour.webp 512w,\n/static/c7be9961dd9ace6fed8767ff1ae4e3c0/67ded/detour.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/detour/",
+    "body": "Meaning Detour means a longer or different route taken to avoid something or to reach a destination indirectly.\nIt can also mean a temporary deviation from a normal path or plan. As a noun: a route that is different from the usual one, often because of a blockage or roadwork. As a verb: to take a longer or alternate way around something. Grammar and Usage Part of speech: noun / verb Noun structure: take/make a detour, on a detour Verb structure: detour around/through/to (place) Examples of structures: We took a detour through the countryside. The driver detoured around the flooded area. Common Phrases make a detour – to take an alternate route take a detour – to go by a longer way on a detour – currently traveling on a different route detour sign – a sign indicating a temporary route detour ahead – warning that the normal route is blocked Collocations take/make a detour long/short detour unexpected detour detour route/path detour sign/road Examples We had to take a detour because the main road was closed. The bus made a detour through the old part of town. They enjoyed the scenic detour by the lake. Due to construction, all traffic was detoured to the west. His career took an interesting detour into teaching before returning to engineering. The driver ignored the detour signs and got stuck in traffic. We took a small detour to visit a local bakery. The detour added an extra 30 minutes to our journey. Synonyms or Related bypass diversion alternative route side trip deviation Antonym direct route straight path shortcut"
+  },
+  {
+    "title": "discharge meaning and examples",
+    "description": "English learning materials; discharge explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "noun"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/a2a43e4f133d2112580fd1e919d2723a/b5658/discharge.png",
+              "srcSet": "/static/a2a43e4f133d2112580fd1e919d2723a/acb7c/discharge.png 256w,\n/static/a2a43e4f133d2112580fd1e919d2723a/ccc41/discharge.png 512w,\n/static/a2a43e4f133d2112580fd1e919d2723a/b5658/discharge.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/a2a43e4f133d2112580fd1e919d2723a/22bfc/discharge.webp 256w,\n/static/a2a43e4f133d2112580fd1e919d2723a/d689f/discharge.webp 512w,\n/static/a2a43e4f133d2112580fd1e919d2723a/67ded/discharge.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/discharge/",
+    "body": "Meaning Discharge has several meanings depending on the context. As a verb, it means to release, allow to leave, or send out something or someone. As a noun, it refers to the act of releasing or a substance that flows out. (verb) To allow someone to leave a place (hospital, military, etc.). “The patient was discharged from the hospital.” (verb) To fire or shoot (a weapon). “The soldier discharged his rifle.” (verb) To release liquid, gas, or electricity. “The factory discharged waste into the river.” (noun) The act of being released or dismissed. “His discharge from the army was unexpected.” (noun) A liquid or gas that is released. “There was a strange discharge from the pipe.” Grammar and Usage Part of Speech: Verb (transitive/intransitive) Noun Common verb forms: Base: discharge Past: discharged Past participle: discharged Gerund: discharging Typical sentence patterns: discharge + object → “The hospital discharged the patient.” be discharged from + place → “He was discharged from the navy.” discharge + substance + into + place → “The factory discharged chemicals into the sea.” Common Phrases discharge a duty / responsibility – to perform or fulfill it discharge from hospital / army / prison – to release someone officially electric discharge – release of electricity discharge of waste / pollutants – emission into the environment honorable discharge – official release from military service with good record Collocations verb + discharge: allow, order, perform, prevent noun + discharge: electric discharge, industrial discharge, official discharge adjective + discharge: sudden, chemical, honorable, medical Examples The hospital decided to discharge her after a full recovery. The company was fined for discharging toxic substances into the lake. He was honorably discharged after ten years of service. The soldier accidentally discharged his weapon. The pipe was leaking a foul-smelling discharge. The manager discharged his duties efficiently. Lightning is a form of natural…"
+  },
+  {
+    "title": "dilute meaning and examples",
+    "description": "English learning materials; dilute explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "adjective"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8d8",
+          "images": {
+            "fallback": {
+              "src": "/static/9d5014eda3e604377c02f1e4cdfd7cd5/b5658/dilute.png",
+              "srcSet": "/static/9d5014eda3e604377c02f1e4cdfd7cd5/acb7c/dilute.png 256w,\n/static/9d5014eda3e604377c02f1e4cdfd7cd5/ccc41/dilute.png 512w,\n/static/9d5014eda3e604377c02f1e4cdfd7cd5/b5658/dilute.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/9d5014eda3e604377c02f1e4cdfd7cd5/22bfc/dilute.webp 256w,\n/static/9d5014eda3e604377c02f1e4cdfd7cd5/d689f/dilute.webp 512w,\n/static/9d5014eda3e604377c02f1e4cdfd7cd5/67ded/dilute.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/dilute/",
+    "body": "Meaning Dilute means to make a liquid thinner or weaker by adding water or another solvent.\nIt can also mean to weaken the strength, quality, or value of something (like an argument, belief, or power). Grammar and Usage Part of speech: verb / adjective Verb forms: dilute – diluted – diluted – diluting Adjective form: dilute (e.g., a dilute solution) Transitive verb: takes a direct object (e.g., dilute the juice with water) Common structures dilute + something + with + something\n→ to mix and weaken a liquid\nExample: She diluted the vinegar with water. dilute + something\n→ to weaken or lessen the strength or impact\nExample: The company diluted its brand image by lowering product quality. Common Phrases dilute solution – a weak mixture dilute acid – an acid that has been mixed with water dilute concentration – a low level of a substance in a mixture dilute the effect – reduce or weaken the effect Collocations verb + dilute: try to dilute, need to dilute, must dilute noun + dilute: water, acid, juice, paint, medicine adjective + dilute: slightly dilute, very dilute Examples You should dilute the juice with water before giving it to children. The teacher diluted the complex idea to make it easier to understand. Investors feared that new shares would dilute the value of existing ones. The medicine is too strong; please dilute it before use. The report dilutes the seriousness of the problem. A dilute acid is less dangerous but still must be handled carefully. They tried to dilute the criticism with humor. Adding ice cubes will dilute your drink over time. Synonyms or Related weaken thin water down reduce diminish Antonym concentrate strengthen intensify"
+  },
+  {
+    "title": "dispatch meaning and examples",
+    "description": "English learning materials; dispatch explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "noun"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/e753cfb9d362726ecef00fca028d6a61/b5658/dispatch.png",
+              "srcSet": "/static/e753cfb9d362726ecef00fca028d6a61/acb7c/dispatch.png 256w,\n/static/e753cfb9d362726ecef00fca028d6a61/ccc41/dispatch.png 512w,\n/static/e753cfb9d362726ecef00fca028d6a61/b5658/dispatch.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/e753cfb9d362726ecef00fca028d6a61/22bfc/dispatch.webp 256w,\n/static/e753cfb9d362726ecef00fca028d6a61/d689f/dispatch.webp 512w,\n/static/e753cfb9d362726ecef00fca028d6a61/67ded/dispatch.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/dispatch/",
+    "body": "Meaning Dispatch means to send off something or someone for a specific purpose, or to deal with a task quickly and efficiently.\nIt can also mean a message or report sent quickly, often from a distant place. As a verb, it usually refers to sending or completing something.\nAs a noun, it refers to the message or act of sending. Grammar and Usage Part of speech: Verb (transitive): dispatch something / someone Noun: a dispatch / dispatches Verb usage patterns: dispatch + object e.g. The company dispatched a truck to deliver the goods. dispatch + object + to + place e.g. They dispatched a team to the disaster area. Noun usage: a dispatch (formal message/report) e.g. The journalist sent a dispatch from the war zone. Common Phrases dispatch someone to do something – send a person with a mission dispatch goods – send products for delivery news dispatch – a report sent to a news organization with great dispatch – very quickly and efficiently Collocations dispatch troops / police / vehicles dispatch a message / report / parcel dispatch center / station / unit handle with dispatch Examples The army dispatched reinforcements to the front line. A courier was dispatched to deliver the urgent documents. The rescue team was dispatched immediately after the earthquake. She handled the customer’s complaint with great dispatch. The news agency published a dispatch from its foreign correspondent. Police were dispatched to the scene of the accident. The package was dispatched within 24 hours. He dispatched his work quickly and went home early. Synonyms or Related send forward transmit deploy expedite Antonym recall withhold delay retain"
+  },
+  {
+    "title": "distort meaning and examples",
+    "description": "English learning materials; distort explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/490b3cba9ca35e738c53d7f630730b2d/b5658/distort.png",
+              "srcSet": "/static/490b3cba9ca35e738c53d7f630730b2d/acb7c/distort.png 256w,\n/static/490b3cba9ca35e738c53d7f630730b2d/ccc41/distort.png 512w,\n/static/490b3cba9ca35e738c53d7f630730b2d/b5658/distort.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/490b3cba9ca35e738c53d7f630730b2d/22bfc/distort.webp 256w,\n/static/490b3cba9ca35e738c53d7f630730b2d/d689f/distort.webp 512w,\n/static/490b3cba9ca35e738c53d7f630730b2d/67ded/distort.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/distort/",
+    "body": "Meaning To distort means to twist, change, or misrepresent the true shape, sound, or meaning of something. It can refer to both physical deformation (e.g., bending an image or sound) and figurative distortion (e.g., misrepresenting facts or truth). Grammar and Usage Part of speech: Verb (transitive) Forms: distort – distorted – distorted – distorting Typical patterns: distort something distort the truth/facts/image/sound be distorted by something Examples of usage: “The mirror distorted her reflection.” “The media distorted the facts to fit their narrative.” Common Phrases distort the truth – to misrepresent or twist what is true distort reality – to create a false or misleading impression distort the image/sound – to make visual or audio quality unclear or inaccurate Collocations verb + distort: deliberately distort, slightly distort, completely distort noun + distort: distortion of sound, distortion of facts, distortion of reality adjective + distortion: major distortion, slight distortion, visual distortion Examples The loudspeaker distorted the sound during the concert. Heat can distort metal if it becomes too intense. He accused the journalist of distorting his words. The reflection in the water distorted her face. Social media often distorts our perception of other people’s lives. The photograph was distorted by the wide-angle lens. His memory of the event may have been distorted over time. The government denied distorting information about the crisis. The artist intentionally distorted the image for dramatic effect. Political bias can distort how news is reported. Synonyms or Related twist warp misrepresent falsify deform pervert Antonym clarify straighten represent accurately correct"
+  },
+  {
+    "title": "embezzle meaning and examples",
+    "description": "English learning materials; embezzle explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "phrasal verbs"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/747b3c3bdf82f57010275905bab159ed/b5658/embezzle.png",
+              "srcSet": "/static/747b3c3bdf82f57010275905bab159ed/acb7c/embezzle.png 256w,\n/static/747b3c3bdf82f57010275905bab159ed/ccc41/embezzle.png 512w,\n/static/747b3c3bdf82f57010275905bab159ed/b5658/embezzle.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/747b3c3bdf82f57010275905bab159ed/22bfc/embezzle.webp 256w,\n/static/747b3c3bdf82f57010275905bab159ed/d689f/embezzle.webp 512w,\n/static/747b3c3bdf82f57010275905bab159ed/67ded/embezzle.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/embezzle/",
+    "body": "Meaning Embezzle means to steal or misuse money or property that has been entrusted to you, often from an organization or employer. It usually involves financial fraud or theft by someone in a position of trust. Grammar and Usage Part of speech: Verb (transitive) Verb forms: embezzle – embezzled – embezzling Typical structure: embezzle money/funds/property from [organization/person] be charged with embezzling [amount] Example structure: She was accused of embezzling funds from the company. Common Phrases embezzle money/funds/assets – to steal money or assets entrusted to someone. charged with embezzlement – to face legal charges for financial theft. embezzlement of public funds – illegal use of government money. Collocations Type Common Collocations Verbs commit embezzlement, uncover embezzlement Nouns embezzlement case, embezzlement charge Adjectives large-scale embezzlement, corporate embezzlement Prepositions embezzlement of funds, embezzle from the company Examples The accountant was fired for embezzling company funds. He was charged with embezzling nearly two million dollars. The investigation revealed a long-term embezzlement scheme. The treasurer embezzled money from the charity over several years. The court sentenced her to five years in prison for embezzlement. The CEO denied all allegations of having embezzled investors’ money. Internal auditors discovered embezzled funds hidden in offshore accounts. The mayor resigned after a scandal involving embezzlement of public funds. Synonyms or Related steal misappropriate defraud pilfer swindle siphon off Antonym reimburse repay return"
+  },
+  {
+    "title": "expedite meaning and examples",
+    "description": "English learning materials; expedite explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/477e34aab60c3f6a63ee5927829cb9ed/b5658/expedite.png",
+              "srcSet": "/static/477e34aab60c3f6a63ee5927829cb9ed/acb7c/expedite.png 256w,\n/static/477e34aab60c3f6a63ee5927829cb9ed/ccc41/expedite.png 512w,\n/static/477e34aab60c3f6a63ee5927829cb9ed/b5658/expedite.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/477e34aab60c3f6a63ee5927829cb9ed/22bfc/expedite.webp 256w,\n/static/477e34aab60c3f6a63ee5927829cb9ed/d689f/expedite.webp 512w,\n/static/477e34aab60c3f6a63ee5927829cb9ed/67ded/expedite.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/expedite/",
+    "body": "Meaning Expedite means to make a process or action happen faster or be completed more quickly.\nIt is often used in business, logistics, and official contexts to describe speeding up something that is delayed or slow. Grammar and Usage Part of speech: Verb Transitivity: Transitive (requires an object) Typical patterns: expedite + noun (e.g., expedite a process, expedite delivery) be expedited by + agent (in passive voice) Examples of sentence patterns: We need to expedite the approval process. The shipment was expedited by air. Common Phrases expedite the process – make a procedure go faster expedite delivery – send goods more quickly expedite approval – get permission sooner expedite shipment – send or transport quickly Collocations Verb + expedite: try to expedite, help expedite, work to expedite Noun + expedite: request to expedite, measures to expedite Adverb + expedite: quickly expedite, immediately expedite Examples The manager promised to expedite the paperwork so we could start the project sooner. They expedited delivery to meet the customer’s deadline. Our goal is to expedite the review process and reduce waiting times. The embassy helped expedite his visa application. The new software will expedite data processing. We hired more staff to expedite production. The company took steps to expedite shipping during the holiday season. Please expedite payment to avoid penalties. Synonyms or Related accelerate hasten speed up facilitate quicken Antonym delay hinder slow down"
+  },
+  {
+    "title": "extort meaning and examples",
+    "description": "English learning materials; extort explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d898",
+          "images": {
+            "fallback": {
+              "src": "/static/baa80cfc5f69b5dfcea86033e163d954/b5658/extort.png",
+              "srcSet": "/static/baa80cfc5f69b5dfcea86033e163d954/acb7c/extort.png 256w,\n/static/baa80cfc5f69b5dfcea86033e163d954/ccc41/extort.png 512w,\n/static/baa80cfc5f69b5dfcea86033e163d954/b5658/extort.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/baa80cfc5f69b5dfcea86033e163d954/22bfc/extort.webp 256w,\n/static/baa80cfc5f69b5dfcea86033e163d954/d689f/extort.webp 512w,\n/static/baa80cfc5f69b5dfcea86033e163d954/67ded/extort.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/extort/",
+    "body": "Meaning Extort means to obtain something, especially money or information, by using force, threats, or unfair pressure.\nIt often implies illegal or unethical coercion. Grammar and Usage Part of speech: Verb Verb type: Transitive (requires an object) Common structures: extort money from someone extort a confession from someone Usage notes: Often used in legal or moral contexts. The noun form is extortion, and the person who does it is an extortionist. Common Phrases extort money from someone – to get money through threats extort a confession – to force someone to confess be accused of extortion – to face charges for using threats to get something Collocations verbs: try to extort, attempt to extort, manage to extort nouns: money, confession, payment, bribe, information prepositions: extort from someone Examples The criminals tried to extort money from the businessman. The police said he had extorted thousands of dollars from his victims. The gang extorted protection fees from local shops. The officer was accused of extorting a confession from the suspect. She refused to pay the money he was trying to extort from her. The company denied any attempt to extort payment from customers. The politician was jailed for extortion. They used threats to extort cooperation from the witnesses. Synonyms or Related blackmail coerce threaten force compel pressure Antonym give freely offer donate volunteer"
+  },
+  {
+    "title": "fixate meaning and examples",
+    "description": "English learning materials; fixate explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/b5658/fixate.png",
+              "srcSet": "/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/acb7c/fixate.png 256w,\n/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/ccc41/fixate.png 512w,\n/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/b5658/fixate.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/22bfc/fixate.webp 256w,\n/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/d689f/fixate.webp 512w,\n/static/5e4b705a3bbc12b7f2b4b9f6c140a49d/67ded/fixate.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/fixate/",
+    "body": "Meaning Fixate means to become focused or obsessed with something or someone, often in an excessive or unhealthy way.\nIt can also mean to focus one’s eyes or attention on something firmly. Grammar and Usage Part of speech: Verb Forms: fixate, fixates, fixated, fixating Common structures: fixate on/upon something — to obsessively focus attention on something be fixated on/upon something — to describe a state of obsession Examples of patterns: He fixated on the smallest details. She is fixated on her appearance. Common Phrases fixate on the past – to be unable to move on from previous events fixate on success – to be overly focused on achieving success fixate on someone – to become emotionally or mentally obsessed with a person Collocations fixate on details fixate on mistakes fixate on perfection be fixated with technology be fixated by fame Examples He tends to fixate on minor problems instead of seeing the bigger picture. The media fixated on her relationship rather than her achievements. She’s completely fixated on staying young. Don’t fixate on what went wrong; think about how to improve. As a child, he fixated on dinosaurs and learned every fact about them. The fans were fixated by the celebrity’s private life. Some people fixate on numbers instead of human outcomes. He became fixated with the idea of becoming rich overnight. She couldn’t help but fixate on the clock, waiting for the meeting to end. The artist fixated on capturing light and shadow in his paintings. Synonyms or Related obsess (over/about) dwell on concentrate on focus on preoccupy Antonym overlook ignore disregard"
+  },
+  {
+    "title": "inept meaning and examples",
+    "description": "English learning materials; inept explanation.",
+    "tags": [
+      "English",
+      "adjective"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#e8d8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/da09aa41a62c90b78128bda3de003805/b5658/inept.png",
+              "srcSet": "/static/da09aa41a62c90b78128bda3de003805/acb7c/inept.png 256w,\n/static/da09aa41a62c90b78128bda3de003805/ccc41/inept.png 512w,\n/static/da09aa41a62c90b78128bda3de003805/b5658/inept.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/da09aa41a62c90b78128bda3de003805/22bfc/inept.webp 256w,\n/static/da09aa41a62c90b78128bda3de003805/d689f/inept.webp 512w,\n/static/da09aa41a62c90b78128bda3de003805/67ded/inept.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/inept/",
+    "body": "Meaning Inept means having or showing no skill; clumsy or incompetent.\nIt describes a person who is bad at doing something or lacks ability or judgment in a specific situation. Grammar and Usage Part of speech: Adjective Typical patterns: inept at (doing) something → \"He is inept at cooking.\" inept in (a field or skill) → \"She felt inept in social situations.\" an inept remark/decision/action → modifying a noun. Common sentence structures: Someone is inept at doing something. It was an inept attempt/decision/remark. Common Phrases inept at handling situations an inept performance an inept leader socially inept inept decision-making Collocations Verb + inept: seem, appear, look Adverb + inept: completely, totally, utterly, hopelessly Noun + inept: inept handling, inept performance, inept remark Examples He was completely inept at managing people. The company suffered from inept leadership. Her inept handling of the situation only made things worse. He made an inept remark that offended everyone at the table. Despite his enthusiasm, he was socially inept and shy. The team's inept defense led to their defeat. That was an inept attempt to fix the computer. She felt inept in front of experienced professionals. Synonyms or Related incompetent unskilled clumsy awkward ineffective unqualified Antonym competent skilled capable adept proficient"
+  },
+  {
+    "title": "infringe meaning and examples",
+    "description": "English learning materials; infringe explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/26731234a1a0a4c204da21717bb46a3a/b5658/infringe.png",
+              "srcSet": "/static/26731234a1a0a4c204da21717bb46a3a/acb7c/infringe.png 256w,\n/static/26731234a1a0a4c204da21717bb46a3a/ccc41/infringe.png 512w,\n/static/26731234a1a0a4c204da21717bb46a3a/b5658/infringe.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/26731234a1a0a4c204da21717bb46a3a/22bfc/infringe.webp 256w,\n/static/26731234a1a0a4c204da21717bb46a3a/d689f/infringe.webp 512w,\n/static/26731234a1a0a4c204da21717bb46a3a/67ded/infringe.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/infringe/",
+    "body": "Meaning Infringe means to violate, break, or act against a rule, law, or someone’s rights. It often refers to legal or moral violations, such as infringing on copyrights, patents, or personal freedoms. Grammar and Usage Part of Speech: Verb (usually transitive) Common structures: infringe + law/right/rule infringe on/upon + right/freedom/privacy Notes: “Infringe” without a preposition is used when referring directly to laws or regulations. → He infringed the company’s rules. “Infringe on/upon” is used when referring to intangible things like rights or freedoms. → That law infringes on our freedom of speech. Common Phrases infringe the law – break a law or regulation infringe on someone’s rights – violate someone’s rights copyright infringement – the act of using someone’s creative work without permission patent infringement – unauthorized use of a patented invention Collocations Type Examples Verb + infringe clearly infringe, intentionally infringe, unlawfully infringe Noun + infringe law, copyright, rule, regulation, patent Infringe + noun the law, copyright, human rights, privacy Infringe + on/upon + noun rights, liberty, freedom, privacy Examples The company was sued for infringing a patent owned by another firm. Such actions infringe on individual privacy. Copying music without permission infringes copyright laws. He claimed that the new regulation infringes upon his freedom of expression. The court decided that the advertisement did not infringe any trademarks. Governments must ensure that security measures do not infringe on human rights. Downloading pirated movies infringes copyright and is illegal. She was accused of infringing the company’s code of conduct. Synonyms or Related violate breach transgress contravene encroach (on) trespass (on) Antonym comply (with) obey respect uphold"
+  },
+  {
+    "title": "inquire meaning and examples",
+    "description": "English learning materials; inquire explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/6d376134428b5218b96d17263e84e86b/b5658/inquire.png",
+              "srcSet": "/static/6d376134428b5218b96d17263e84e86b/acb7c/inquire.png 256w,\n/static/6d376134428b5218b96d17263e84e86b/ccc41/inquire.png 512w,\n/static/6d376134428b5218b96d17263e84e86b/b5658/inquire.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/6d376134428b5218b96d17263e84e86b/22bfc/inquire.webp 256w,\n/static/6d376134428b5218b96d17263e84e86b/d689f/inquire.webp 512w,\n/static/6d376134428b5218b96d17263e84e86b/67ded/inquire.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/inquire/",
+    "body": "Meaning Inquire means to ask for information or to investigate something carefully. It is often used in formal or polite contexts, similar to “ask,” but more official or serious in tone. Grammar and Usage Part of speech: Verb (both transitive and intransitive) Transitive: inquire about something (ask for information) Intransitive: inquire into something (investigate deeply) Common structures: inquire about + noun (ask for information)\n→ He inquired about the price. inquire into + noun (investigate formally)\n→ The police are inquiring into the cause of the fire. inquire whether / if + clause\n→ She inquired whether the meeting had been postponed. Common Phrases inquire about a job inquire into a matter inquire at the desk inquire whether... make an inquiry Collocations inquire about a position, product, schedule inquire into a problem, incident, allegation inquire at the counter, the office politely / formally inquire customer / police inquiry Examples She inquired about the opening hours of the museum. I called to inquire whether my order had been shipped. The committee will inquire into the recent budget misuse. He inquired at the front desk for directions to the hall. Reporters are inquiring into the company’s sudden collapse. May I inquire about your travel plans? The government plans to inquire into the cause of the accident. The customer inquired about the availability of the new model. We inquired at the hotel reception for a taxi. The teacher inquired why the student was absent. Synonyms or Related ask question request investigate probe examine Antonym ignore overlook neglect"
+  },
+  {
+    "title": "intact meaning and examples",
+    "description": "English learning materials; intact explanation.",
+    "tags": [
+      "English",
+      "adjective"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/b059568aeaec0548c4191ed42c9f76c4/b5658/intact.png",
+              "srcSet": "/static/b059568aeaec0548c4191ed42c9f76c4/acb7c/intact.png 256w,\n/static/b059568aeaec0548c4191ed42c9f76c4/ccc41/intact.png 512w,\n/static/b059568aeaec0548c4191ed42c9f76c4/b5658/intact.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/b059568aeaec0548c4191ed42c9f76c4/22bfc/intact.webp 256w,\n/static/b059568aeaec0548c4191ed42c9f76c4/d689f/intact.webp 512w,\n/static/b059568aeaec0548c4191ed42c9f76c4/67ded/intact.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/intact/",
+    "body": "Meaning Intact means whole, undamaged, or complete; not harmed or changed in any way. It describes something that has remained in its original condition without being broken or spoiled. Grammar and Usage Part of speech: Adjective Typical structure: keep/remain/stay + intact leave something intact survive intact Used to emphasize that something has not been affected or harmed after an event. Common Phrases keep intact – to preserve something in its original state remain intact – to stay undamaged leave intact – to not touch or change something survive intact – to come through an event without damage Collocations remain intact keep intact structure intact system intact body intact data intact Examples Despite the fire, the main structure of the building remained intact. The ancient vase was found completely intact after centuries underground. He managed to keep his reputation intact after the scandal. Please leave the original documents intact for the audit. The ship’s cargo survived intact after the storm. Our goal is to keep the environment intact while developing the area. The package arrived intact, with no signs of damage. His confidence stayed intact even after several failures. The law was left intact despite public protests. The glass remained intact when it fell onto the carpet. Synonyms or Related undamaged unbroken unharmed whole untouched perfect Antonym damaged broken ruined harmed impaired"
+  },
+  {
+    "title": "interrogate meaning and examples",
+    "description": "English learning materials; interrogate explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/975e4632d4c454d77189f67d712f053e/b5658/interrogate.png",
+              "srcSet": "/static/975e4632d4c454d77189f67d712f053e/acb7c/interrogate.png 256w,\n/static/975e4632d4c454d77189f67d712f053e/ccc41/interrogate.png 512w,\n/static/975e4632d4c454d77189f67d712f053e/b5658/interrogate.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/975e4632d4c454d77189f67d712f053e/22bfc/interrogate.webp 256w,\n/static/975e4632d4c454d77189f67d712f053e/d689f/interrogate.webp 512w,\n/static/975e4632d4c454d77189f67d712f053e/67ded/interrogate.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/interogate/",
+    "body": "Meaning To interrogate means to question someone thoroughly and often aggressively, especially by police, military, or authority figures, in order to obtain information or a confession. Grammar and Usage Part of speech: Verb (transitive) Verb forms: interrogate – interrogated – interrogating Structure: interrogate + object (someone) interrogate someone about something Example pattern: The detective interrogated the suspect about the robbery. It is often used in formal or official contexts like law enforcement or intelligence. Common Phrases interrogate a suspect interrogate a witness interrogate someone about their motives be subjected to interrogation intense interrogation Collocations verbs: conduct / carry out / face / endure interrogation adjectives: intense / lengthy / police / military interrogation nouns: interrogation room, interrogation report, interrogation tactics Examples The police interrogated the man for several hours. She felt as if her parents were interrogating her about her private life. The journalist was interrogated by security officers at the airport. The suspect was subjected to a long and exhausting interrogation. The officer interrogated him about the missing documents. He refused to answer any questions during the interrogation. The committee will interrogate the minister regarding the misuse of funds. The spy was interrogated under bright lights in a cold room. Synonyms or Related question examine grill probe cross-examine debrief Antonym answer respond reply"
+  },
+  {
+    "title": "linger meaning and examples",
+    "description": "English learning materials; linger explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d888",
+          "images": {
+            "fallback": {
+              "src": "/static/90f4b4d7295635fc580f60491bdf06ec/b5658/linger.png",
+              "srcSet": "/static/90f4b4d7295635fc580f60491bdf06ec/acb7c/linger.png 256w,\n/static/90f4b4d7295635fc580f60491bdf06ec/ccc41/linger.png 512w,\n/static/90f4b4d7295635fc580f60491bdf06ec/b5658/linger.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/90f4b4d7295635fc580f60491bdf06ec/22bfc/linger.webp 256w,\n/static/90f4b4d7295635fc580f60491bdf06ec/d689f/linger.webp 512w,\n/static/90f4b4d7295635fc580f60491bdf06ec/67ded/linger.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/linger/",
+    "body": "Meaning Linger means to stay in a place longer than necessary because you are reluctant to leave, or because something (such as a smell or feeling) remains for a long time. Grammar and Usage Part of speech: Verb (intransitive) Verb forms: linger – lingered – lingering Typical patterns: linger (somewhere) — stay longer than expected linger on — continue to exist or remain linger over (something) — take a long time to do something because you enjoy it Examples of structures: linger in the air (used for smells, sounds, feelings) linger on in memory (used for emotions, memories, impressions) Common Phrases linger on – to continue to exist or be noticeable linger over – to take time enjoying or considering something linger around/about – to stay aimlessly in one place Collocations linger in the air linger in the mind linger on the tongue linger for hours linger over coffee Examples The smell of freshly baked bread lingered in the kitchen. She lingered at the door, unwilling to say goodbye. His words lingered in my mind long after the meeting ended. The pain lingered for weeks after the accident. They lingered over dessert, enjoying the pleasant evening. A sense of sadness lingered on after the movie ended. Don’t linger around, we’re already late! The taste of the wine lingered on her tongue. Synonyms or Related stay remain persist endure loiter Antonym leave depart vanish disappear"
+  },
+  {
+    "title": "pollutant meaning and examples",
+    "description": "English learning materials; pollutant explanation.",
+    "tags": [
+      "English",
+      "noun",
+      "environment"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/3357e661d2e61aca9b51a9f8d063a47c/b5658/pollutant.png",
+              "srcSet": "/static/3357e661d2e61aca9b51a9f8d063a47c/acb7c/pollutant.png 256w,\n/static/3357e661d2e61aca9b51a9f8d063a47c/ccc41/pollutant.png 512w,\n/static/3357e661d2e61aca9b51a9f8d063a47c/b5658/pollutant.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/3357e661d2e61aca9b51a9f8d063a47c/22bfc/pollutant.webp 256w,\n/static/3357e661d2e61aca9b51a9f8d063a47c/d689f/pollutant.webp 512w,\n/static/3357e661d2e61aca9b51a9f8d063a47c/67ded/pollutant.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/pollutant/",
+    "body": "Meaning A pollutant is a substance that makes air, water, or land dirty and harmful to living things.\nIt refers to any chemical or waste material that causes pollution. Grammar and Usage Part of speech: Noun Countable: Yes (plural: pollutants) Typical structure: pollutant + verb → “Pollutants harm the environment.” pollutant + in + noun → “Pollutants in the river are dangerous.” air/water/soil + pollutant → describes the type of pollution. Common Phrases air pollutant water pollutant soil pollutant industrial pollutant chemical pollutant Collocations emit/release/discharge + pollutants reduce/control + pollutants harmful/toxic + pollutants sources of + pollutants pollutant levels Examples Factories release pollutants into the atmosphere. Car exhaust is a major air pollutant in big cities. The government set new limits on industrial pollutants. Pollutants in the ocean can harm marine life. Scientists are developing filters to remove pollutants from water. Smoke and dust are common air pollutants. The company was fined for discharging pollutants into the river. Soil pollutants can affect food safety. Reducing pollutants is essential for protecting human health. The factory installed equipment to cut down on harmful pollutants. Synonyms or Related contaminant toxin waste impurity pollutive substance Antonym purifier cleanser filter"
+  },
+  {
+    "title": "proclaim meaning and examples",
+    "description": "English learning materials; proclaim explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/ec0f1e7886f5d724ff60ae37553b8989/b5658/proclaim.png",
+              "srcSet": "/static/ec0f1e7886f5d724ff60ae37553b8989/acb7c/proclaim.png 256w,\n/static/ec0f1e7886f5d724ff60ae37553b8989/ccc41/proclaim.png 512w,\n/static/ec0f1e7886f5d724ff60ae37553b8989/b5658/proclaim.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/ec0f1e7886f5d724ff60ae37553b8989/22bfc/proclaim.webp 256w,\n/static/ec0f1e7886f5d724ff60ae37553b8989/d689f/proclaim.webp 512w,\n/static/ec0f1e7886f5d724ff60ae37553b8989/67ded/proclaim.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/proclaim/",
+    "body": "Meaning Proclaim means to announce something officially, publicly, or in a confident way. It often implies declaring something important or making something known openly. Grammar and Usage Part of speech: Verb Transitivity: Transitive (takes a direct object) Typical patterns: proclaim something – to announce or declare something. proclaim someone/something as something – to officially state someone’s status or role. proclaim that... – to formally state or declare a fact or opinion. Examples: The government proclaimed a new policy. They proclaimed her as the winner. He proclaimed that the war was over. Common Phrases proclaim independence proclaim victory proclaim peace proclaim someone king/queen proclaim the gospel Collocations adverb + proclaim: publicly proclaim, boldly proclaim, officially proclaim verb + noun: proclaim freedom, proclaim law, proclaim victory, proclaim loyalty Examples The president proclaimed a state of emergency. The nation proclaimed its independence in 1945. The scientist proclaimed his discovery to the world. She proclaimed her love for him without hesitation. The crowd proclaimed the hero’s return. The priest proclaimed the message of hope. The company proclaimed that it would go carbon-neutral. The city proclaimed March 15 as “Clean Earth Day.” Synonyms or Related declare announce state assert affirm pronounce Antonym deny conceal suppress"
+  },
+  {
+    "title": "loiter meaning and examples",
+    "description": "English learning materials; loiter explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/4c5b607cb91b9c505436e9732cf9acc5/b5658/loiter.png",
+              "srcSet": "/static/4c5b607cb91b9c505436e9732cf9acc5/acb7c/loiter.png 256w,\n/static/4c5b607cb91b9c505436e9732cf9acc5/ccc41/loiter.png 512w,\n/static/4c5b607cb91b9c505436e9732cf9acc5/b5658/loiter.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/4c5b607cb91b9c505436e9732cf9acc5/22bfc/loiter.webp 256w,\n/static/4c5b607cb91b9c505436e9732cf9acc5/d689f/loiter.webp 512w,\n/static/4c5b607cb91b9c505436e9732cf9acc5/67ded/loiter.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/loiter/",
+    "body": "Meaning Loiter means to stand, wait, or move slowly around a place without any clear purpose or reason. It often implies wasting time or behaving suspiciously by lingering somewhere without doing anything specific. Grammar and Usage Part of speech: Verb (intransitive) Forms: loiter – loitered – loitered – loitering Typical patterns: loiter around (a place) — to hang around somewhere aimlessly. loiter near (something) — to stay close to a location without purpose. loiter outside / in front of / by — to wait idly in that area. Example structure: Someone loiters around the park. Teenagers were loitering near the store. Common Phrases loiter around the entrance – stay idly near a door or gate loiter on the street – linger on a road without reason no loitering – a warning sign meaning “do not hang around here” loiter with intent – (legal phrase) stay somewhere with a purpose that suggests possible criminal activity Collocations loiter aimlessly loiter suspiciously loiter near shops loiter outside schools signs prohibiting loitering Examples The security guard told the group not to loiter in front of the store. Teenagers often loiter around the mall after school. A man was loitering near the bus stop for hours. The park ranger asked them not to loiter after dark. There was a no loitering sign posted on the wall. Police questioned a person loitering with intent near the parking lot. He loitered in the hallway, unsure of what to do next. They loitered by the vending machines during lunch break. Synonyms or Related linger hang around dawdle loaf idle Antonym hurry rush proceed move on"
+  },
+  {
+    "title": "recite meaning and examples",
+    "description": "English learning materials; recite explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/be0486b0109e79e2d40aa00f49f73d01/b5658/recite.png",
+              "srcSet": "/static/be0486b0109e79e2d40aa00f49f73d01/acb7c/recite.png 256w,\n/static/be0486b0109e79e2d40aa00f49f73d01/ccc41/recite.png 512w,\n/static/be0486b0109e79e2d40aa00f49f73d01/b5658/recite.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/be0486b0109e79e2d40aa00f49f73d01/22bfc/recite.webp 256w,\n/static/be0486b0109e79e2d40aa00f49f73d01/d689f/recite.webp 512w,\n/static/be0486b0109e79e2d40aa00f49f73d01/67ded/recite.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/recite/",
+    "body": "Meaning To recite means to say aloud something that has been learned or memorized, such as a poem, list, or speech.\nIt can also mean to list or mention things one by one. Grammar and Usage Part of speech: Verb (transitive or intransitive) Transitive: “recite something” (to say something from memory) Intransitive: “recite” (to perform or repeat words aloud) Common patterns: recite + poem / speech / prayer / story recite something from memory recite something to someone Example structure: [Subject] + recite + [object] + (from memory / to someone) Common Phrases recite a poem – to say a poem aloud from memory recite from memory – to recall and speak something without reading recite the alphabet – to say each letter in order recite the Quran / Bible verses – to speak religious texts aloud recite a list of names – to mention names one after another Collocations recite fluently / beautifully / perfectly recite lines / verses / prayers / formulas / facts recite to the class / audience / teacher Examples The child recited a poem at the school festival. She can recite all the U.S. presidents in order. He recited the prayer softly before going to bed. The student nervously recited her lines on stage. The witness recited the events of that night in detail. We were asked to recite a short passage from memory. The monk recited a verse from the scriptures. He recited the alphabet backward just for fun. Synonyms or Related repeat deliver rehearse enumerate chant Antonym forget ignore silence"
+  },
+  {
+    "title": "uphold meaning and examples",
+    "description": "English learning materials; uphold explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8d8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/e62ebec097e284e5da09694a6275be72/b5658/uphold.png",
+              "srcSet": "/static/e62ebec097e284e5da09694a6275be72/acb7c/uphold.png 256w,\n/static/e62ebec097e284e5da09694a6275be72/ccc41/uphold.png 512w,\n/static/e62ebec097e284e5da09694a6275be72/b5658/uphold.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/e62ebec097e284e5da09694a6275be72/22bfc/uphold.webp 256w,\n/static/e62ebec097e284e5da09694a6275be72/d689f/uphold.webp 512w,\n/static/e62ebec097e284e5da09694a6275be72/67ded/uphold.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/uphold/",
+    "body": "Meaning Uphold means to support, maintain, or defend something, especially a principle, law, decision, or standard.\nIt suggests keeping something valid, respected, or in force. Grammar and Usage Part of speech: Verb (transitive) Forms: uphold – upheld – upheld Typical structures: uphold + law / principle / decision / right uphold the tradition / constitution / values Examples of sentence structures: The court upheld the decision of the lower court. We must uphold the rights of every citizen. Common Phrases uphold justice – to maintain fairness and legality uphold the law – to ensure laws are respected and enforced uphold human rights – to protect fundamental freedoms uphold a tradition – to continue or preserve customs Collocations Verb + Noun Meaning uphold justice defend fairness uphold a decision confirm or support a ruling uphold values maintain beliefs or standards uphold a complaint accept that a complaint is valid Examples The Supreme Court upheld the ruling made by the district court. She has always upheld the principles of honesty and fairness. The organization works to uphold human rights worldwide. We must uphold our commitment to equality. The judge upheld the company’s appeal. They strive to uphold traditional values in their community. The school aims to uphold a high standard of education. The board upheld the disciplinary action after reviewing the case. Synonyms or Related maintain defend support sustain preserve confirm Antonym overturn reject deny abandon"
+  },
+  {
+    "title": "uplift meaning and examples",
+    "description": "English learning materials; uplift explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "noun"
+    ],
+    "date": "2025-11-05",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/0cd87974298a280ac6736ef6991545cd/b5658/uplift.png",
+              "srcSet": "/static/0cd87974298a280ac6736ef6991545cd/acb7c/uplift.png 256w,\n/static/0cd87974298a280ac6736ef6991545cd/ccc41/uplift.png 512w,\n/static/0cd87974298a280ac6736ef6991545cd/b5658/uplift.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/0cd87974298a280ac6736ef6991545cd/22bfc/uplift.webp 256w,\n/static/0cd87974298a280ac6736ef6991545cd/d689f/uplift.webp 512w,\n/static/0cd87974298a280ac6736ef6991545cd/67ded/uplift.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/uplift/",
+    "body": "Meaning Uplift means to raise something to a higher level, improve someone’s mood or spirit, or increase in amount or value.\nIt can also refer to a physical or emotional rise. As a verb, it means to lift up or make higher in position, feeling, or value.\nAs a noun, it means an increase or improvement. Grammar and Usage Part of Speech: Verb (transitive/intransitive) Noun Verb patterns: uplift someone/something — to raise physically or emotionally. be uplifted by something — to feel encouraged or inspired. Examples: The music uplifted her spirits. He felt uplifted by the positive feedback. Noun usage: a moral uplift an economic uplift Common Phrases uplift someone’s spirits – to make someone feel happier. economic uplift – improvement in the economy. spiritual uplift – improvement in one’s emotional or moral state. community uplift – effort to improve a community’s well-being. Collocations moral uplift social uplift emotional uplift uplift program / initiative uplift the mood / spirit / economy Examples The teacher’s kind words uplifted the students. The victory provided a great uplift for the team. His speech was so inspiring that it uplifted everyone in the audience. The new government policy aims to bring economic uplift to rural areas. Music has the power to uplift our spirits in difficult times. The scenery was so beautiful it uplifted my heart. A small act of kindness can create a huge emotional uplift. Community programs are essential for social uplift. The donation uplifted the morale of the volunteers. Her artwork provides spiritual uplift to many viewers. Synonyms or Related elevate inspire boost raise encourage improve Antonym depress lower discourage diminish"
+  },
+  {
+    "title": "disengage meaning and examples",
+    "description": "English learning materials; disengage explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/847ab55aeeed12f6f89be2472b013319/b5658/disengage.png",
+              "srcSet": "/static/847ab55aeeed12f6f89be2472b013319/acb7c/disengage.png 256w,\n/static/847ab55aeeed12f6f89be2472b013319/ccc41/disengage.png 512w,\n/static/847ab55aeeed12f6f89be2472b013319/b5658/disengage.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/847ab55aeeed12f6f89be2472b013319/22bfc/disengage.webp 256w,\n/static/847ab55aeeed12f6f89be2472b013319/d689f/disengage.webp 512w,\n/static/847ab55aeeed12f6f89be2472b013319/67ded/disengage.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/disengage/",
+    "body": "Meaning To disengage means to release or separate something from a connection, involvement, or commitment. It can refer to physically disconnecting parts, or emotionally or mentally withdrawing from a situation. Grammar and Usage Part of speech: Verb Verb forms: disengages, disengaged, disengaging Transitive (takes an object): “She disengaged her hand from his.” Intransitive (no object): “He disengaged from the conversation.” Common patterns disengage from something\n→ to withdraw or detach from an activity, relationship, or commitment. disengage A from B\n→ to separate one thing from another. Common Phrases disengage from reality disengage from a relationship disengage the clutch disengage oneself from conflict disengage troops from battle Collocations verb + disengage: try to disengage, help to disengage noun + disengage: automatic disengage, system disengage adverb + disengage: completely disengage, gradually disengage Examples She tried to disengage her hand from his tight grip. The company plans to disengage from unprofitable markets. He found it hard to disengage emotionally after the project ended. The troops were ordered to disengage from the battle zone. The clutch will disengage automatically when you release the pedal. It’s important to disengage from work and rest during holidays. The mechanism failed to disengage, causing the machine to jam. She decided to disengage herself from the argument. Synonyms or Related detach withdraw disconnect separate release uncouple Antonym engage connect attach involve"
+  },
+  {
+    "title": "disguise meaning and examples",
+    "description": "English learning materials; disguise explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "noun"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/58767f61800719ece7aa6fd924ff462c/b5658/disguise.png",
+              "srcSet": "/static/58767f61800719ece7aa6fd924ff462c/acb7c/disguise.png 256w,\n/static/58767f61800719ece7aa6fd924ff462c/ccc41/disguise.png 512w,\n/static/58767f61800719ece7aa6fd924ff462c/b5658/disguise.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/58767f61800719ece7aa6fd924ff462c/22bfc/disguise.webp 256w,\n/static/58767f61800719ece7aa6fd924ff462c/d689f/disguise.webp 512w,\n/static/58767f61800719ece7aa6fd924ff462c/67ded/disguise.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/disguise/",
+    "body": "Meaning Disguise means to change the appearance, voice, or manner of someone or something so that they are not recognized.\nIt can also mean to hide the true nature or feeling of something. As a noun, it refers to clothes, makeup, or a change in appearance used to conceal identity. Grammar and Usage Part of speech: Verb / Noun Verb forms: disguise, disguises, disguising, disguised Typical patterns: disguise oneself as someone/something disguise the fact/feeling that… be in disguise (noun phrase) Examples of sentence structure: He disguised himself as a police officer. She tried to disguise her anger. Common Phrases in disguise – wearing clothes or using a look to hide one’s true identity a blessing in disguise – something that seems bad at first but turns out good disguise oneself as – to dress or behave like someone else Collocations verb + disguise: wear a disguise, use a disguise, adopt a disguise noun + disguise: clever disguise, complete disguise, good disguise disguise + noun: disguise the truth, disguise feelings, disguise emotions Examples The thief disguised himself as a delivery man to enter the building. She wore dark glasses to disguise her face. He tried to disguise his disappointment with a smile. The spy traveled in disguise to avoid being recognized. Her kindness was a disguise for her true motives. Sometimes failure is a blessing in disguise. They disguised the sound of their footsteps. It’s hard to disguise your excitement when you get good news. The actor was in complete disguise for the prank show. He disguised his handwriting to avoid detection. Synonyms or Related conceal mask camouflage cover up hide veil Antonym reveal expose uncover unmask"
+  },
+  {
+    "title": "disrupt meaning and examples",
+    "description": "English learning materials; disrupt explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/c8c2126f540015de832527e76e77c44b/b5658/disrupt.png",
+              "srcSet": "/static/c8c2126f540015de832527e76e77c44b/acb7c/disrupt.png 256w,\n/static/c8c2126f540015de832527e76e77c44b/ccc41/disrupt.png 512w,\n/static/c8c2126f540015de832527e76e77c44b/b5658/disrupt.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/c8c2126f540015de832527e76e77c44b/22bfc/disrupt.webp 256w,\n/static/c8c2126f540015de832527e76e77c44b/d689f/disrupt.webp 512w,\n/static/c8c2126f540015de832527e76e77c44b/67ded/disrupt.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/disrupt/",
+    "body": "Meaning To disrupt means to interrupt or disturb the normal course or flow of something, especially by causing confusion, disorder, or temporary stoppage. Grammar and Usage Part of speech: Verb Verb forms: disrupt – disrupted – disrupting Transitivity: Transitive (requires an object) Typical pattern: disrupt + noun Common structures: disrupt a meeting disrupt traffic disrupt communication disrupt business operations It is often used in both everyday and business/technology contexts. Common Phrases disrupt the market – to change the way a market functions, usually with innovation. disrupt the system – to interrupt or damage a system’s normal operation. cause disruption – a noun form often used to mean “to create confusion or delay.” Collocations Verb + disrupt disrupt + Noun try to disrupt disrupt service seek to disrupt disrupt traffic intend to disrupt disrupt communication — disrupt the flow — disrupt the economy Examples Heavy rain disrupted the train service for several hours. Protesters tried to disrupt the conference by shouting slogans. The new technology has the potential to disrupt the entire industry. A power failure disrupted communication between the two offices. Don’t disrupt the class while the teacher is speaking. Social media has disrupted traditional advertising models. The children’s noise disrupted my concentration. The pandemic disrupted global supply chains. Sudden layoffs disrupted the company’s operations. Construction work disrupted traffic flow downtown. Synonyms or Related disturb interrupt interfere with upset destabilize derail Antonym stabilize maintain support continue sustain"
+  },
+  {
+    "title": "divert meaning and examples",
+    "description": "English learning materials; divert explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/8167f03b3c1dbb5aff6a5a1d49c7302f/b5658/divert.png",
+              "srcSet": "/static/8167f03b3c1dbb5aff6a5a1d49c7302f/acb7c/divert.png 256w,\n/static/8167f03b3c1dbb5aff6a5a1d49c7302f/ccc41/divert.png 512w,\n/static/8167f03b3c1dbb5aff6a5a1d49c7302f/b5658/divert.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/8167f03b3c1dbb5aff6a5a1d49c7302f/22bfc/divert.webp 256w,\n/static/8167f03b3c1dbb5aff6a5a1d49c7302f/d689f/divert.webp 512w,\n/static/8167f03b3c1dbb5aff6a5a1d49c7302f/67ded/divert.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/divert/",
+    "body": "Meaning Divert means to change the direction or purpose of something, or to entertain and distract someone from their usual focus or worries. Grammar and Usage Part of speech: Verb (transitive) Forms: diverts, diverting, diverted Common patterns: divert A to B — change the direction of something toward another target divert A from B — turn someone’s attention away from something be diverted by — be entertained by something Common Phrases divert traffic — to change the route of vehicles divert attention — to shift focus away from something divert funds — to use money for a different purpose divert resources — to allocate resources elsewhere Collocations divert someone’s attention divert funds/resources divert a river/flight/road divert traffic flow Examples Police diverted traffic to a side road due to the accident. The company was accused of diverting funds meant for research. The teacher diverted the students’ attention with a funny story. The new park was built to divert tourists from overcrowded areas. A temporary channel was dug to divert the river. She tried to divert herself with a good book after the argument. The manager diverted resources to handle the urgent issue. The film was lighthearted and diverted the audience for two hours. Synonyms or Related redirect reroute distract amuse entertain Antonym focus concentrate direct align"
+  },
+  {
+    "title": "invert meaning and examples",
+    "description": "English learning materials; invert explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8c8",
+          "images": {
+            "fallback": {
+              "src": "/static/c73edb5788faf120a3c9c8b3aac5049b/b5658/invert.png",
+              "srcSet": "/static/c73edb5788faf120a3c9c8b3aac5049b/acb7c/invert.png 256w,\n/static/c73edb5788faf120a3c9c8b3aac5049b/ccc41/invert.png 512w,\n/static/c73edb5788faf120a3c9c8b3aac5049b/b5658/invert.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/c73edb5788faf120a3c9c8b3aac5049b/22bfc/invert.webp 256w,\n/static/c73edb5788faf120a3c9c8b3aac5049b/d689f/invert.webp 512w,\n/static/c73edb5788faf120a3c9c8b3aac5049b/67ded/invert.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/invert/",
+    "body": "Meaning To invert means to turn something upside down or to reverse the position, order, or direction of something.\nIt can refer to physical objects, processes, or abstract ideas like logic or relationships. Grammar and Usage Part of speech: Verb Verb type: Transitive (takes an object) / Intransitive (sometimes used without an object) Common structure: invert + noun invert something to + form Examples of structures: invert the colors invert the order of the list invert the triangle so that the base is on top Common Phrases invert the order – to reverse the sequence. invert the colors – to swap light and dark areas (commonly used in digital editing). invert logic – to reverse reasoning or cause and effect. invert a fraction – to flip numerator and denominator. Collocations invert + position/order/relationship invert + structure/logic/signal mathematically invert color-invert mode Examples The teacher asked the students to invert the fraction to find its reciprocal. The artist inverted the colors of the photo for a dramatic effect. You need to invert the cup before stacking it. The scientist inverted the test tube to mix the chemicals. If you invert the order of the steps, the process won’t work. The company’s pyramid structure was inverted, giving more power to the workers. In logic, to invert a statement means to express the opposite condition. The camera app has an invert colors option for accessibility. Synonyms or Related reverse flip upend transpose turn upside down Antonym maintain keep preserve retain uphold"
+  },
+  {
+    "title": "prowl meaning and examples",
+    "description": "English learning materials; prowl explanation.",
+    "tags": [
+      "English",
+      "verb"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/d17978f9d060d5f7926cf838782e4489/b5658/prowl.png",
+              "srcSet": "/static/d17978f9d060d5f7926cf838782e4489/acb7c/prowl.png 256w,\n/static/d17978f9d060d5f7926cf838782e4489/ccc41/prowl.png 512w,\n/static/d17978f9d060d5f7926cf838782e4489/b5658/prowl.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/d17978f9d060d5f7926cf838782e4489/22bfc/prowl.webp 256w,\n/static/d17978f9d060d5f7926cf838782e4489/d689f/prowl.webp 512w,\n/static/d17978f9d060d5f7926cf838782e4489/67ded/prowl.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/prowl/",
+    "body": "Meaning Prowl means to move around quietly and secretly, especially while searching for something or someone — often with the intention of hunting or stealing.\nIt suggests slow, cautious, and stealthy movement, like that of a predator. Grammar and Usage Part of speech: Verb (intransitive or transitive) Forms: prowl, prowls, prowled, prowling Typical patterns: prowl around/in/through (somewhere) — move stealthily in an area prowl for (something) — search secretly for something Examples of patterns: The cat prowled around the garden. He was prowling for new opportunities. Common Phrases on the prowl — looking for something or someone, often with excitement or desire\ne.g., “He’s on the prowl for a new car.” prowl the streets — to wander secretly or aimlessly, often at night Collocations animals: lions prowl, tigers prowl, cats prowl people: thieves prowl, police prowl places: prowl the streets / forest / neighborhood Examples A tiger was prowling through the jungle in search of prey. The burglar prowled around the house before breaking in. She likes to prowl the aisles of the bookstore for hidden gems. The police car prowled the neighborhood late at night. Sharks prowl the ocean depths, waiting for unsuspecting fish. He went on the prowl for a new apartment. The cat prowled silently, ready to pounce on the mouse. Synonyms or Related stalk roam sneak creep lurk Antonym march stride parade reveal"
+  },
+  {
+    "title": "wipe out meaning and examples",
+    "description": "English learning materials; wipe out explanation.",
+    "tags": [
+      "English",
+      "phrasal verbs"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8b8",
+          "images": {
+            "fallback": {
+              "src": "/static/bb7479dec96ce17248a960e79b0035bc/b5658/wipe-out.png",
+              "srcSet": "/static/bb7479dec96ce17248a960e79b0035bc/acb7c/wipe-out.png 256w,\n/static/bb7479dec96ce17248a960e79b0035bc/ccc41/wipe-out.png 512w,\n/static/bb7479dec96ce17248a960e79b0035bc/b5658/wipe-out.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/bb7479dec96ce17248a960e79b0035bc/22bfc/wipe-out.webp 256w,\n/static/bb7479dec96ce17248a960e79b0035bc/d689f/wipe-out.webp 512w,\n/static/bb7479dec96ce17248a960e79b0035bc/67ded/wipe-out.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/wipe-out/",
+    "body": "Meaning Wipe out means to completely destroy, eliminate, or remove something or someone. It can also mean to fall down hard (especially in surfing or sports). Grammar and Usage Verb type: Phrasal verb (transitive or intransitive) Structure: wipe out + noun / be wiped out Common meanings: To destroy or eliminate completely\n→ “The disease wiped out half the population.” To exhaust or tire someone completely\n→ “The long hike really wiped me out.” To fall or crash badly (informal, especially in sports)\n→ “He wiped out while surfing a huge wave.” Common Phrases wipe out a debt — to pay off or eliminate debt wipe out a species — to make an animal species extinct completely wiped out — totally exhausted or destroyed wipe out the competition — to defeat opponents completely Collocations wipe out + disease / population / debt / species / enemy completely / almost / totally wiped out be wiped out by something Examples The tsunami wiped out several coastal villages. A new vaccine could wipe out the virus entirely. I’m completely wiped out after working 12 hours straight. The army was nearly wiped out in the battle. He wiped out on his skateboard and broke his arm. The company’s debts were wiped out after the merger. Deforestation is wiping out natural habitats. The marathon runners looked totally wiped out at the finish line. Synonyms or Related destroy eradicate eliminate annihilate exhaust crash (informal, for the “fall” meaning) Antonym preserve protect survive restore"
+  },
+  {
+    "title": "swagger meaning and examples",
+    "description": "English learning materials; swagger explanation.",
+    "tags": [
+      "English",
+      "verb",
+      "noun",
+      "adjective"
+    ],
+    "date": "2025-11-07",
+    "featuredImage": {
+      "childImageSharp": {
+        "gatsbyImageData": {
+          "layout": "constrained",
+          "backgroundColor": "#f8e8a8",
+          "images": {
+            "fallback": {
+              "src": "/static/88828986083003ea6774d2706c2e1a88/b5658/swagger.png",
+              "srcSet": "/static/88828986083003ea6774d2706c2e1a88/acb7c/swagger.png 256w,\n/static/88828986083003ea6774d2706c2e1a88/ccc41/swagger.png 512w,\n/static/88828986083003ea6774d2706c2e1a88/b5658/swagger.png 1024w",
+              "sizes": "(min-width: 1024px) 1024px, 100vw"
+            },
+            "sources": [
+              {
+                "srcSet": "/static/88828986083003ea6774d2706c2e1a88/22bfc/swagger.webp 256w,\n/static/88828986083003ea6774d2706c2e1a88/d689f/swagger.webp 512w,\n/static/88828986083003ea6774d2706c2e1a88/67ded/swagger.webp 1024w",
+                "type": "image/webp",
+                "sizes": "(min-width: 1024px) 1024px, 100vw"
+              }
+            ]
+          },
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    "slug": "/swagger/",
+    "body": "Meaning Swagger means to walk, behave, or speak in a very confident, proud, or arrogant way — often to show off.\nIt can also describe a stylish confidence in someone’s appearance or manner. As a noun, it refers to a confident and sometimes arrogant manner or style.\nAs an adjective, it can describe something that has a bold, cool, or stylish quality. Grammar and Usage Part of speech: Verb (intransitive) — to walk or behave confidently or arrogantly. Noun — a confident or arrogant manner; a stylish attitude. Adjective (informal) — showing style or coolness. Patterns: swagger around/about — walk or move proudly. with swagger — used to describe the way someone walks or behaves. to have swagger — to possess confidence and style. Common Phrases walk with swagger — to walk proudly and confidently. have swagger — to exude confidence or coolness. swagger around — to move with arrogant self-confidence. swagger style — bold or stylish way of dressing or acting. Collocations verb + swagger: walk with swagger, move with swagger noun + swagger: his usual swagger, youthful swagger adjective + swagger: confident swagger, cool swagger, arrogant swagger Examples He swaggered into the room as if he owned the place. The young player has a lot of swagger on and off the field. She walked with a confident swagger after winning the award. That jacket gives him a real swagger look. Don’t swagger around like you’re the boss here. His swagger annoyed some people but inspired others. The singer’s performance had a unique swagger and energy. Teenagers often try to show a bit of swagger to impress their friends. The CEO’s swagger was part of his leadership image. He spoke with the easy swagger of someone used to attention. Synonyms or Related Verb: strut, boast, parade, flaunt Noun: confidence, arrogance, bravado, self-assurance Antonym Verb: humble oneself, walk modestly Noun: modesty, humility, shyness"
   }
 ]
