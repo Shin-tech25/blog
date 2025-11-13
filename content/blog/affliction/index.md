@@ -6,6 +6,7 @@ description: "English learning materials; affliction explanation."
 tags: ["English", "noun"]
 featuredImage: ./affliction.png
 relatedPosts:
+  - afflict
 ---
 
 ## Meaning
